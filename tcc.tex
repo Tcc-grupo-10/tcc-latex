@@ -57,6 +57,7 @@
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{mathtools}
+\usepackage{tabulary}
 
 % ---
 
@@ -298,6 +299,66 @@ Ao final do projeto, será realizada uma comparação dos resultados obtidos pel
 	\end{citacao}
 
 	De acordo com \citeauthor{norvig} (\citeyear{norvig}), “Se pretendemos dizer que um dado programa pensa como um ser humano, temos de ter alguma forma de determinar como os seres humanos pensam.”
+	
+	Existem diversas definições respondendo "O que é Inteligência Artificial?", porém, cada abordagem é focada em um tipo de comportamento ou método de raciocínio que uma IA pode ter. Segundo \citeauthor{norvig} (\citeyear{norvig}), existem 4 categorias demonstrada na tabela \ref{Quatro Categorias}
+	
+
+\begin{table}[h]
+
+\centering
+{\renewcommand\arraystretch{1.25}
+\begin{tabular}{|l|l|l|} \hline \toprule
+
+\multicolumn{1}{p{7.5cm}|}{\textbf{Pensando Humanamente}} 
+& 
+\multicolumn{2}{p{7.5cm}|}{\textbf{Pensando Racionalmente}} \\
+
+\multicolumn{1}{p{7.5cm}|}{
+"O novo e emocionante esforço para fazer os computadores pensarem ... máquinas com mentes, no total e literal sentido." \cite{haugeland}
+
+"[A automação das] atividades que associamos ao pensamento humano, atividades como a tomada de decisões, a resolução de problemas, a aprendizagem ..." \cite{bellman}
+
+} 
+& 
+\multicolumn{2}{p{7.5cm}|}{
+
+"O estudo das faculdades mentais através do uso de modelos computacionais." ARRUMAR REF \cite{norvig}
+
+"O estudo das computações que tornam possível perceber, raciocinar e agir. ARRUMAR REF \cite{norvig}
+
+} \\
+
+\hline
+
+
+\multicolumn{1}{p{7.5cm}|}{\textbf{Agindo Humanamente}} 
+& 
+\multicolumn{2}{p{7.5cm}|}{\textbf{Agindo Racionalmente}} \\ 
+
+\multicolumn{1}{p{7.5cm}|}{
+
+"A arte de criar máquinas que executam funções que exigem inteligência quando realizadas por pessoas." ARRUMAR REF\cite{norvig}
+
+"O estudo de como fazer computadores fazer coisas em que, no momento, as pessoas são melhores." ARRUMAR REF\cite{norvig}
+
+} 
+& 
+\multicolumn{2}{p{7.5cm}|}{
+
+"Inteligência computacional é o estudo do design de \textbf{agentes} inteligentes." ARRUMAR REF\cite{norvig}
+
+"Inteligência artificial ... está preocupada com o comportamento inteligente em artefatos." ARRUMAR REF \cite{norvig}
+
+} \\ \hline
+
+
+\end{tabular}}
+\caption{Tabela de Comportamentos}
+\label{Quatro Categorias}
+\end{table}
+	
+	As definições da esquerda medem o sucesso comparando o resultado com a fidelidade a performace humana, sendo essa uma ciência empirica, envolvendo hipóteses sobre o comportamento humano, já as da direita medem a performace ideal, sendo o mais racional possivel, agindo da "forma correta" baseando-se nas informações que tem, envolvendo matemática e engenharia. Estes modelos de comportamentos foram estudados separadamente por diversos grupos que com seus resultados, conseguiram se ajudar. \citeauthor{norvig}
+	 
 	
 	\section{Computação Cognitiva}
 
