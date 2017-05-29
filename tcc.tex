@@ -300,7 +300,7 @@ Ao final do projeto, será realizada uma comparação dos resultados obtidos pel
 
 	De acordo com \citeauthor{norvig} (\citeyear{norvig}), “Se pretendemos dizer que um dado programa pensa como um ser humano, temos de ter alguma forma de determinar como os seres humanos pensam.”
 	
-	Existem diversas definições respondendo "O que é Inteligência Artificial?", porém, cada abordagem é focada em um tipo de comportamento ou método de raciocínio que uma IA pode ter. Segundo \citeauthor{norvig} (\citeyear{norvig}), existem 4 categorias demonstrada na tabela \ref{Quatro Categorias}
+	Existem diversas definições respondendo "O que é Inteligência Artificial?", porém, cada abordagem é focada em um tipo de comportamento ou método de raciocínio que uma IA pode ter. Segundo \citeauthor{norvig} (\citeyear{norvig}), estas definições podem ser divididas em 4 categorias: Pensando Humanamente, Pensando Racionalmente, Agindo Humanamente e Agindo Racionalmente, podemos ver alguns exemplos na tabela \ref{Quatro Categorias}
 	
 
 \begin{table}[h]
@@ -359,6 +359,32 @@ Ao final do projeto, será realizada uma comparação dos resultados obtidos pel
 	
 	As definições da esquerda medem o sucesso comparando o resultado com a fidelidade a performace humana, sendo essa uma ciência empirica, envolvendo hipóteses sobre o comportamento humano, já as da direita medem a performace ideal, sendo o mais racional possivel, agindo da "forma correta" baseando-se nas informações que tem, envolvendo matemática e engenharia. Estes modelos de comportamentos foram estudados separadamente por diversos grupos que com seus resultados, conseguiram se ajudar. \citeauthor{norvig}
 	 
+	\subsection*{Agindo Humanamente}
+		Para que seja considerada que uma maquina age como humanos, ela deve passar pelo teste de Turing, sendo esse, um teste julgar se uma máquina pode ser considerada inteligente o suficiente para possuir habilidades de conversação comparáveis as de um ser humano \cite{turing}. A maquina deve ter os seguintes recursos:
+		
+		\begin{itemize}
+  			\item Processamento de linguagem natural - Reconhecer a linguagem e se comunicar
+  			\item Representação do conhecimento - Guardar o que sabe e o que ouve
+  			\item Raciocínio automatizado - Usar o que sabe para novas respostas e gerar novas conclusões
+  			\item Machine learning - Se adaptar a novas circunstâncias
+  		\end{itemize}
+  			
+  			Para o "Total Turing Test" também é necessário:
+  			
+  		\begin{itemize}
+  			\item Visão computacional - Reconhecer objetos
+  			\item Robotica - Manipular objetos e se mover
+		\end{itemize}
+		
+	\subsection*{Pensando Humanamente}
+		Para uma maquina pensar como humano, primeiro precisamos entender e determinar como um pensamento humano funciona, então a maquinda deve ser modelada usando modelos cognitivos que são estudados pela "Cognitive Science", sendo essa a ciência que estuda como o pensamento funciona, esta cria teorias testaveis através de tecnicas de psicologia. \cite{wilson_keil}
+		
+	\subsection*{Pensando Racionalmente}
+		Pensar racionalmente é chegar na conclusão correta a partir de premissias. Usando o exemplo de Aristóteles: "
+Sócrates é um homem; Todos os homens são mortais; Portanto, Sócrates é mortal." Isto segue as "Leis do pensamento" \cite{laws_of_thought}
+		
+	\subsection*{Agindo Racionalmente}
+		Agir racionalmente seria uma unificação das Leis do Pensamento com o Teste de Turing, fazendo a maquina chegar no resultado esperado, e quando não for possivel chegar em um resultado, que chegue no melhor possível. Porém em alguns casos, não existe coisa certa a fazer, mas deve ser feito alguma coisa. Usando o exemplo de um carro autonomo, se em uma situação de emergencia, ele deve escolher entre atropelar um grupo de crianças que esta atravessando a rua com o farol de pedestre vermelho, ou bater no muro matando quem estiver dentro do veiculo.
 	
 	\section{Computação Cognitiva}
 
