@@ -385,6 +385,33 @@ Sócrates é um homem; Todos os homens são mortais; Portanto, Sócrates é mort
 	\subsection*{Agindo Racionalmente}
 		Agir racionalmente seria uma unificação das Leis do Pensamento com o Teste de Turing, fazendo a maquina chegar no resultado esperado, e quando não for possivel chegar em um resultado, que chegue no melhor possível. Porém em alguns casos, não existe coisa certa a fazer, mas deve ser feito alguma coisa. Usando o exemplo de um carro autonomo, se em uma situação de emergencia, ele deve escolher entre atropelar um grupo de crianças que esta atravessando a rua com o farol de pedestre vermelho, ou bater no muro matando quem estiver dentro do veiculo.
 	
+	\section{Machine Learning}
+		No começo das “aplicações inteligentes”, muitos sistemas usavam regras de decisões codificadas manualmente para processar dados ou ajustar a entrada do usuário. Criar regras de decisão manualmente é viável para algumas aplicações, especialmente aquelas em que os seres humanos têm uma boa compreensão do processo de modelagem. No entanto, a lógica necessária para tomar uma decisão geralmente é específica de um único domínio e alterar a tarefa até mesmo um pouco poderia exigir uma reescrita de todo o sistema. \cite {guido_muller}
+
+		Machine learning evoluiu como um subcampo de Inteligência Artificial que envolve o desenvolvimento de algoritmos de autoaprendizagem para fazer previsões através de dados. Esse método de análise oferece uma alternativa mais eficiente para capturar o conhecimento em dados para melhorar gradualmente o desempenho de modelos preditivos. \cite{ r_julian_heart}
+
+	\subsection*{Supervised Learning}
+		É um dos tipos mais usados e bem-sucedidos algoritmos de Machine Learning. Para que o sistema "aprenda" o mapeamento a partir dos dados treinados e seja capaz de "prever" o valor de saída, é necessário ter um treinamento com um “professor” para supervisionar as saídas desejadas em cada exemplo aprendido. Exemplos de tarefas de Supervised Learning \cite {guido_muller}: 
+	\begin{itemize}
+	 	\item Identificar o código postal escrito em envelopes.
+		\item Determinar se um tumor é benigno com base em uma imagem médica
+		\item Detectar atividade fraudulenta em transações com cartão de crédito
+	\end{itemize}
+
+	\subsection*{Unsupervised Learning}
+		Em Unsupervised learning, o sistema deve ser capaz de extrair um padrão dos dados por conta própria, sem nenhum tipo de mapeamento prévio. Apesar de ter aplicações bem sucedidas com esse método, ele é mais difícil de entender e avaliar. Exemplos de tarefas de Unsupervised Learning \cite {guido_muller}: 
+	\begin{itemize}
+	 	\item Identificar e sumarizar tópicos em uma grande quantidade de dados em texto.
+		\item Segmentação de clientes em grupos com preferências semelhantes.
+		\item Detecção de padrões anormais de acesso a um site.
+	\end{itemize}
+
+	\subsection*{Reinforcement Learning}
+		No Reinforcement learning, o objetivo é desenvolver um sistema que melhora seu desempenho com base em interações com o ambiente (feedbacks). A diferença entre ele e o supervised learning, é o fato de que o feedback não é o valor correto, mas uma medida de quão bem a ação foi medida por uma função de recompensa. Através da interação com o ambiente, um agente pode usar o aprendizado de reforço para aprender uma série de ações que maximizam essa recompensa por meio de uma abordagem de tentativa e erro. \cite{ r_julian_heart}
+
+		Chess engine é um exemplo popular de reinforcement learning, pois o agente decide sobre uma série de movimentos dependendo do estado do ambiente, e a recompensa pode ser definida como ganhar ou perder no final do jogo. \cite{ r_julian_heart}
+
+	
 	\section{Computação Cognitiva}
 
 	Sendo um dos ramos da Inteligência Artificial, a Computação Cognitiva é a capacidade de máquinas pensarem como humanos. Esse termo ganhou grande repercussão quando o Watson da IBM conseguiu vencer o programa de TV Jeopardy em 2011.
