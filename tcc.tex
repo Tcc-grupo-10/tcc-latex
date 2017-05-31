@@ -179,19 +179,11 @@
 \textual
 
 \chapter{Introdução}
+	Neste capítulo serão apresentados os pontos que foram decisivos na escolha do tema do projeto, e também quais serão as atividades a serem efetuadas para alcançar os objetivos estabelecidos
 
-	Neste capítulo serão demonstrados os pontos que foram decisivos na escolha do tema do projeto, e também quais serão as abordagens a serem utilizadas para alcançar os objetivos estabelecidos
-
-	\section{Objetivo}
-	O objetivo deste trabalho é desenvolver o protótipo de um sistema capaz de identificar os sentimentos humanos expressados em postagens de redes sociais sobre um determinado tema.
-	
-	 Serão pré-determinados “grupos de sentimentos”, nos quais as postagens serão enquadradas a partir de indicadores linguísticos a serem estudados ao longo da pesquisa. A expectativa é que o sistema seja capaz de enquadrar os textos em sentimentos obtendo um resultado similar ao que uma pessoa teria realizando o processo manualmente.
-	
-Ao final do projeto, será realizada uma comparação dos resultados obtidos pelo algoritmo desenvolvido durante o trabalho com um algoritmo aleatório e com os resultados obtidos por ferramentas de computação cognitiva populares no cenário atual.
-	
 	\section{Motivação}
 	
-	Atualmente, o uso de redes sociais, como Facebook, Twitter, Instagram e outros, ocupa uma parcela significante da rotina das pessoas. Bilhões de internautas as utilizam diariamente não apenas para entrar em contato com seus amigos, conhecer novas amizades e divulgar informações que julgam interessantes, mas também expressar e compartilhar, através de postagens, vídeos e fotos, seus pontos de vista a respeito de uma extensa gama de assuntos.
+	Atualmente, o uso de redes sociais, como Facebook, Twitter, Instagram e outros, ocupa uma parcela significante da rotina das pessoas. Bilhões de internautas as utilizam diariamente não apenas para entrar em contato com seus amigos, conhecer novas amizades e divulgar informações que julgam interessantes, mas também expressar e compartilhar, por meio de postagens, vídeos e fotos, seus pontos de vista a respeito de uma extensa gama de assuntos.
 	
 	Uma postagem criada por um usuário pode gerar muitas informações a respeito de seu estilo de vida: em qual cidade ele mora, onde costuma fazer compras, quais suas preferências musicais, etc. Estas informações extraídas da maneira correta se transformam em dados sociais. A crescente disponibilidade destes dados sociais é extremamente benéfica para tarefas como branding, análise de produtos, gerenciamento de reputação corporativa e marketing de mídia social \cite{article_sentiment_analysis}. 
 	
@@ -202,6 +194,13 @@ Embora esses dados sejam facilmente compreensíveis aos seres humanos, eles não
 
 	Emular e compreender o cérebro humano é um dos principais desafios da inteligência computacional, que envolve muitos problemas-chave da inteligência artificial, incluindo a compreensão da linguagem humana, raciocínio e emoções. 
 Dessa forma, com este trabalho procura-se compreender e aplicar técnicas de inteligência computacional e processamento linguístico para desenvolver um algoritmo capaz de entender e identificar sentimentos associados a textos de mídias sociais dentro de uma determinada temática. 
+	
+	\section{Objetivo}
+	O objetivo deste trabalho é desenvolver o protótipo de um sistema capaz de identificar os sentimentos humanos expressados em postagens de redes sociais sobre um determinado tema.
+	
+	 Serão pré-determinados “grupos de sentimentos”, nos quais as postagens serão enquadradas a partir de indicadores linguísticos a serem estudados ao longo da pesquisa. A expectativa é que o sistema seja capaz de enquadrar os textos em sentimentos obtendo um resultado similar ao que uma pessoa teria realizando o processo manualmente.
+	
+Ao final do projeto, será realizada uma comparação dos resultados obtidos pelo algoritmo desenvolvido durante o trabalho com um algoritmo aleatório e com os resultados obtidos por ferramentas de computação cognitiva populares no cenário atual.	
 	
 	\section{Método de Trabalho}
 	   
@@ -216,7 +215,7 @@ Dessa forma, com este trabalho procura-se compreender e aplicar técnicas de int
 					
 				\end{itemize}
 				
-		\subsection*{Princípios de Inteligência Artifical - Estudo e Exploração Tecnológica}
+		\subsection*{Estudo e Exploração Tecnológica dos Princípios de Inteligência Artifical }
 				
 				\begin{itemize} 
 					\item Avaliação dos bancos de dados léxicos de análise de sentimentos (SentiWordNet, ConceptNet, SentiSense)
@@ -236,14 +235,14 @@ Dessa forma, com este trabalho procura-se compreender e aplicar técnicas de int
 				\begin{itemize}
 					\item Análise dos algoritmos na literatura, adaptação e desenvolvimento de um algoritmo próprio para o escopo do problema.	Consistirá na análise de eficiência dos diferentes algoritmos para textos curtos e não estruturados. E, posteriormente, adaptação para alimentar uma base de dados do Watson.
 
-					\item Fase de treinamento: Nesta fase o sistema é treinado com o uso de um conjunto de treinamento constituído por textos previamente classificados para obter a probabilidade de que uma palavra seja positiva, negativa ou neutra dada a classe atribuída ao texto.
-					\item Fase de teste: O algoritmo é testado para calcular a precisão do método.
-					\item Fase de classificação: Nesta fase, a entrada do algoritmo é um conjunto de textos não classificados e é determinado se são positivos, negativos ou neutros.
+					\item Treinamento do Algoritmo: Nesta fase o sistema é treinado com o uso de um conjunto de treinamento constituído por textos previamente classificados para obter a probabilidade de que uma palavra seja positiva, negativa ou neutra dada a classe atribuída ao texto.
+					\item Teste do Algoritmo: O algoritmo é testado para calcular a precisão do método.
+					\item Uso do Algoritmo: Nesta fase, a entrada do algoritmo é um conjunto de textos não classificados e é determinado se são positivos, negativos ou neutros.
 				\end{itemize}
 				
 		\subsection*{Desenvolvimento do Protótipo}
 		
-		Nesta atividade, o protótipo de um sistema será modelado e implementado tendo como núcleo o algoritmo de análise de sentimentos desenvolvido anteriormente. Para dar suporte a este projeto, será utilizado o método de desenvolvimento de software ICONIX, que consiste nas seguintes etapas: 
+		Nesta atividade, o protótipo de um sistema será modelado e implementado tendo como núcleo o algoritmo de análise de sentimentos desenvolvido anteriormente. Para dar suporte a este projeto, será utilizado o método de desenvolvimento de software orientado a objetos ICONIX, que consiste nas seguintes etapas: 
 		
 				\begin{itemize}
 					\item Análise de Requisitos
@@ -270,7 +269,7 @@ Dessa forma, com este trabalho procura-se compreender e aplicar técnicas de int
                                                                                                                                           & \multicolumn{10}{c|}{2017}                                 \\ \cline{2-11} 
                                                                                                                                           & fev & mar & abr & maio & jun & jul & ago & set & out & nov \\ \hline
 \multicolumn{1}{|l|}{Pesquisa Bibliográfica}                                                                                              & x   & x   & x   & x    &     &     &     &     &     &     \\ \hline
-\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Princípios de Inteligência  Artifical - \\ Estudo e Exploração Tecnológicas\end{tabular}} &     &     & x   & x    & x   & x   &     &     &     &     \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Estudo e Exploração Tecnológica dos \\ Princípios de Inteligência  Artifical \end{tabular}} &     &     & x   & x    & x   & x   &     &     &     &     \\ \hline
 \multicolumn{1}{|l|}{Coleta dos Dados Iniciais}                                                                                           &     &     &     &      & x   & x   &     &     &     &     \\ \hline
 \multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Desenvolvimento do Algoritmo\\  para Análise de Sentimentos\end{tabular}}                 &     &     &     &      &     & x   & x   &     &     &     \\ \hline
 \multicolumn{1}{|l|}{Desenvolvimento do Protótipo}                                                                                        &     &     &     &      &     &     & x   & x   & x   &     \\ \hline
@@ -278,13 +277,16 @@ Dessa forma, com este trabalho procura-se compreender e aplicar técnicas de int
 \end{tabular}
 \end{table}
 	\section{Organização do Texto}
-		No capítulo 1, Introdução, serão apresentados o tema, objetivos do trabalho, contextualização dentro da área de Ciência da Computação, motivação para a realização da pesquisa e o método de pesquisa utilizado para atingir o objetivo 
+		No capítulo 1, Introdução, são apresentados o tema, a motivação para a realização da pesquisa, objetivo do trabalho, contextualização dentro da área de Ciência da Computação e o método utilizado para atingir o objetivo.
 		
-		No capítulo 2, Revisão Bibliográfica, será apresentada a Fundamentação Teórica demandada para a realização dessa pesquisa bem como identificados e analisados Trabalhos Relacionados de apoio.
+		No capítulo 2, Revisão Bibliográfica, é apresentada a Fundamentação Teórica demandada para a realização dessa pesquisa bem como identificados e analisados Trabalhos Relacionados de apoio.
 		
 		No capítulo 3, o trabalho de pesquisa completo será apresentado com seus experimentos e atividades. O processo de desenvolvimento do protótipo será descrito em detalhes, com ênfase no algoritmo de classificação de emoções. 
 		
-		No capítulo 4, Conclusões, haverá uma descrição dos resultados obtidos durante o projeto e uma comparação crítica com os resultados esperados durante a idealização do trabalho e revisão bibliográfica. Do mesmo modo, haverá uma avaliação da metodologia utilizada, assim como sugestão de linhas de pesquisa que possam complementar o trabalho no futuro. 
+		No capítulo 4, Avaliação dos Resultados, haverá uma descrição dos resultados obtidos durante o projeto e uma comparação crítica com os resultados esperados durante a idealização do trabalho e revisão bibliográfica. 
+
+		No capítulo 5, Conclusões, haverá uma avaliação do método utilizado, assim como sugestão de linhas de pesquisa que possam complementar o trabalho no futuro.
+		
 				
 
 \chapter{Fundamentação Teórica}
@@ -295,34 +297,34 @@ Dessa forma, com este trabalho procura-se compreender e aplicar técnicas de int
 	\begin{citacao} “Atualmente, a IA abrange uma enorme variedade de subcampos, desde áreas de uso geral como aprendizado e percepção, até tarefas específicas como jogos de xadrez, demonstração de teoremas matemáticos, criação de poesia e diagnóstico de doenças. A IA sistematiza e automatiza tarefas intelectuais e, portanto, é potencialmente relevante para qualquer esfera de atividade intelectual humana. Nesse sentido, ela é verdadeiramente um campo universal. ” \cite{norvig}
 	\end{citacao}
 
-	De acordo com \citeauthor{norvig}, “Se pretendemos dizer que um dado programa pensa como um ser humano, temos de ter alguma forma de determinar como os seres humanos pensam.”
+	De acordo com \citeauthor{norvig} (\citeyear{norvig}), “Se pretendemos dizer que um dado programa pensa como um ser humano, temos de ter alguma forma de determinar como os seres humanos pensam.”
 	
 	\section{Computação Cognitiva}
 
 	Sendo um dos ramos da Inteligência Artificial, a Computação Cognitiva é a capacidade de máquinas pensarem como humanos. Esse termo ganhou grande repercussão quando o Watson da IBM conseguiu vencer o programa de TV Jeopardy em 2011.
 
-	No entanto, um dos empecilhos para o avanço da tecnologia é a linguagem. Qualquer idioma é cheio de insinuações, idiossincrasias, expressões idiomáticas e ambiguidade, porém nós transmitimos muito significado nestes contextos “não exatos”, como 4x4 não necessariamente é 16, podendo ser também uma característica de carro.
+	No entanto, um dos empecilhos para o avanço da tecnologia é a linguagem. Qualquer idioma é cheio de insinuações, idiossincrasias, expressões idiomáticas e ambiguidades, porém é transmitido muito significado nestes contextos “não exatos”, como 4x4 não necessariamente é 16, podendo ser também uma característica de carro.
 
-	“IBM Watson é um sistema de NLP(Natural Language Processing) profundo. Ele alcança a precisão tentando analisar a maior quantia de contextos possíveis. Ele obtém este contexto tanto da passagem da pergunta quanto da base de conhecimento (chamada de corpus) que está disponível para ele para localizar respostas.” \cite{watson_manual} 
+	“IBM Watson é um sistema de NLP(Natural Language Processing) profundo. Ele alcança a precisão tentando analisar a maior quantia de contextos possíveis. Ele obtém este contexto tanto da passagem da pergunta quanto da base de conhecimento (chamada de corpus) que está disponível para ele localizar respostas.” \cite{watson_manual} 
 
 	\section{Processamento de Linguagem Natural (NLP)}
-	Uma linguagem natural é uma língua falada por pessoas, como Português, Inglês ou Turco. Isto é, uma oposição as linguagens artificias como Java, FORTRAN, ou código Morse. O NLP é uma parte importante de Inteligência artificial pois a capacidade de compreender a linguagem está intimamente ligada ao pensamento.
+	Uma linguagem natural é uma língua falada por pessoas, como Português, Inglês ou Turco. Isto é, uma oposição as linguagens artificias como Java, FORTRAN, ou código Morse. O NLP é uma parte importante de Inteligência Artificial pois a capacidade de compreender a linguagem está intimamente ligada ao pensamento.
 	
 		\subsection*{NLP e Computação}
 		A linguagem é uma das ferramentas centrais na vida social e professional das pessoas. Dentre outras coisas, esta age como um meio de transmissão de ideias, informação, opiniões e sentimentos, assim como para persuadir, perguntar por informações, transmitir ordens, entre outros. \cite{book_natural_lang}.
 		
-A Ciência da Computação começou a ganhar interesse por análise linguística assim que o próprio campo emergiu, principalmente no campo da Inteligência Artificial (AI). O teste de Turing, um dos primeiros testes desenvolvidos para julgar se uma máquina é inteligente ou não, estipula que para ser considerada inteligente, uma máquina deve possuir habilidades de conversação comparáveis as de um ser humano \cite{turing}.  Isso implica que uma máquina inteligente deve possuir habilidades de compreensão e produção, no sentido mais amplo desses termos \cite{book_natural_lang}. Ou seja, deve ser capaz de processar a linguagem de comunicação, aprender as informações contidas na mensagem, e ser capaz de transmitir o que foi aprendido. 	
+A Ciência da Computação começou a ganhar interesse por análise linguística assim que o próprio campo emergiu, principalmente no campo da Inteligência Artificial (AI). O teste de Turing, um dos primeiros testes desenvolvidos para julgar se uma máquina é inteligente ou não, estipula que para ser considerado inteligente, uma máquina deve possuir habilidades de conversação comparáveis as de um ser humano \cite{turing}.  Isso implica que uma máquina inteligente deve possuir habilidades de compreensão e produção, no sentido mais amplo desses termos \cite{book_natural_lang}. Ou seja, deve ser capaz de processar a linguagem de comunicação, aprender as informações contidas na mensagem, e ser capaz de transmitir o que foi aprendido. 	
 Em um contexto prático, a NLP é análoga ao ensino de uma língua para uma criança. Algumas das tarefas mais comuns, como a compreensão de palavras, frases e formação de sentenças gramaticalmente e estruturalmente corretas, são muito naturais para os seres humanos, mas não triviais para computadores. Na NLP, algumas dessas tarefas se traduzem em tokenização, fragmentação, parte de speech tagging, análise, tradução automática, reconhecimento de fala, análise de sentimento, e a maioria deles ainda são os desafios mais difíceis na área de computação\cite{book_natlang_python}.
 		
 	\subsection*{Definições importantes}
 	O Processamento de Linguagem Natural, ou NLP, é uma disciplina que se encontra na interseção de vários ramos da ciência, como Ciência da Computação, Inteligência Artificial e Psicologia Cognitiva. 
 	
-	Existem várias definições para a área ainda não completamente consolidadas. Mas como descrito por  \citeauthor{book_natural_lang}, por exemplo, temos que os termos linguística formal ou linguística computacional relacionam-se com modelos ou formalidades linguísticas desenvolvidos para implementação de TI. E os termos Tecnologia de Linguagem Humana ou Processamento de Linguagem Natural, por outro lado, referem-se a uma ferramenta de software de publicação equipada com recursos relacionados ao processamento de linguagem. Além disso, o processamento de fala designa uma gama de técnicas de processamento de sinais para o reconhecimento ou produção de unidades linguísticas, tais como fonemas, sílabas ou palavras. Exceto para a dimensão de lidar com o processamento de sinal, não há grande diferença entre o processamento de fala e NLP. Muitas técnicas que foram inicialmente aplicadas ao processamento da fala encontraram seu caminho em aplicações em NLP, um exemplo são os Modelos de Markov Ocultos (HMM). Finalmente, vale a pena mencionar o termo corpus linguistics  que se refere aos métodos de coleta, anotação e uso de corpus, tanto na pesquisa lingüística quanto na NLP. Os corpus têm um papel muito importante no processo de construção de um sistema de NLP, especialmente aqueles que adotam uma abordagem de machine learning.
+Existem várias definições para a área ainda não completamente consolidadas. Mas como descrito por  \citeauthor{book_natural_lang} (\citeyear{book_natural_lank}), por exemplo, tem-se que os termos linguística formal ou linguística computacional relacionam-se com modelos ou formalidades linguísticas desenvolvidos para implementação de TI. E os termos Tecnologia de Linguagem Humana ou Processamento de Linguagem Natural, por outro lado, referem-se a uma ferramenta de software de publicação equipada com recursos relacionados ao processamento de linguagem. Além disso, o processamento de fala designa uma gama de técnicas de processamento de sinais para o reconhecimento ou produção de unidades linguísticas, tais como fonemas, sílabas ou palavras. Exceto para a dimensão lidar com o processamento de sinal, não há grande diferença entre o processamento de fala e NLP. Muitas técnicas que foram inicialmente aplicadas ao processamento da fala encontraram seu caminho em aplicações em NLP, um exemplo são os Modelos de Markov Ocultos (HMM). Finalmente, vale a pena mencionar o termo \textit{corpus linguistics}  que se refere aos métodos de coleta, anotação e uso de corpus, tanto na pesquisa lingüística quanto na NLP. Os corpus têm um papel muito importante no processo de construção de um sistema de NLP, especialmente aqueles que adotam uma abordagem de machine learning.
 
-	\subsection*{NPL e AI}
-	Inteligencia Artificial (AI), é o estudo, design e criação de agentes inteligentes. Um agente inteligente é um sistema natural ou artificial com habilidades perceptuais que lhe permite atuar em um determinado ambiente para satisfazer seus desejos ou alcançar com êxito os objetivos\cite{norvig}. O trabalho em AI é geralmente classificado em várias subdisciplinas ou ramos, tais como representação do conhecimento, planejamento, percepção e aprendizagem. Todos esses ramos estão diretamente relacionados à NLP. Isso dá a relação entre AI e NLP uma dimensão muito importante. Muitos consideram a NLP como um ramo da AI, enquanto alguns preferem considerar a NLP uma disciplina independente. 
+	\subsection*{NPL e IA}
+	Inteligencia Artificial (AI) tem como uma de suas descrições o estudo, design e criação de agentes inteligentes. Um agente inteligente é um sistema natural ou artificial com habilidades perceptuais que lhe permite atuar em um determinado ambiente para satisfazer seus desejos ou alcançar com êxito os objetivos \cite{norvig}. O trabalho em AI é geralmente classificado em várias subdisciplinas ou ramos, tais como representação do conhecimento, planejamento, percepção e aprendizagem. Todos esses ramos estão diretamente relacionados à NLP. Isso dá a relação entre AI e NLP uma dimensão muito importante. Muitos consideram a NLP como um ramo da AI, enquanto alguns preferem considerar a NLP uma disciplina independente. 
 	
-	A representação do conhecimento é importante para um sistema NLP em dois níveis: Por um lado, pode fornecer um quadro para representar os conhecimentos linguísticos necessários ao bom funcionamento de todo o sistema NLP, mesmo que o tamanho e a quantidade das informações declarativas no sistema variem consideravelmente de acordo com a abordagem escolhida. Por outro lado, alguns sistemas NLP exigem informações extralinguísticas para tomar decisões, especialmente em casos ambíguos. Portanto, certos sistemas NLP são emparelhados com ontologias ou com bases de conhecimento sob a forma de uma rede semântica, um quadro ou gráficos conceituais \cite{book_natural_lang}.
+A representação do conhecimento é importante para um sistema NLP em dois níveis: Por um lado, pode fornecer um quadro para representar os conhecimentos linguísticos necessários ao bom funcionamento de todo o sistema NLP, mesmo que o tamanho e a quantidade das informações declarativas no sistema variem consideravelmente de acordo com a abordagem escolhida. Por outro lado, alguns sistemas NLP exigem informações extralinguísticas para tomar decisões, especialmente em casos ambíguos. Portanto, certos sistemas NLP são emparelhados com ontologias ou com bases de conhecimento sob a forma de uma rede semântica, um quadro ou gráficos conceituais \cite{book_natural_lang}.
 
 Em teoria, a percepção e a linguagem parecem distantes umas das outras, mas na realidade, não é esse o caso. Fazer a conexão entre percepção e reconhecimento semântico é crucial, não só para a compreensão, mas também para melhorar a qualidade e interpretação da mensagem contida no texto. 
 
@@ -330,8 +332,8 @@ Em teoria, a percepção e a linguagem parecem distantes umas das outras, mas na
 	Assim como na análise linguística, a relação entre a ciência cognitiva e NLP vai em duas direções \cite{book_natural_lang}. Por um lado, os modelos cognitivos podem agir para apoiar uma fonte de inspiração para um sistema de NLP. Por outro lado, a construção de um sistema NLP de acordo com um modelo cognitivo pode ser uma forma de testar este modelo. O benefício prático de uma abordagem que imita o processo cognitivo permanece uma questão aberta porque em muitos campos, construir um sistema que é inspirado por modelos biológicos não se revela produtivo. Deve-se notar também que certas tarefas realizadas por sistemas NLP não têm paralelo em seres humanos, como a busca de informações através de mecanismos de busca ou a busca por grandes volumes de dados de texto para extrair informações úteis. A NLP pode ser vista como uma extensão das capacidades cognitivas humanas como parte de um sistema de apoio à decisão, por exemplo. Outros sistemas de NLP são muito próximos de tarefas humanas, como compreensão e produção.
 	
 	\subsection*{NLP e Data Science}	
-	Com a disponibilidade de mais e mais dados digitais, surgiu recentemente uma nova disciplina: a Data Science (ciência dos dados). Trata-se de extrair, quantificar e visualizar o conhecimento, principalmente a partir de dados textuais e falados \cite{book_natural_lang}. Grande parte da informação encontra-se não estruturada, pois foi especificamente criada para interpretação humana, sendo, dessa forma, de difícil processamento por máquinas. Dessa forma, a NLP tem o papel de extrair e processar as informações para torna-las acessíveis e interpretáveis de forma automatizada. Atualmente, dados os inúmeros usos industriais para esse tipo de conhecimento, especialmente nos campos de marketing e tomada de decisões, a ciência dos dados se tornou extremamente importante.
-
+	Com a disponibilidade de mais e mais dados digitais, surgiu recentemente uma nova disciplina: a Data Science (ciência dos dados). Trata-se de extrair, quantificar e visualizar o conhecimento, principalmente a partir de dados textuais e falados \cite{book_natural_lang}. 
+	Grande parte da informação encontra-se não estruturada, pois foi especificamente criada para interpretação humana, sendo, dessa forma, de difícil processamento por máquinas. A NLP tem o papel de extrair e processar as informações para torna-las acessíveis e interpretáveis de forma automatizada. Atualmente, dados os inúmeros usos industriais para esse tipo de conhecimento, especialmente nos campos de marketing e tomada de decisões, esta área de estudo se tornou extremamente importante.
 
 	\subsection*{Exemplo de Aplicações de NPL na atualidade}
 	Atualmente são gerados petabytes de Weblogs, tweets, feeds do Facebook, bate-papos, e-mails e comentários. As empresas estão coletando todos esses tipos diferentes de dados para uma melhor segmentação de clientes e insights significativos. Para processar todas essas fontes de dados não estruturadas é necessário entender e utilizar NPL.
@@ -360,20 +362,15 @@ Para alcançar algumas das aplicações acima e outros pré-processamentos bási
 	\end{itemize}
 	
 	\section{Análise de Sentimentos}
-		A análise de sentimentos, também chamada de Opinion Mining, tem sido uma das áreas de pesquisa mais ativas no processamento de linguagem natural desde o início de 2000\cite{bliu_2012}. O objetivo da análise de sentimento é definir ferramentas automáticas capazes de extrair informações subjetivas de textos em linguagem natural, ou seja, opiniões e sentimentos, de modo a criar conhecimento estruturado e acessível para ser usado por um sistema de apoio à decisão ou um decisor.
-
-Análise de sentimento é um campo emergente de análise preocupado com a aplicação de métodos computacionais para o tratamento da subjetividade no texto, com uma série de aplicações em áreas como sistemas de recomendação, publicidade contextual e business intelligence \cite{book_discover_practices}.
+		A análise de sentimentos, também chamada de Opinion Mining, tem sido uma das áreas de pesquisa mais ativas no processamento de linguagem natural desde o início de 2000 \cite{bliu_2012}. O objetivo da análise de sentimento é definir ferramentas automáticas capazes de extrair informações subjetivas de textos em linguagem natural, ou seja, opiniões e sentimentos, de modo a criar conhecimento estruturado e acessível para ser usado por um sistema de apoio à decisão.É um campo emergente de análise preocupado com a aplicação de métodos computacionais para o tratamento da subjetividade no texto, com uma série de aplicações em áreas como sistemas de recomendação, publicidade contextual e business intelligence \cite{book_discover_practices}.
 
 	\subsection*{Definição}
 	
-	A análise de sentimentos ou geração de sentimentos é uma das tarefas da NLP. Ela é definida como o processo de determinar os sentimentos por trás de uma sequência de caracteres\cite{book_natlang_python}. Trata-se de uma tarefa subjetiva, pois fornece as informações sobre o texto que está sendo expresso. Pode ser definida como um problema de classificação em que a classificação pode ser de dois tipos - categorização binária (positiva ou negativa) ou categorização multi-classe (positiva, negativa ou neutra). 
+	A análise de sentimentos ou geração de sentimentos é uma das tarefas da NLP. Ela é definida como o processo de determinar os sentimentos por trás de uma sequência de caracteres \cite{book_natlang_python}. Trata-se de uma tarefa subjetiva, pois fornece as informações sobre o texto que está sendo expresso. Pode ser definida como um problema de classificação em que a classificação pode ser de dois tipos - categorização binária (positiva ou negativa) ou categorização multi-classe (positiva, negativa ou neutra). 
 	
-Quando combinamos a análise de sentimentos com a mineração de tópicos, ela é referida como análise de sentimento de tópico. A análise de sentimento pode ser realizada usando um lexicon. O lexicon pode ser específico do domínio ou de natureza geral e podem conter uma lista de expressões positivas, expressões negativas, expressões neutras e palavras de parada. Quando uma sentença de teste aparece, então uma simples operação de consulta pode ser realizada através deste léxico \cite{book_natlang_python}. Um exemplo de Lexicon de analises de sentimentos é o SentiSense, que compreende 2.190 sínteses e 5.496 palavras baseadas em 14 categorias emocionais\cite{carrilho}.
+Quando combina-se a análise de sentimentos com a mineração de tópicos, ela é referida como análise de sentimento de tópico. A análise de sentimento pode ser realizada usando um lexicon. O lexicon pode ser específico do domínio ou de natureza geral e podem conter uma lista de expressões positivas, expressões negativas, expressões neutras e palavras de parada. Quando uma sentença de teste aparece, então uma simples operação de consulta pode ser realizada através deste léxico \cite{book_natlang_python}. Um exemplo de Lexicon de analises de sentimentos é o SentiSense, que compreende 2.190 sínteses e 5.496 palavras baseadas em 14 categorias emocionais \cite{carrilho}.
 
-Mais formalmente, como definido em \cite{bliu_2012}, uma opinião é uma quíntupla 
-
-$\left ( e_{i}, a_{ij}, s_{ijkl},h_{k},t_{l} \right )$
-
+Mais formalmente, como definido em \cite{bliu_2012}, uma opinião é uma quíntupla \[ \left ( e_{i}, a_{ij}, s_{ijkl},h_{k},t_{l} \right ) \]
 
 
 Em que $e_{i}$ é o nome de uma entidade, $a_{ij}$ é um aspecto de $e_{i}$, $s_{ikjl}$ é o sentimento no aspecto $a_{ij}$  da entidade $e_{i}$ , $h_{k}$ denota o detentor da opinião, e $t_{l}$  é o momento em que a opinião é expressa por $h_{k}$ .
@@ -382,9 +379,9 @@ O sentimento $s_{ikjl}$ pode ser positivo, negativo ou neutro, ou expresso com d
 
 	\subsection*{Análises de Sentimentos em Mídias sociais}
 	
-	A grande difusão das redes sociais e seu papel na sociedade moderna estão entre as novidades mais interessantes dos últimos anos, capturando o interesse de pesquisadores, jornalistas, empresas e governos. A densa interconexão que surge frequentemente entre os usuários gera um espaço de discussão capaz de motivar e envolver os indivíduos, vinculando as pessoas com objetivos comuns e facilitando diversas formas de socialização. Isto dá origem ao chamado "individualismo na rede": em vez de sempre contar com uma única comunidade de referência, graças às redes sociais torna-se possível estimular-se movendo-se entre mais pessoas e recursos, muitas vezes heterogêneos. As redes sociais estão, portanto, criando uma revolução digital. O aspecto mais interessante desta mudança não está unicamente relacionado com a possibilidade de promover a participação política e o ativismo. Esta revolução social influencia a vida de cada indivíduo. É a liberdade de nos expressarmos, de ter um espaço próprio onde possamos ser nós mesmos, ou de ser quem gostaríamos de ser, com poucos limites e barreiras \cite{book_sentiment_social}.
+A grande difusão das redes sociais e seu papel na sociedade moderna estão entre as novidades mais interessantes dos últimos anos, capturando o interesse de pesquisadores, jornalistas, empresas e governos. A densa interconexão que surge frequentemente entre os usuários gera um espaço de discussão capaz de motivar e envolver os indivíduos, vinculando as pessoas com objetivos comuns e facilitando diversas formas de socialização. Isto dá origem ao chamado "individualismo na rede": em vez de sempre contar com uma única comunidade de referência, graças às redes sociais torna-se possível estimular-se movendo-se entre mais pessoas e recursos, muitas vezes heterogêneos. As redes sociais estão, portanto, criando uma revolução digital. O aspecto mais interessante desta mudança não está unicamente relacionado com a possibilidade de promover a participação política e o ativismo. Esta revolução social influencia a vida de cada indivíduo. É a liberdade de nos expressarmos, de ter um espaço próprio onde possamos ser nós mesmos, ou de ser quem gostaríamos de ser, com poucos limites e barreiras \cite{book_sentiment_social}.
 
-	Neste contexto, a análise de sentimentos tenta tornar evidente o que as pessoas pensam fornecendo representações, modelos e algoritmos capazes de passar de "texto simples não estruturado" para "visão complexa". \cite{book_sentiment_social}.
+Neste contexto, a análise de sentimentos tenta tornar evidente o que as pessoas pensam fornecendo representações, modelos e algoritmos capazes de passar de "texto simples não estruturado" para "visão complexa". \cite{book_sentiment_social}.
 
 	\subsection*{Aplicações de Opinion Mining}
 	
@@ -403,35 +400,99 @@ O sentimento $s_{ikjl}$ pode ser positivo, negativo ou neutro, ou expresso com d
 
 Atualmente, o Google já não publica estimativas atuais de gripe e dengue com base em padrões de busca, mas continua a oferecer estimativas históricas produzidas pelo Google Flu Trends e Google Dengue Trends. Isto, principalmente devido à falta de acuracidade dos modelos de predição, evidenciados quando o algoritmo subestimou a necessidade de vacinas nos anos de 2011-2013 nos Estados Unidos  \cite{article_google_flu}.
 
-Outras empresas também estão usando feeds de mídia social, como Facebook, Twitter e seus equivalentes, para entender as tendências em tudo, desde previsões de tendências de consumo quanto em monitoramento de tragédias. A tecnologia AI está sendo usada de muitas maneiras por essas empresas para extrair e entender os dados. Por exemplo, algumas empresas usam técnicas de NLP para interpretar o conteúdo de mídia social, enquanto outras empresas estão explorando como a análise de sentimento das mídias sociais pode ser usada para entender o que as pessoas estão postando. Os resultados atuais indicam que o uso de NLP juntamente com análise de sentimento ajuda a diferenciar entre "eu me sinto bem" e "eu me sinto mal", que se torna um grande diferencial no rastreamento de tendências de saúde\cite{book_social_machines}.
+Outras empresas também estão usando feeds de mídia social, como Facebook, Twitter e seus equivalentes, para entender as tendências em tudo, desde previsões de tendências de consumo quanto em monitoramento de tragédias. A tecnologia AI está sendo usada de muitas maneiras por essas empresas para extrair e entender os dados. Por exemplo, algumas empresas usam técnicas de NLP para interpretar o conteúdo de mídia social, enquanto outras empresas estão explorando como a análise de sentimento das mídias sociais pode ser usada para entender o que as pessoas estão postando. Os resultados atuais indicam que o uso de NLP juntamente com análise de sentimento ajuda a diferenciar entre "eu me sinto bem" e "eu me sinto mal", que se torna um grande diferencial no rastreamento de tendências de saúde \cite{book_social_machines}.
 	
 	\subsection*{Desafios}
-Infelizmente, analisar os feeds de mídia social é muito mais difícil do que parece. Suponha que alguém foi para tweet "Meu médico me disse para tomar aspirina. Como eu me sinto melhor \#not ". Embora o hashtag \#not deixa claro que "me sinto melhor " é sarcástico, se removemos o hashtag, não sabemos se o escritor está sendo sério ou sarcástico.
+Infelizmente, analisar os feeds de mídia social é muito mais difícil do que parece. Suponha que alguém escreveu um tweet "Meu médico me disse para tomar aspirina. Como eu me sinto melhor \#not ". Embora o hashtag \#not deixa claro que "me sinto melhor " é sarcástico, se removemos o hashtag, não sabemos se o escritor está sendo sério ou sarcástico.
 
 Os sistemas atuais resolvem este problema através do acoplamento de técnicas de Machine Learning com técnicas de análise de linguagem. No entanto, a fim de serem eficientes, estas técnicas exigem um grande número de exemplos para ser "marcado" por pessoas, o que significa que as pessoas explicitamente precisam indicar recursos como sentimento e sarcasmo. Uma vez que o computador tem essas informações adicionais anotadas, resultados de pesquisas atuais indicam que o computador pode, então, mais precisamente correlacionar grandes conjuntos de dados para descobrir quais palavras prever, quais recursos e usar os resultados para analisar novos conjuntos de dados \cite{book_social_machines}.
 
+Embora a pesquisa em PNL tenha feito grandes progressos na produção de comportamentos artificialmente inteligentes, por exemplo, Google, IBM Watson e Apple Siri, nenhuma dessas estruturas NLP por si só realmente entendem o que eles estão fazendo - tornando-os não muito diferentes de um papagaio que aprende a repetir palavras sem nenhuma compreensão clara do que está dizendo. Hoje, mesmo as tecnologias de NLP mais populares visualizam a análise de texto como uma tarefa de correspondência de palavras ou padrões. Tentar verificar o significado de um pedaço de texto, processando-o no nível de palavra, no entanto, não é diferente de tentar entender uma imagem, analisando-a em nível de pixel \cite{book_Cambria2015}. 
+
+Basear-se em palavras-chave arbitrárias, pontuação e frequências de co-ocorrência de palavras funciona bem para textos estruturados, mas uma grande quantidade de conteúdo gerado pelo usuário e o surgimento de fenômenos enganosos, como spam na web e de opinião, estão causando que os algoritmos de NLP padrão sejam cada vez menos eficientes. Para extrair e manipular adequadamente significados de texto, um sistema NLP deve ter acesso a uma quantidade significativa de conhecimento sobre o mundo e o domínio do discurso.
+Para este fim, os sistemas de PNL irão gradualmente parar de confiar muito em técnicas baseadas em palavras enquanto começam a explorar a semântica de forma mais consistente e, portanto, dão um salto da Curva de sintaxe para a curva de semântica (Figura \ref{NLPCurve}).
+
+\begin{figure}[!h]
+\centering
+\includegraphics{NLPCurve}
+\caption{Evolução prevista da pesquisa da PNL através de três eras ou curvas diferentes \cite{book_Cambria2015}}
+\label{NLPCurve}
+\end{figure}
+
+\section{Sentic Computing}
+
+A Sentic Computing (SC), cujo termo deriva do "sentire" latino (raiz das palavras como sentimento e sensibilidade) e "sensus" (como em senso comum),  é uma abordagem multidisciplinar para a compreensão da linguagem natural que visa preencher a distância entre o processamento estatístico de linguagem natural (NLP) e muitas outras disciplinas que são necessárias para a compreensão da linguagem humana, como linguística, raciocínio de senso comum, computação afetiva e entre outros \cite{book_Cambria2015}. Em particular, a SC utiliza de técnicas AI e SemanticWeb, para representação e inferência do conhecimento; Matemática, para realizar tarefas como mineração de gráficos e redução de multidimensionalidade; Linguística, para análise de discurso e pragmática; Psicologia, para modelagem cognitiva e afetiva; Sociologia, para a compreensão da dinâmica das redes sociais e da influência social; Finalmente ética, para compreender questões relacionadas com a natureza da mente e a criação de máquinas emocionais \cite{inBook_Bisio2017}.
+Na SC a análise da linguagem natural baseia-se em ferramentas de raciocínio de senso comum, que permitem a análise de texto, não apenas em nível de documento, página ou parágrafo, mas também em sentença, cláusula e nível de conceito. A SC é diferente dos métodos comuns para a detecção de polaridade, pois requer uma abordagem multifacetada para o problema da análise do sentimento.
+
+Algumas das técnicas mais populares para Opinion Mining centram-se em frequências de co-ocorrência de palavras e polaridade estatística associadas a palavras. Essas abordagens podem inferir corretamente a polaridade de textos não ambíguos com estrutura de frases simples e em um domínio específico (ou seja, o qual o classificador estatístico foi treinado). Uma das principais características da linguagem natural, no entanto, é a ambiguidade. Uma palavra como "grande" não possui nenhuma polaridade por si só, pois pode ser negativa, por exemplo, no caso de um "problema grande", ou positivo, por exemplo, na "grande jantar", mas a maioria dos métodos estatísticos lhe atribuem uma polaridade positiva, pois o contexto em que aparece muitas vezes é positivo.
+Trabalhando no nível do conceito, a SC supera isso e muitos outros problemas comuns de framework de opinion-mining que dependem fortemente das propriedades estatísticas das palavras. 
+
+A detecção de sentimentos é, no entanto, um problema muito desafiador porque as emoções são constructos (ou seja, quantidades conceituais que não podem ser diretamente medidas) com limites distorcidos e variações substanciais da diferença na expressão e experiência individuais \cite{inBook_Bisio2016} . Para superar esse obstáculo, a SC baseia-se em uma modelo de categorização afetiva inspirada biologicamente e motivada psicologicamente que podem potencialmente descrever toda a gama de fatores emocionais e experiências em termos de quatro dimensões independentes, mas concomitantes, cujas diferentes níveis de ativação compõem o estado emocional total da mente \cite{book_Cambria2015}. Esse modelo é representado como uma ampulheta demonstrado na figura \ref{SenticHourGlass}.
+
+
+\begin{figure}[!h]
+\centering
+\includegraphics{SenticHourGlass}
+\caption {O modelo 3D e a rede do "Hourglass of Emotions". Uma vez que os estados afetivos vão de fortemente positivo para nulo para fortemente negativo, o modelo assume uma forma de ampulheta. \cite{book_Cambria2015}}
+\label{SenticHourGlass}
+\end{figure}
+
+
+
 	\section{Twitter}
 	
-	Twitter é uma rede social onde milhões de curtas mensagens de 140 caracteres são postadas diariamente (microblogging). Esta rede tem um crescente volume de dados graças um grande número de usuários ativos.\cite{conference_twitter_alg}
+	Twitter é uma rede social onde milhões de curtas mensagens de 140 caracteres são postadas diariamente (microblogging). Esta rede tem um crescente volume de dados graças um grande número de usuários ativos \cite{conference_twitter_alg}.
 
-	Por ser uma ferramenta de fácil e rápida utilização, usuários utilizam a rede para comentar situações cotidianas e/ou eventos em tempo real (shows, esportes, premiações), criando o efeito de segunda tela (Tela 1: Evento ou TV, Tela 2: Smartphone conectado em redes sociais focados no assunto em si), o que tornou a rede rica em informações abrangendo diversas áreas e diversos públicos.\cite{conference_twitter_sports}
+	Por ser uma ferramenta de fácil e rápida utilização, usuários utilizam a rede para comentar situações cotidianas e/ou eventos em tempo real (shows, esportes, premiações), criando o efeito de segunda tela (Tela 1: Evento ou TV, Tela 2: Smartphone conectado em redes sociais focados no assunto em si), o que tornou a rede rica em informações abrangendo diversas áreas e diversos públicos \cite{conference_twitter_sports}.
 
 	A extração de dados dos diversos “tweets” se mostrou extremamente útil ultimamente, possibilitando saber qual é a popularidade de tópicos, e qual foi a reação dos usuários neste tópico,  ainda com a possibilidade de mapear qual é o público alvo (idade, sexo, localização, etc) pelo cadastro que é efetuado no ato de criação de um perfil na rede.
 
-	Segundo o Twitter, em junho de 2016, ele contava com 313 Milhões de usuários \cite{twitter_company} postando em média 500 milhões de tweets por dia. \cite{TwitterU87:online}
+	Segundo o Twitter, em junho de 2016, ele contava com 313 Milhões de usuários \cite{twitter_company} postando em média 500 milhões de tweets por dia \cite{TwitterU87:online}.
 	
 	\section{ICONIX}	
 	
-	O ICONIX é um método de desenvolvimento de software minimalista, focado em atuar na área entre a elaboração dos casos de uso e o do código. \cite{iconix} A ênfase do método está em desenvolver uma boa análise e um bom design a partir de um processo incremental, no qual os diagramas de caso de uso são a base para cada iteração. As fases do desenvolvimento delimitadas pelo ICONIX são: Requisitos, Análise e Design Preliminares, Design Detalhado e Implementação.
+	O ICONIX é um método de desenvolvimento de software minimalista, focado em atuar na área entre a elaboração dos casos de uso e o do código \cite{iconix}. A ênfase do método está em desenvolver uma boa análise e um bom design a partir de um processo incremental, no qual os diagramas de caso de uso são a base para cada iteração. As fases do desenvolvimento delimitadas pelo ICONIX são: Requisitos, Análise e Design Preliminares, Design Detalhado e Implementação.
 	
-	Na fase de Requisitos, os requisitos funcionais (que definem quais as capacidades do sistema) pré-elaborados são analisados com o intuito de se realizar um modelo de domínio, um dicionário dos termos e objetos reais do seu projeto e de como eles se relacionam superficialmente. A partir do modelo de domínio, estabelecem-se os requisitos comportamentais, que detalham as ações do usuário e como o sistema deve responder a elas. \cite{iconix} Storyboads da GUI são uma ferramenta importante na idenficação destes requisitos, enquanto diagramas de caso de uso são utilizados para documentar cada cenário encontrado.
+	Na fase de Requisitos, os requisitos funcionais (que definem quais as capacidades do sistema) pré-elaborados são analisados com o intuito de realizar um modelo de domínio, um dicionário dos termos e objetos reais do seu projeto e de como eles se relacionam superficialmente. A partir do modelo de domínio, estabelecem-se os requisitos comportamentais, que detalham as ações do usuário e como o sistema deve responder a elas. \cite{iconix} Storyboads da GUI são uma ferramenta importante na idenficação destes requisitos, enquanto diagramas de caso de uso são utilizados para documentar cada cenário encontrado.
 	
 	Baseadas nos casos de uso encontrados, as demais fases se repetem a cada iteração, trabalhando alguns poucos casos de uso por vez. Durante a Análise e Design Preliminares, os casos de uso são refinados através de diagramas de robustez, ajudando a complementar o modelo de domínio com a identifição de classes antes ignoradas e dos atributos de cada classe. No Design Detalhado, cada caso de uso gera um diagrama de sequência de mensagens que descreve todas as chamadas de método que ocorrem entre os objetos naquele cenário. Com base nestes diagramas, o modelo de domínio é atualizado com os métodos descritos e torna-se um diagrama de classes.
 	
 	Quando a fase de Design Detalhado acaba, a modelagem realizada até o momento deve ser capaz de descrever com clareza o código a ser escrito. Inicia-se então a fase de Implementação. As classes descritas no diagrama de classes são geradas, seus métodos são implementados e testes unitários são escritos garantir o funcionamento do sistema. Essencialmente, você deve testar todas as funções identificadas durante a análise de robustez. \cite{iconix} Também são realizados testes de integração e aceitação. Por último, revisa-se o código e atualiza-se o modelo para se preparar para a próxima iteração.  
 	
-	Entre cada uma das fases, atingi-se uma milestone que consiste numa revisão crítica do que foi elaborado até o momento para assegurar que os requisitos estão sendo atendidos corretamente. A elaboração dos casos de uso, diagramas de robustez e de sequência de mensagem são a parte chamada de dinâmica no ICONIX e os diagramas de domínio e de classes são a parte estática. 
+	Entre cada uma das fases, atingi-se uma milestone que consiste numa revisão crítica do que foi elaborado até o momento para assegurar que os requisitos estão sendo atendidos corretamente. A elaboração dos casos de uso, diagramas de robustez e de sequência de mensagem são a parte chamada de dinâmica no ICONIX e os diagramas de domínio e de classes são a parte estática. A figura \ref{iconix_diagram} apresenta uma visão geral do processo.
 	
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.5]{iconix}
+\caption{Visão Geral do Processo ICONIX \cite{iconix}}
+\label{iconix_diagram}
+\end{figure}
+
+
+\section{Trabalhos relacionados}
+
+Emular o cérebro humano é um dos principais desafios da inteligência computacional, que envolve muitos problemas-chave da inteligência artificial, incluindo a compreensão da linguagem humana, raciocínio e emoções. A crescente disponibilidade de dados sociais é extremamente benéfica para tarefas como branding, posicionamento de produtos, gerenciamento de reputação corporativa e marketing de mídia social. Identificar informações úteis a partir desta enorme quantidade de dados não estruturados, no entanto, continua a ser um desafio aberto.
+
+Um dos métodos convencionais de predição, é a utilização da frequência de repetição de palavras chave, para identificar uma tendência. Como descrito no Trabalho de \citeauthor{article_Tsugawa2013} (\citeyear{article_Tsugawa2013}) foi investigado a eficácia dos registros das atividades no Twitter, correlacionando a frequência do uso de certas palavras para detectar a tendência depressiva dos usuários. Para isso, foi feito um levantamento utilizando 50 homens e mulheres japoneses com aproximadamente 20 anos usando o teste de Zung - Zung’s Self-rating Depression Scale (SDS). Este teste é um método popular de análise de tendência depressiva, que se baseia em um questionário de 20 perguntas, respondidas pelo próprio usuário, em que cada questão é pontuada de 1 a 4, e o somatório constitui a pontuação de Zung. Quanto maior a pontuação, maior sua a tendência depressiva. Neste estudo, foram realizadas análises de regressão múltipla para estimar as pontuações de Zung dos participantes a partir de freqüências de palavras usadas em suas mensagens de tweet. Os resultados experimentais mostraram que existe uma correlação positiva média (coeficiente de correlação r aproximadamente 0,45) entre pontuação de Zung calculada pelo questionário e a pontuação estimada obtida a partir do modelo de regressão. Um dos resultados interessantes deste trabalho, foi identificar que, o uso da análise de frequência de palavras como variáveis independentes não é adequado, pois quando analisadas em conjuntos de até 5 palavras chave, foi encontrado maior coeficiente de correlação.
+
+No entanto, basear-se em palavras-chave arbitrárias, em as frequências de pontuação e ocorrência de palavras pode não ser tão eficiente levando em consideração a explosão de conteúdo da Web e o surto de fenômenos enganosos como o Web trolling e o spam, que diminuem a eficiência desses métodos. Para efetivamente extrair e manipular dinamicamente significados de textos não estruturados, um sistema de NLP verdadeiramente inteligente deve considerar dados ambíguos e ter acesso a uma quantidade significativa de conhecimento sobre os possíveis ruídos dos dados e o domínio do discurso variando no tempo.
+
+No trabalho de \citeauthor{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) é descrito um novo paradigma que explora as relações entre os conceitos e padrões linguísticos em um texto para revelar o fluxo de sentimento de conceito a conceito. A principal novidade do artigo consiste em um algoritmo que atribui polaridade contextual a conceitos nos textos e flui essa polaridade através de arcos de dependência para atribuir um rótulo de polaridade final a cada sentença. Este algoritmo extrai o sentimento de cada palavra diretamente de recursos lexicais já existentes como SenticNet  \cite{Cambria2014}. Em seguida, o algoritmo aplica deslocadores de valor e combina o sentimento de palavras individuais da frase de forma semelhante aos circuitos eletrônicos, onde o sinal das fontes pode sofrer amplificação, inversão e enfraquecimento, combinando-os até obter o resultado final do balanço desses valores. Além disso, o método proposto envolve uma técnica de back-up machine-learning, que funciona nos casos em que não é encontrada informação suficiente nos recursos lexical existentes.
+
+ 	O algoritmo descrito por \citeauthor{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) utiliza o conceito de sentic pattern ou padrão de sentimento, foi definido no trabalho do mesmo grupo de pesquisa \cite{article_Poria2014}, e pode ser ilustrado na figura abaixo.
+
+
+\begin{figure}[!htb]
+\centering
+\includegraphics{senticPatternsCircuit}
+\caption{A ideia principal por trás do sentic patterns: a estrutura de uma sentença é como um circuito eletrônico onde os operadores lógicos canalizam os fluxos de dados de sentimento para obter a polaridade total da sentença. \cite{article_sentiment_analysis}}
+\label{senticPatternsCircuit}
+\end{figure}
+
+O procedimento pode ser compreendido como um algoritmo de coloração de árvores que opera nos nós e arcos da árvore de dependência sintática. O algoritmo determina diretamente a polaridade para as palavras ou relações - conceitos, ou expressões multi-palavras – pertencentes nos recursos lexicais existentes. Em seguida, ele gradualmente estende os rótulos para outros arcos e nós, com as transformações necessárias determinadas por regras de sentic patterns, até obter o rótulo final para o elemento raiz, que é a saída desejada. O grupo denominou a extensão da polaridade como o fluxo do sentimento.
+
+Para complementar a análise quando os dados não estavam mapeados nos Lexicons utilizados, o \citeauthor{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) utilizaram uma nova técnica de inteligência computacional chamada máquina de aprendizagem extrema (Extreme Learning Machine - ELM), que é um tipo redes de feedforward de camada oculta desenvolvido desenvolvida recentemente, com uma camada oculta que não requer ajuste. O ELM superou os métodos de última geração, como o SVM (Support Vector Machines), tanto em termos de precisão como em tempo de treinamento. Nas experiências, Poria et al. (2015) obteu uma precisão global de 71,32\% no conjunto de dados final usando ELM e precisão de 68,35\% usando SVM. Esses dados foram obtidos a partir de análises em três tipos de conjuntos de dados diferentes.
+
 	%% Quero falar sobre TDD %%
 	 
 	
