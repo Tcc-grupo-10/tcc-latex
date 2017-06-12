@@ -198,7 +198,7 @@
 	
 	O objetivo deste trabalho é  compreender e aplicar técnicas de inteligência computacional e processamento linguístico para desenvolver um algoritmo capaz de entender e identificar sentimentos associados a textos de mídias sociais dentro de uma determinada temática. 
 	
-	 Serão pré-determinados “grupos de sentimentos”, nos quais as postagens serão enquadradas a partir de indicadores linguísticos a serem estudados ao longo da pesquisa. A expectativa é que o sistema seja capaz de enquadrar os textos em sentimentos obtendo um resultado similar ao que um especialista conseguiria realizando o processo manualmente.
+	 Serão pré-determinados ``grupos de sentimentos'', nos quais as postagens serão enquadradas a partir de indicadores linguísticos a serem estudados ao longo da pesquisa. A expectativa é que o sistema seja capaz de enquadrar os textos em sentimentos obtendo um resultado similar ao que um especialista conseguiria realizando o processo manualmente.
 	
 	Ao final do projeto, será realizada uma comparação dos resultados obtidos pelo algoritmo desenvolvido durante o trabalho com um algoritmo aleatório e com os resultados obtidos por ferramentas de computação cognitiva populares no cenário atual.	
 	
@@ -299,12 +299,12 @@
 	Em relação à fundamentação teórica, é cabível abordar de maneira mais específica os conceitos de Inteligência Artifical, Computação Cognitiva, Análise de Sentimentos, Redes Sociais e o método de desenvolvimento de software orientado a objetos ICONIX.
 
 	\subsection{Inteligência Artifical}	
-	\begin{citacao} “Atualmente, a IA abrange uma enorme variedade de subcampos, desde áreas de uso geral como aprendizado e percepção, até tarefas específicas como jogos de xadrez, demonstração de teoremas matemáticos, criação de poesia e diagnóstico de doenças. A IA sistematiza e automatiza tarefas intelectuais e, portanto, é potencialmente relevante para qualquer esfera de atividade intelectual humana. Nesse sentido, ela é verdadeiramente um campo universal.” \cite{norvig}
+	\begin{citacao} ``Atualmente, a IA abrange uma enorme variedade de subcampos, desde áreas de uso geral como aprendizado e percepção, até tarefas específicas como jogos de xadrez, demonstração de teoremas matemáticos, criação de poesia e diagnóstico de doenças. A IA sistematiza e automatiza tarefas intelectuais e, portanto, é potencialmente relevante para qualquer esfera de atividade intelectual humana. Nesse sentido, ela é verdadeiramente um campo universal.'' \cite{norvig}
 	\end{citacao}
 
-	De acordo com \citeauthor{norvig} (\citeyear{norvig}), “Se pretendemos dizer que um dado programa pensa como um ser humano, temos de ter alguma forma de determinar como os seres humanos pensam.”
+	De acordo com \citeauthor{norvig} (\citeyear{norvig}), ``Se pretendemos dizer que um dado programa pensa como um ser humano, temos de ter alguma forma de determinar como os seres humanos pensam.''
 	
-	Existem diversas definições respondendo "O que é Inteligência Artificial?", porém, cada abordagem é focada em um tipo de comportamento ou método de raciocínio que a IA pode ter. Segundo \citeauthor{norvig} (\citeyear{norvig}), estas definições podem ser divididas em 4 categorias: Pensando Humanamente, Pensando Racionalmente, Agindo Humanamente e Agindo Racionalmente. É possível ver alguns exemplos na tabela \ref{Quatro Categorias}
+	Existem diversas definições respondendo ``O que é Inteligência Artificial?'', porém, cada abordagem é focada em um tipo de comportamento ou método de raciocínio que a IA pode ter. Segundo \citeauthor{norvig} (\citeyear{norvig}), estas definições podem ser divididas em 4 categorias: Pensando Humanamente, Pensando Racionalmente, Agindo Humanamente e Agindo Racionalmente. É possível ver alguns exemplos na tabela \ref{Quatro Categorias}
 	
 
 \begin{table}[!h]
@@ -318,17 +318,17 @@
 \multicolumn{2}{p{7.5cm}|}{\textbf{Pensando Racionalmente}} \\
 
 \multicolumn{1}{p{7.5cm}|}{
-"O novo e emocionante esforço para fazer os computadores pensarem ... máquinas com mentes, no total e literal sentido."  \cite{haugeland}
+``O novo e emocionante esforço para fazer os computadores pensarem ... máquinas com mentes, no total e literal sentido.'' \cite{haugeland}
 
-"[A automação das] atividades que associamos ao pensamento humano, atividades como a tomada de decisões, a resolução de problemas, a aprendizagem..."  \cite{bellman}
+``[A automação das] atividades que associamos ao pensamento humano, atividades como a tomada de decisões, a resolução de problemas, a aprendizagem...''  \cite{bellman}
 
 } 
 & 
 \multicolumn{2}{p{7.5cm}|}{
 
-"O estudo das faculdades mentais através do uso de modelos computacionais."  \cite{charniak_mcdermott}
+``O estudo das faculdades mentais através do uso de modelos computacionais.''  \cite{charniak_mcdermott}
 
-"O estudo das computações que tornam possível perceber, raciocinar e agir."  \cite{winston}
+``O estudo das computações que tornam possível perceber, raciocinar e agir.''  \cite{winston}
 
 } \\
 
@@ -341,17 +341,17 @@
 
 \multicolumn{1}{p{7.5cm}|}{
 
-"A arte de criar máquinas que executam funções que exigem inteligência quando realizadas por pessoas."  \cite{kurzweil}
+``A arte de criar máquinas que executam funções que exigem inteligência quando realizadas por pessoas.''  \cite{kurzweil}
 
-"O estudo de como fazer computadores fazer coisas em que, no momento, as pessoas são melhores."  \cite{rich_knight}
+``O estudo de como fazer computadores fazer coisas em que, no momento, as pessoas são melhores.''  \cite{rich_knight}
 
 } 
 & 
 \multicolumn{2}{p{7.5cm}|}{
 
-"Inteligência computacional é o estudo do design de \textbf{agentes} inteligentes."  \cite{poole}
+``Inteligência computacional é o estudo do design de \textbf{agentes} inteligentes.''  \cite{poole}
 
-"Inteligência artificial ... está preocupada com o comportamento inteligente em artefatos."  \cite{nilsson}
+``Inteligência artificial ... está preocupada com o comportamento inteligente em artefatos.''  \cite{nilsson}
 
 } \\ \hline
 
@@ -361,7 +361,7 @@
 \label{Quatro Categorias}
 \end{table}
 	
-	As definições da esquerda medem o sucesso da IA baseando-se na fidelidade que o resultado obtido possui em relação à performace humana, sendo essa uma ciência empírica que envolve hipóteses sobre o comportamento e a cognição humana, como tomada de decisão, aprendizado e resolução de problemas. As definições da direta, por outro lado, tem como base de comparação para uma "performance ideal", o resultado obtido seguindo o caminho mais racional possível e agindo sempre de "maneira correta", tomando decisões baseadas em dados e trabalhando conhecimentos das áreas de matemática e engenharia. Cada um desses modelos de comportamentos são estudados e desenvolvidos separadamente por diversos grupos que, com a divulgação de suas pesquisas e seus resultados, cooperam a entender e melhorar o conceito que se tem de IA. \cite{norvig}
+	As definições da esquerda medem o sucesso da IA baseando-se na fidelidade que o resultado obtido possui em relação à performace humana, sendo essa uma ciência empírica que envolve hipóteses sobre o comportamento e a cognição humana, como tomada de decisão, aprendizado e resolução de problemas. As definições da direta, por outro lado, tem como base de comparação para uma ``performance ideal'', o resultado obtido seguindo o caminho mais racional possível e agindo sempre de ``maneira correta'', tomando decisões baseadas em dados e trabalhando conhecimentos das áreas de matemática e engenharia. Cada um desses modelos de comportamentos são estudados e desenvolvidos separadamente por diversos grupos que, com a divulgação de suas pesquisas e seus resultados, cooperam a entender e melhorar o conceito que se tem de IA. \cite{norvig}
 	 
 	\subsubsection*{Agindo Humanamente}
 		Para que seja considerada que uma maquina age como humanos, ela deve passar pelo teste de Turing, sendo esse, um teste capaz de julgar se uma máquina pode ser considerada inteligente o suficiente para possuir habilidades de conversação comparáveis as de um ser humano \cite{turing}. A maquina deve ter os seguintes recursos:
@@ -373,7 +373,7 @@
   			\item Aprendizado de Máquina - Se adaptar a novas circunstâncias
   		\end{itemize}
   			
-  			Para o "Total Turing Test" também é necessário:
+  			Para o ``Total Turing Test'' também é necessário:
   			
   		\begin{itemize}
   			\item Visão computacional - Reconhecer objetos
@@ -381,22 +381,22 @@
 		\end{itemize}
 		
 	\subsubsection*{Pensando Humanamente}
-		Para uma máquina pensar como humano, primeiro precisa-se entender e determinar como um pensamento humano funciona; então, a máquina deve ser modelada usando modelos cognitivos que são estudados pela Ciência Cognitiva", sendo essa a ciência que estuda como o pensamento funciona, e cria teorias testáveis através de tecnicas de psicologia \cite{wilson_keil}.
+		Para uma máquina pensar como humano, primeiro precisa-se entender e determinar como um pensamento humano funciona; então, a máquina deve ser modelada usando modelos cognitivos que são estudados pela Ciência Cognitiva, sendo essa a ciência que estuda como o pensamento funciona, e cria teorias testáveis através de tecnicas de psicologia \cite{wilson_keil}.
 		
 	\subsubsection*{Pensando Racionalmente}
-		Pensar racionalmente é chegar na conclusão correta a partir de premissas. Usando o exemplo de Aristóteles: "
-Sócrates é um homem; Todos os homens são mortais; Portanto, Sócrates é mortal."  Isto segue as "Leis do pensamento"  \cite{laws_of_thought}.
+		Pensar racionalmente é chegar na conclusão correta a partir de premissas. Usando o exemplo de Aristóteles: ``
+Sócrates é um homem; Todos os homens são mortais; Portanto, Sócrates é mortal.''  Isto segue as ``Leis do pensamento''  \cite{laws_of_thought}.
 		
 	\subsubsection*{Agindo Racionalmente}
 		Agir racionalmente seria uma unificação das Leis do Pensamento com o Teste de Turing, fazendo a máquina chegar no resultado esperado, e quando não for possivel chegar em um resultado, que chegue no melhor possível. No entanto, em alguns casos, não existe coisa certa a fazer, mas deve ser tomada uma decisão. Usando o exemplo de um carro autônomo, se em uma situação de emergência, ele deve escolher entre atropelar um grupo de crianças que está atravessando a rua com o farol de pedestre vermelho, ou bater no muro matando quem estiver dentro do veículo.
 	
 	\subsection{Aprendizado de Máquina}
-		No começo das “aplicações inteligentes”, muitos sistemas usavam regras de decisões codificadas manualmente para processar dados ou ajustar a entrada do usuário. Criar regras de decisão manualmente é viável para algumas aplicações, especialmente aquelas em que os seres humanos têm uma boa compreensão do processo de modelagem. No entanto, a lógica necessária para tomar uma decisão geralmente é específica de um único domínio e alterar a tarefa até mesmo um pouco poderia exigir uma reescrita de todo o sistema \cite {guido_muller}.
+		No começo das ``aplicações inteligentes'', muitos sistemas usavam regras de decisões codificadas manualmente para processar dados ou ajustar a entrada do usuário. Criar regras de decisão manualmente é viável para algumas aplicações, especialmente aquelas em que os seres humanos têm uma boa compreensão do processo de modelagem. No entanto, a lógica necessária para tomar uma decisão geralmente é específica de um único domínio e alterar a tarefa até mesmo um pouco poderia exigir uma reescrita de todo o sistema \cite {guido_muller}.
 
 		O Aprendizado de Máquina evoluiu como um subcampo de Inteligência Artificial que envolve o desenvolvimento de algoritmos de autoaprendizagem para fazer previsões através de dados. Esse método de análise oferece uma alternativa mais eficiente para capturar o conhecimento em dados para melhorar gradualmente o desempenho de modelos preditivos \cite{ r_julian_heart}.
 
 	\subsubsection*{Aprendizagem Supervisionada}
-		É um dos mais usados e bem-sucedidos algoritmos de Aprendizado de Máquina. Para que o sistema "aprenda" o mapeamento a partir dos dados treinados e seja capaz de "prever"  o valor de saída, é necessário ter um treinamento com um “professor” para supervisionar as saídas desejadas em cada exemplo aprendido. Exemplos de tarefas de Aprendizagem Supervisionada \cite {guido_muller}: 
+		É um dos mais usados e bem-sucedidos algoritmos de Aprendizado de Máquina. Para que o sistema ``aprenda'' o mapeamento a partir dos dados treinados e seja capaz de ``prever''  o valor de saída, é necessário ter um treinamento com um ``professor'' para supervisionar as saídas desejadas em cada exemplo aprendido. Exemplos de tarefas de Aprendizagem Supervisionada \cite {guido_muller}: 
 	\begin{itemize}
 	 	\item Identificar o código postal escrito em envelopes
 		\item Determinar se um tumor é benigno com base em uma imagem médica
@@ -423,7 +423,7 @@ Sócrates é um homem; Todos os homens são mortais; Portanto, Sócrates é mort
 
 	No entanto, um dos empecilhos para o avanço da tecnologia é a linguagem. Qualquer idioma é cheio de insinuações, idiossincrasias, expressões idiomáticas e ambiguidades; portanto, são transmitidos muitos significados nestes contextos, como 4x4 não necessariamente é 16, podendo ser também uma característica de carro.
 
-	“IBM Watson é um sistema de PLN (Processamento de Linguagem Natural) profundo. Ele alcança a precisão tentando analisar a maior quantia de contextos possíveis. Ele obtém este contexto tanto da passagem da pergunta quanto da base de conhecimento (chamada de corpus) que está disponível para ele localizar respostas” \cite{watson_manual}. 
+	``IBM Watson é um sistema de PLN (Processamento de Linguagem Natural) profundo. Ele alcança a precisão tentando analisar a maior quantia de contextos possíveis. Ele obtém este contexto tanto da passagem da pergunta quanto da base de conhecimento (chamada de corpus) que está disponível para ele localizar respostas'' \cite{watson_manual}. 
 
 	\subsection{Processamento de Linguagem Natural (PNL)}
 	Em oposição às linguagens artificiais como Java, FORTRAN ou código Morse, uma linguagem natural é uma língua falada por pessoas, como Português, Inglês ou Turco. O Processamento de Linguagem Natural é uma parte importante do ramo de Inteligência Artificial, visto que a capacidade de compreender linguagens naturais está intimamente ligada ao pensamento humano. % TO DO: Aline, rever a parte da lingua falada por pessoas%
@@ -504,9 +504,9 @@ O sentimento $s_{ikjl}$ pode ser positivo, negativo ou neutro, ou expresso com d
 
 	\subsubsection*{Análises de Sentimentos em Mídias Sociais}
 	
-A grande difusão das redes sociais e seu papel na sociedade moderna estão entre as novidades mais interessantes dos últimos anos, capturando o interesse de pesquisadores, jornalistas, empresas e governos. A densa interconexão que surge frequentemente entre os usuários gera um espaço de discussão capaz de motivar e envolver os indivíduos, vinculando as pessoas com objetivos comuns e facilitando diversas formas de socialização. Isto dá origem ao chamado "individualismo na rede": em vez de sempre contar com uma única comunidade de referência, graças às redes sociais é possível estimular-se movendo-se entre mais pessoas e recursos, muitas vezes heterogêneos. As redes sociais estão, portanto, criando uma revolução digital. O aspecto mais interessante desta mudança não está unicamente relacionado com a possibilidade de promover a participação política e o ativismo. Esta revolução social influencia a vida de cada indivíduo. "É a liberdade de nos expressarmos, de ter um espaço próprio onde possamos ser nós mesmos, ou de ser quem gostaríamos de ser, com poucos limites e barreiras" \cite{book_sentiment_social}.
+A grande difusão das redes sociais e seu papel na sociedade moderna estão entre as novidades mais interessantes dos últimos anos, capturando o interesse de pesquisadores, jornalistas, empresas e governos. A densa interconexão que surge frequentemente entre os usuários gera um espaço de discussão capaz de motivar e envolver os indivíduos, vinculando as pessoas com objetivos comuns e facilitando diversas formas de socialização. Isto dá origem ao chamado ``individualismo na rede'': em vez de sempre contar com uma única comunidade de referência, graças às redes sociais é possível estimular-se movendo-se entre mais pessoas e recursos, muitas vezes heterogêneos. As redes sociais estão, portanto, criando uma revolução digital. O aspecto mais interessante desta mudança não está unicamente relacionado com a possibilidade de promover a participação política e o ativismo. Esta revolução social influencia a vida de cada indivíduo. ``É a liberdade de nos expressarmos, de ter um espaço próprio onde possamos ser nós mesmos, ou de ser quem gostaríamos de ser, com poucos limites e barreiras'' \cite{book_sentiment_social}.
 
-Neste contexto, a análise de sentimentos tenta tornar evidente o que as pessoas pensam fornecendo representações, modelos e algoritmos capazes de passar de "texto simples não estruturado"  para "visão complexa". \cite{book_sentiment_social}.
+Neste contexto, a análise de sentimentos tenta tornar evidente o que as pessoas pensam fornecendo representações, modelos e algoritmos capazes de passar de ``texto simples não estruturado''  para ``visão complexa''. \cite{book_sentiment_social}.
 
 	\subsubsection*{Aplicações de Opinion Mining}
 	
@@ -525,12 +525,12 @@ Neste contexto, a análise de sentimentos tenta tornar evidente o que as pessoas
 
 Atualmente, o Google já não publica estimativas atuais de gripe e dengue com base em padrões de busca, mas continua a oferecer estimativas históricas produzidas pelo Google Flu Trends e Google Dengue Trends. Isto, principalmente devido à falta de acuracidade dos modelos de predição, evidenciados quando o algoritmo subestimou a necessidade de vacinas nos anos de 2011-2013 nos Estados Unidos  \cite{article_google_flu}.
 
-Outras empresas também estão usando feeds de mídia social, como Facebook, Twitter e seus equivalentes, para entender as tendências em tudo, desde previsões de tendências de consumo quanto em monitoramento de tragédias. A tecnologia AI está sendo usada de muitas maneiras por essas empresas para extrair e entender os dados. Por exemplo, algumas empresas usam técnicas de PNL para interpretar o conteúdo de mídia social, enquanto outras empresas estão explorando como a análise de sentimento das mídias sociais pode ser usada para entender o que as pessoas estão postando. Os resultados atuais indicam que o uso de PNL juntamente com análise de sentimento ajuda a diferenciar entre "eu me sinto bem" e "eu me sinto mal", que se torna um grande diferencial no rastreamento de tendências de saúde \cite{book_social_machines}.
+Outras empresas também estão usando feeds de mídia social, como Facebook, Twitter e seus equivalentes, para entender as tendências em tudo, desde previsões de tendências de consumo quanto em monitoramento de tragédias. A tecnologia AI está sendo usada de muitas maneiras por essas empresas para extrair e entender os dados. Por exemplo, algumas empresas usam técnicas de PNL para interpretar o conteúdo de mídia social, enquanto outras empresas estão explorando como a análise de sentimento das mídias sociais pode ser usada para entender o que as pessoas estão postando. Os resultados atuais indicam que o uso de PNL juntamente com análise de sentimento ajuda a diferenciar entre ``eu me sinto bem'' e ``eu me sinto mal'', que se torna um grande diferencial no rastreamento de tendências de saúde \cite{book_social_machines}.
 	
 	\subsubsection*{Desafios}
-Infelizmente, analisar os feeds de mídia social é muito mais difícil do que parece. Suponha que alguém escreveu um tweet "Meu médico me disse para tomar aspirina. Como eu me sinto melhor \#not ". Embora o hashtag \#not deixa claro que "me sinto melhor " é sarcástico, se removemos o hashtag, não sabe-se se o escritor está sendo sério ou sarcástico.
+Infelizmente, analisar os feeds de mídia social é muito mais difícil do que parece. Suponha que alguém escreveu um tweet ``Meu médico me disse para tomar aspirina. Como eu me sinto melhor \#not ''. Embora o hashtag \#not deixa claro que ``me sinto melhor'' é sarcástico, se removemos o hashtag, não sabe-se se o escritor está sendo sério ou sarcástico.
 
-Os sistemas atuais resolvem este problema através do acoplamento de técnicas de Aprendizado de Máquina com técnicas de análise de linguagem. No entanto, a fim de serem eficientes, estas técnicas exigem um grande número de exemplos para ser "marcado" por pessoas, o que significa que as pessoas explicitamente precisam indicar recursos como sentimento e sarcasmo. Uma vez que o computador tem essas informações adicionais anotadas, resultados de pesquisas atuais indicam que o computador pode, então, mais precisamente correlacionar grandes conjuntos de dados para descobrir quais palavras prever, quais recursos %TO DO: Aline, quais recursos o que ?% e usar os resultados para analisar novos conjuntos de dados \cite{book_social_machines}.
+Os sistemas atuais resolvem este problema através do acoplamento de técnicas de Aprendizado de Máquina com técnicas de análise de linguagem. No entanto, a fim de serem eficientes, estas técnicas exigem um grande número de exemplos para ser ``marcado'' por pessoas, o que significa que as pessoas explicitamente precisam indicar recursos como sentimento e sarcasmo. Uma vez que o computador tem essas informações adicionais anotadas, resultados de pesquisas atuais indicam que o computador pode, então, mais precisamente correlacionar grandes conjuntos de dados para descobrir quais palavras prever, quais recursos %TO DO: Aline, quais recursos o que ?% e usar os resultados para analisar novos conjuntos de dados \cite{book_social_machines}.
 
 Embora a pesquisa em PNL tenha feito grandes progressos na produção de comportamentos artificialmente inteligentes, por exemplo, Google, IBM Watson e Apple Siri, nenhuma dessas estruturas PNL por si só realmente entendem o que eles estão fazendo - tornando-os não muito diferentes de um papagaio que aprende a repetir palavras sem nenhuma compreensão clara do que está dizendo. Hoje, mesmo as tecnologias de PLN mais populares visualizam a análise de texto como uma tarefa de correspondência de palavras ou padrões. Tentar verificar o significado de um pedaço de texto, processando-o no nível de palavra, no entanto, não é diferente de tentar entender uma imagem, analisando-a em nível de pixel \cite{book_Cambria2015}. 
 
@@ -546,13 +546,13 @@ Para este fim, os sistemas de PNL irão gradualmente parar de confiar muito em t
 
 \subsection{Sentic Computing}
 
-A Sentic Computing (SC), cujo termo deriva do "sentire" latino (raiz das palavras como sentimento e sensibilidade) e "sensus" (como em senso comum),  é uma abordagem multidisciplinar para a compreensão da linguagem natural que visa preencher a distância entre o processamento estatístico de linguagem natural (PNL) e muitas outras disciplinas que são necessárias para a compreensão da linguagem humana, como linguística, raciocínio de senso comum, computação afetiva, entre outros \cite{book_Cambria2015}.
+A Sentic Computing (SC), cujo termo deriva do ``sentire'' latino (raiz das palavras como sentimento e sensibilidade) e ``sensus'' (como em senso comum),  é uma abordagem multidisciplinar para a compreensão da linguagem natural que visa preencher a distância entre o processamento estatístico de linguagem natural (PNL) e muitas outras disciplinas que são necessárias para a compreensão da linguagem humana, como linguística, raciocínio de senso comum, computação afetiva, entre outros \cite{book_Cambria2015}.
 
 Em particular, a SC utiliza de técnicas AI e SemanticWeb, para representação e inferência do conhecimento; Matemática, para realizar tarefas como mineração de gráficos e redução de multidimensionalidade; Linguística, para análise de discurso e pragmática; Psicologia, para modelagem cognitiva e afetiva; Sociologia, para a compreensão da dinâmica das redes sociais e da influência social; Finalmente ética, para compreender questões relacionadas com a natureza da mente e a criação de máquinas emocionais \cite{inBook_Bisio2017}.
 
 Na SC a análise da linguagem natural baseia-se em ferramentas de raciocínio de senso comum, que permitem a análise de texto, não apenas em nível de documento, página ou parágrafo, mas também em sentença, cláusula e nível de conceito. A SC é diferente dos métodos comuns para a detecção de polaridade, pois requer uma abordagem multifacetada para o problema da análise do sentimento.
 
-Algumas das técnicas mais populares para Opinion Mining centram-se em frequências de co-ocorrência de palavras e polaridade estatística associadas a palavras. Essas abordagens podem inferir corretamente a polaridade de textos não ambíguos com estrutura de frases simples e em um domínio específico (ou seja, o qual o classificador estatístico foi treinado). Uma das principais características da linguagem natural, no entanto, é a ambiguidade. Uma palavra como "grande" não possui nenhuma polaridade de forma avulsa, pois pode ser negativa, por exemplo, no caso de um "problema grande", ou positiva, por exemplo, em "grande jantar", mas a maioria dos métodos estatísticos lhe atribuem uma polaridade positiva, pois o contexto em que aparece muitas vezes é positivo.
+Algumas das técnicas mais populares para Opinion Mining centram-se em frequências de co-ocorrência de palavras e polaridade estatística associadas a palavras. Essas abordagens podem inferir corretamente a polaridade de textos não ambíguos com estrutura de frases simples e em um domínio específico (ou seja, o qual o classificador estatístico foi treinado). Uma das principais características da linguagem natural, no entanto, é a ambiguidade. Uma palavra como ``grande'' não possui nenhuma polaridade de forma avulsa, pois pode ser negativa, por exemplo, no caso de um ``problema grande'', ou positiva, por exemplo, em ``grande jantar'', mas a maioria dos métodos estatísticos lhe atribuem uma polaridade positiva, pois o contexto em que aparece muitas vezes é positivo.
 
 Trabalhando no nível do conceito, a SC supera isso e muitos outros problemas comuns de framework de opinion-mining que dependem fortemente das propriedades estatísticas das palavras. 
 
@@ -562,7 +562,7 @@ A detecção de sentimentos é, no entanto, um problema muito desafiador porque 
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=1.4]{SenticHourGlass}
-\caption {O modelo 3D e a rede do "Hourglass of Emotions". Uma vez que os estados afetivos vão de fortemente positivo para nulo para fortemente negativo, o modelo assume uma forma de ampulheta \cite{book_Cambria2015}}.
+\caption {O modelo 3D e a rede do ``Hourglass of Emotions''. Uma vez que os estados afetivos vão de fortemente positivo para nulo para fortemente negativo, o modelo assume uma forma de ampulheta \cite{book_Cambria2015}}.
 \label{SenticHourGlass}
 \end{figure}
 
@@ -572,7 +572,7 @@ A detecção de sentimentos é, no entanto, um problema muito desafiador porque 
 
 	Por ser uma ferramenta de fácil e rápida utilização, usuários utilizam a rede para comentar situações cotidianas e/ou eventos em tempo real (shows, esportes, premiações), criando o efeito de segunda tela (Tela 1: Evento ou TV, Tela 2: Smartphone conectado em redes sociais focados no assunto em si), o que tornou a rede rica em informações abrangendo diversas áreas e diversos públicos \cite{conference_twitter_sports}.
 
-	A extração de dados dos diversos “tweets” se mostrou extremamente útil ultimamente, possibilitando saber qual é a popularidade de tópicos, e qual foi a reação dos usuários neste tópico,  ainda com a possibilidade de mapear qual é o público alvo (idade, sexo, localização, etc) pelo cadastro que é efetuado no ato de criação de um perfil na rede.
+	A extração de dados dos diversos ``tweets'' se mostrou extremamente útil ultimamente, possibilitando saber qual é a popularidade de tópicos, e qual foi a reação dos usuários neste tópico,  ainda com a possibilidade de mapear qual é o público alvo (idade, sexo, localização, etc) pelo cadastro que é efetuado no ato de criação de um perfil na rede.
 
 	Segundo o Twitter, em junho de 2016, ele contava com 313 Milhões de usuários \cite{twitter_company} postando em média 500 milhões de tweets por dia \cite{TwitterU87:online}.
 	
