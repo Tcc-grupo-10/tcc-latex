@@ -57,6 +57,8 @@
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{mathtools}
+\usepackage[automake,acronym]{glossaries}
+
 
 % ---
 
@@ -145,11 +147,15 @@
 % ---
 % compila o indice
 % ---
+\input{glossaires.tex}
+\makeglossaries
+
 \makeindex
 % --
 % ----
 % Início do documento
 % ----
+
 \begin{document}
 
 % ----------------------------------------------------------
@@ -159,6 +165,7 @@
 
 
  \pretextual
+ 
 
 % ---
 % Capa
@@ -172,7 +179,11 @@
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
+
+
 % ---
+
+\printglossaries
 
 
 % ----------------------------------------------------------
@@ -181,7 +192,7 @@
 \textual
 
 \chapter{Introdução}
-	Neste capítulo serão apresentados os pontos que foram decisivos na escolha do tema do projeto, assim como as atividades a serem efetuadas para alcançar os objetivos estabelecidos.
+	\gls{computer} \gls{fpsLabel} Neste capítulo serão apresentados os pontos que foram decisivos na escolha do tema do projeto, assim como as atividades a serem efetuadas para alcançar os objetivos estabelecidos.
 
 	\section{Motivação}
 	
