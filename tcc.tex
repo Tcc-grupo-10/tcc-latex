@@ -396,12 +396,35 @@ Sócrates é um homem; Todos os homens são mortais; Portanto, Sócrates é mort
 		O Aprendizado de Máquina evoluiu como um subcampo de Inteligência Artificial que envolve o desenvolvimento de algoritmos de autoaprendizagem para fazer previsões através de dados. Esse método de análise oferece uma alternativa mais eficiente para capturar o conhecimento em dados para melhorar gradualmente o desempenho de modelos preditivos \cite{ r_julian_heart}.
 
 	\subsubsection*{Aprendizagem Supervisionada}
-		É um dos mais usados e bem-sucedidos algoritmos de Aprendizado de Máquina. Para que o sistema ``aprenda'' o mapeamento a partir dos dados treinados e seja capaz de ``prever''  o valor de saída, é necessário ter um treinamento com um ``professor'' para supervisionar as saídas desejadas em cada exemplo aprendido. Exemplos de tarefas de Aprendizagem Supervisionada \cite {guido_muller}: 
+		É um dos mais usados e bem-sucedidos métodos de Aprendizado de Máquina. Para que o sistema ``aprenda'' o mapeamento a partir dos dados treinados e seja capaz de ``prever''  o valor de saída, é necessário ter um treinamento com um ``professor'' para supervisionar as saídas desejadas em cada exemplo aprendido. Exemplos de tarefas de Aprendizagem Supervisionada \cite {guido_muller}: 
 	\begin{itemize}
 	 	\item Identificar o código postal escrito em envelopes
 		\item Determinar se um tumor é benigno com base em uma imagem médica
 		\item Detectar atividade fraudulenta em transações com cartão de crédito
 	\end{itemize}
+	
+		Existem diversos algoritmos conhecidos que aplicam o conceito de aprendizagem supervisionada, neste trabalho serão tratados de forma mais aprofundada os classificadores de \emph{Naive Bayles}, o \emph{Support Vector Machine} e o \emph{Extreme Learning}.
+	
+	\subsubsubsection*{Classificadores Naive Bayles}
+	
+	Algoritmos classificadores têm como objetivo enquadrar um dado em classes dentro de um conjunto de classes predefinidas. Os classificadores do tipo \emph{Naive Bayles} realizam esse enquadramento utilizando o teorema de Bayles como base para calcular a probabilidade de um dado pertencer a uma determinada classe de acordo com o vetor de características do mesmo \cite{rish}.
+	 
+	No entanto, em seu conceito, este método pressupõe que as características trabalhadas sejam totalmente independentes entre si. Ou seja, em uma análise de texto, o aparecimento de uma determinada palavra não influenciaria em nada o surgimento de uma outra. Na prática, esse pressuposto de independência costuma ser violado com frequência e o adjetivo \emph{naive}, ``ingênuo'' em português, no início do nome do método deriva do fato do algoritmo assumir esta total desasossiação entre as caracterísicas como verdadeira \cite{raschka}.
+		
+	O teorema de Bayles determina que a probabilidade de um dado pertencer a uma classe $w$, tendo em vista que ele	possui uma característica $x_i$ é determinada por \cite{raschka}:
+	
+	\[ P(w | x_i) = \frac{P(x_i | w)*P(w)}{P(x_i)} \]
+	
+	Sendo $P(x|w)$ a probabilidade de que, dentro da classe $w$, o dado apresente a característica $x$. Todas probabilidades usadas no cálculo são obtidas com base no conjunto de dados de treino do algoritmo. 
+	
+	De maneira análoga, para obter a probabilidade de classificação em uma classe $w$ a partir de um vetor de $d$ características independentes \textbf{$x$}, temos a seguinte fórmula  \cite{raschka}:
+	
+	\[ P(x|w) = P(x_1 | w) * P(x_2 | w) * ... * P(x_d | w) = \prod\limits_{k=1}^d P(x_k | w) \] 
+	 
+		
+	Os pontos fracos dos algoritmos baseados no \emph{Naive Bayles} são: problemas não lineares \cite{raschka}, e a classificação de dados com características novas. Como estas características não estavam inclusas no dados de treinamento, a probabilidade destas indicarem o pertencimento a uma classe ainda é zero. E, como os classificadores Naive Bayles dependem de multiplicar todas as probabilidades independentes, se uma das probabilidades for zero, a probabilidade final será zero também \cite{kirk}.
+	
+	Em contrapartida, este tipo de classificador é fácil de implementar, rápido e, especificamente bom para pequenas quantidades de dados \cite{raschka}. Apesar do seu princípio de independência entre as características, ele também tende a se sair bem em situações o mundo real nos quais este princípio é violado, obtendo uma eficácia maior que outros métodos de classificação mais rebuscados, inclusive em problemas com características com dependências funcionais \cite{rish}. ``O \emph{Naive Bayles} já provou sua eficácia em várias aplicações práticas, incluindo classificação de textos, medicina diagnóstica e gerenciamento da performance de sistemas'' \cite{rish}. 
 
 	\subsubsection*{Aprendizagem não Supervisionada}
 		Na Aprendizagem não Supervisionada, o sistema deve ser capaz de extrair um padrão dos dados por conta própria, sem nenhum tipo de mapeamento prévio. Apesar de ter aplicações bem sucedidas com esse método, ele é mais difícil de entender e avaliar. Exemplos de tarefas de Aprendizagem não Supervisionada \cite {guido_muller}: 
