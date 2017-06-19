@@ -426,7 +426,7 @@ Sócrates é um homem; Todos os homens são mortais; Portanto, Sócrates é mort
 	``IBM Watson é um sistema de PLN (Processamento de Linguagem Natural) profundo. Ele alcança a precisão tentando analisar a maior quantia de contextos possíveis. Ele obtém este contexto tanto da passagem da pergunta quanto da base de conhecimento (chamada de corpus) que está disponível para ele localizar respostas'' \cite{watson_manual}. 
 
 	\subsection{Processamento de Linguagem Natural (PLN)}
-	Em oposição às linguagens artificiais como Java, FORTRAN ou código Morse, uma linguagem natural é uma língua falada por pessoas, como Português, Inglês ou Turco. O Processamento de Linguagem Natural é uma parte importante do ramo de Inteligência Artificial, visto que a capacidade de compreender linguagens naturais está intimamente ligada ao pensamento humano. % TO DO: Aline, rever a parte da lingua falada por pessoas; Aline: "sim, é falada por pessoas."%
+	Em oposição às linguagens artificiais como Java, FORTRAN ou código Morse, uma linguagem natural é uma língua falada humanos, como Português, Inglês ou Turco. O Processamento de Linguagem Natural é uma parte importante do ramo de Inteligência Artificial, visto que a capacidade de compreender linguagens naturais está intimamente ligada ao pensamento humano. % TO DO: Aline, rever a parte da lingua falada por pessoas; Aline: "sim, é falada por pessoas. mudei pra humanos"%
 	
 		\subsubsection*{PLN e Computação}
 		A linguagem é uma das ferramentas centrais na vida social e profissional das pessoas. Dentre outras coisas, age como um meio de transmissão de ideias, informações, opiniões e sentimentos, assim como para persuadir, questionar e transmitir ordens \cite{book_natural_lang}.
@@ -627,16 +627,13 @@ Os tweets foram coletados através de uma biblioteca Python e avaliados manualme
 
 Os resultados obtidos foram comparados com dois algoritmos de base: um que escolhia classes de forma randômica e outro baseado em regras de palavras-chave. Nestes cenários, ambas as soluções desenvolvidas, NB e SVM, obtiveram uma eficácia superior aos algoritmos de base, com 56.5\% e 59.7\% de acerto respectivamente. A precisão das respostas aumentou quando a classe de 'outros' foi removida do contexto, chegando à uma performance de 75.3\% de acerto do algoritmo de SVM. 
 
+	A ideia deste trabalho é aplicar as diferentes técnicas descritas nos trabalhos relacionados para análise de frases do Twitter, com objetivo de extrair os sentimentos dos usuários sobre um determinado tema.  
 
-\subsection{Relacionamentos com este trabalho}
-
-	A ideia deste trabalho é aplicar as deferentes técnicas descritas nos trabalhos relacionados para análise de frases do Twitter, com objetivo de extrair os sentimentos dos usuários sobre um determinado tema.  
-
-	Dessa forma, como descrito em \citeauthoronline{article_tweet_crisis} (\citeyear{article_tweet_crisis}), a base de tweets inicial será obtida através do uso do Tweetstream, um pacote Python que permite a extração de tweets utilizando termos específicos de busca. Os pesquisadores aplicaram os algoritmos de NB e SVM para análise de sentimentos. No entando, para a mesma base de dados iniciais, este trabalho aplicará também os algoritmos de Sentic Patterns e ELM, de maneira similar ao grupo de \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}). Para analisar a eficiência dos algoritmos, será utilizado o método de análise de frequência de palavras, descrito por \citeauthoronline{article_Tsugawa2013} (\citeyear{article_Tsugawa2013}), e uma atribuição de sentimentos randômica, como descrito por \citeauthoronline{article_tweet_crisis} (\citeyear{article_tweet_crisis}), que será o controle. 
+	Dessa forma, como descrito em \citeauthoronline{article_tweet_crisis} (\citeyear{article_tweet_crisis}), a base de tweets inicial será obtida através do uso do Tweetstream, um pacote Python que permite a extração de tweets utilizando termos específicos de busca. Os pesquisadores aplicaram os algoritmos de NB e SVM para análise de sentimentos. No entando, para a mesma base de dados iniciais, este trabalho aplicará também os algoritmos de Fluxo de Sentimentos e ELM, de maneira similar ao grupo de \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}). Para analisar a eficiência dos algoritmos, será utilizado o método de análise de frequência de palavras, descrito por \citeauthoronline{article_Tsugawa2013} (\citeyear{article_Tsugawa2013}), e uma atribuição de sentimentos randômica, como descrito por \citeauthoronline{article_tweet_crisis} (\citeyear{article_tweet_crisis}), que será o controle. 
 
 Utilizaremos o Lexicon SenticNet \cite{article_Poria2014}, para associar os sentimentos vinculados a cada palavra.
 
-A contribuição deste trabalho, se dará na aplicação e comparação de performance de cinco tecnicas diferentes para análise de sentimentos (NB, SVM, Sentic Patterns e ELM, e frêquencia de palavras), e, potencialmente, desenvolvimento de um algoritmo próprio específico para o cenário de extração sentimento em frases curtas e não estruturadas (como é o caso dos tweets).
+A contribuição deste trabalho, se dará na aplicação e comparação de performance de cinco técnicas diferentes para análise de sentimentos (NB, SVM, Fluxo de Sentimentos e ELM, e frêquencia de palavras), e, potencialmente, desenvolvimento de um algoritmo próprio específico para o cenário de extração sentimento em frases curtas e não estruturadas (como é o caso dos tweets).
 
 
 	%% Quero falar sobre TDD %%
