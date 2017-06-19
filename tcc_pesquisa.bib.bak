@@ -335,7 +335,7 @@
   howpublished = {http://sentic.net},
 }
 
-@Article{article_Poria2014,
+@Article{,
   author  = {S. Poria and E. Cambria and G. Winterstein and G.-B Huang},
   title   = {Sentic patterns: Dependency - based rules for concept-level sentiment analysis},
   journal = {Knowl.-Based Syst.},
