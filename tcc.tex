@@ -57,6 +57,8 @@
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{mathtools}
+\usepackage[automake,acronym]{glossaries}
+
 
 % ---
 
@@ -145,11 +147,15 @@
 % ---
 % compila o indice
 % ---
+\input{glossaires.tex}
+\makeglossaries
+
 \makeindex
 % --
 % ----
 % Início do documento
 % ----
+
 \begin{document}
 
 % ----------------------------------------------------------
@@ -159,6 +165,7 @@
 
 
  \pretextual
+ 
 
 % ---
 % Capa
@@ -172,7 +179,12 @@
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
+
+
 % ---
+
+%\printglossary % ---Glossário Somente
+\printglossary[title={Lista de Siglas},type=\acronymtype] % --- Siglas Somente
 
 
 % ----------------------------------------------------------
@@ -210,7 +222,7 @@
 		\subsection*{Pesquisa Bibliográfica}
 		
 				\begin{itemize}
-					\item Levantamento de bibliografias que abordem os temas: Computação cognitiva,  Aprendizado de Máquina, Processamento de Linguagem Natural (PLN), Algoritmos de análise de emoções (Extreme Machine Learning - EML e Suport Vector Machine - SVM) e análises de postagens em redes sociais.
+					\item Levantamento de bibliografias que abordem os temas: Computação cognitiva,  Aprendizado de Máquina, \gls{PLN}, Algoritmos de análise de emoções (\gls{EML} e \gls{SVM}) e análises de postagens em redes sociais.
 					\item Levantamento de trabalhos relacionados à temática desta pesquisa, a fim de localizar pontos que possam ser explorados ou estendidos durante a elaboração do projeto.
 					
 				\end{itemize}
@@ -219,7 +231,7 @@
 				
 				\begin{itemize} 
 					\item Avaliação dos bancos de dados léxicos de análise de sentimentos (SentiWordNet, ConceptNet, SentiSense)
-					\item Estudo da possibilidade de usar Watson (IBM) e/ou LEX (AWS) para análise dos dados
+					\item Estudo da possibilidade de usar Watson (IBM) e/ou LEX da \gls{AWS} para análise dos dados
 					\item Confecção do capítulo 2 do Trabalho de Conclusão de Curso (TCC), a partir dos tópicos pesquisados.
 				\end{itemize}			
 				
@@ -292,19 +304,19 @@
 		
 \chapter{Revisão Bibliográfica}				
 
-%TO DO: ESCREVER PREAMBULO %
+	Neste capítulo, será apresentada a fundamentação teórica que embasa este TCC, mostrando os conceitos, técnicas e tecnologias que serão utilizados como pilares para a confecção do trabalho. Além disso, Trabalhos Relacionados ao tema desta pequisa serão descritos, assim como suas contribuições, semelhanças e diferenças em relação a este trabalho. 
 
 \section{Fundamentação Teórica}
 	
 	Em relação à fundamentação teórica, é cabível abordar de maneira mais específica os conceitos de Inteligência Artificial, Computação Cognitiva, Análise de Sentimentos, Redes Sociais e o método de desenvolvimento de software orientado a objetos ICONIX.
 
 	\subsection{Inteligência Artificial}	
-	\begin{citacao} ``Atualmente, a IA abrange uma enorme variedade de subcampos, desde áreas de uso geral como aprendizado e percepção, até tarefas específicas como jogos de xadrez, demonstração de teoremas matemáticos, criação de poesia e diagnóstico de doenças. A IA sistematiza e automatiza tarefas intelectuais e, portanto, é potencialmente relevante para qualquer esfera de atividade intelectual humana. Nesse sentido, ela é verdadeiramente um campo universal.'' \cite{norvig3rd}
+	\begin{citacao} ``Atualmente, a \gls{IA} abrange uma enorme variedade de subcampos, desde áreas de uso geral como aprendizado e percepção, até tarefas específicas como jogos de xadrez, demonstração de teoremas matemáticos, criação de poesia e diagnóstico de doenças. A \gls{IA} sistematiza e automatiza tarefas intelectuais e, portanto, é potencialmente relevante para qualquer esfera de atividade intelectual humana. Nesse sentido, ela é verdadeiramente um campo universal.'' \cite{norvig3rd}
 	\end{citacao}
 
 	De acordo com \citeauthoronline{norvig3rd} (\citeyear{norvig3rd}), ``Se pretendemos dizer que um dado programa pensa como um ser humano, temos de ter alguma forma de determinar como os seres humanos pensam.''
 	
-	Existem diversas definições respondendo ``O que é Inteligência Artificial?'', porém, cada abordagem é focada em um tipo de comportamento ou método de raciocínio que a IA pode ter. Segundo \citeauthoronline{norvig3rd} (\citeyear{norvig3rd}), estas definições podem ser divididas em 4 categorias: Pensando Humanamente, Pensando Racionalmente, Agindo Humanamente e Agindo Racionalmente. É possível ver alguns exemplos na tabela \ref{Quatro Categorias}
+	Existem diversas definições respondendo ``O que é Inteligência Artificial?'', porém, cada abordagem é focada em um tipo de comportamento ou método de raciocínio que a \gls{IA} pode ter. Segundo \citeauthoronline{norvig3rd} (\citeyear{norvig3rd}), estas definições podem ser divididas em 4 categorias: Pensando Humanamente, Pensando Racionalmente, Agindo Humanamente e Agindo Racionalmente. É possível ver alguns exemplos na tabela \ref{Quatro Categorias}
 	
 
 \begin{table}[!h]
@@ -361,7 +373,7 @@
 \label{Quatro Categorias}
 \end{table}
 	
-	As definições da esquerda medem o sucesso da IA baseando-se na fidelidade que o resultado obtido possui em relação à performance humana, sendo essa uma ciência empírica que envolve hipóteses sobre o comportamento e a cognição humana, como tomada de decisão, aprendizado e resolução de problemas. As definições da direta, por outro lado, tem como base de comparação para uma ``performance ideal'' o resultado obtido seguindo o caminho mais racional possível, e agindo sempre de ``maneira correta'' tomando suas decisões baseadas em dados e trabalhando conhecimentos das áreas de matemática e engenharia. Cada um desses modelos de comportamentos são estudados e desenvolvidos separadamente por diversos grupos que, com a divulgação de suas pesquisas e seus resultados, cooperam a entender e melhorar o conceito que se tem de IA. \cite{norvig3rd}
+	As definições da esquerda medem o sucesso da \gls{IA} baseando-se na fidelidade que o resultado obtido possui em relação à performance humana, sendo essa uma ciência empírica que envolve hipóteses sobre o comportamento e a cognição humana, como tomada de decisão, aprendizado e resolução de problemas. As definições da direta, por outro lado, tem como base de comparação para uma ``performance ideal'' o resultado obtido seguindo o caminho mais racional possível, e agindo sempre de ``maneira correta'' tomando suas decisões baseadas em dados e trabalhando conhecimentos das áreas de matemática e engenharia. Cada um desses modelos de comportamentos são estudados e desenvolvidos separadamente por diversos grupos que, com a divulgação de suas pesquisas e seus resultados, cooperam a entender e melhorar o conceito que se tem de \gls{IA}. \cite{norvig3rd}
 	 
 	\subsubsection*{Agindo Humanamente}
 		Para que seja considerada que uma máquina age como humanos, ela deve passar pelo teste de Turing, sendo esse, um teste capaz de julgar se uma máquina pode ser considerada inteligente o suficiente para possuir habilidades de conversação comparáveis às de um ser humano \cite{turing}. A máquina deve ter os seguintes recursos:
@@ -373,7 +385,7 @@
   			\item Aprendizado de Máquina - Se adaptar a novas circunstâncias
   		\end{itemize}
   			
-  			Para o ``Total Turing Test'' também é necessário:
+  			Para o ``\emph{Total Turing Test}'' também é necessário:
   			
   		\begin{itemize}
   			\item Visão computacional - Reconhecer objetos
@@ -412,55 +424,55 @@ Sócrates é um homem; Todos os homens são mortais; Portanto, Sócrates é mort
 	\end{itemize}
 
 	\subsubsection*{Aprendizado por Reforço}
-		No Aprendizado por Reforço, o objetivo é desenvolver um sistema que melhora seu desempenho com base em interações com o ambiente (feedbacks). A diferença entre ele e a aprendizagem supervisionada, é o fato de que o feedback não é o valor correto, mas uma medida de quão bem a ação foi medida por uma função de recompensa. Através da interação com o ambiente, um agente pode usar o aprendizado de reforço para aprender uma série de ações que maximizam essa recompensa por meio de uma abordagem de tentativa e erro \cite{ r_julian_heart}.
+		No Aprendizado por Reforço, o objetivo é desenvolver um sistema que melhora seu desempenho com base em interações com o ambiente (\emph{feedbacks}). A diferença entre ele e a aprendizagem supervisionada, é o fato de que o feedback não é o valor correto, mas uma medida de quão bem a ação foi medida por uma função de recompensa. Através da interação com o ambiente, um agente pode usar o aprendizado de reforço para aprender uma série de ações que maximizam essa recompensa por meio de uma abordagem de tentativa e erro \cite{ r_julian_heart}.
 
 		Chess engine é um exemplo popular de reinforcement learning, pois o agente decide sobre uma série de movimentos dependendo do estado do ambiente, e a recompensa pode ser definida como ganhar ou perder no final do jogo \cite{r_julian_heart}.  %%TO DO: Aline, rever essa citaçao: Julian Heart ou EIA649B Aline: "essa parte não é minha."%%
 	
 	
 	\subsection{Computação Cognitiva}
 
-	Sendo um dos ramos da Inteligência Artificial, a Computação Cognitiva é a capacidade de máquinas pensarem como humanos. Esse termo ganhou grande repercussão quando o sistema cognitivo da IBM, Watson, conseguiu vencer o programa de TV Jeopardy em 2011.
+	Sendo um dos ramos da \gls{IA}, a Computação Cognitiva é a capacidade de máquinas pensarem como humanos. Esse termo ganhou grande repercussão quando o sistema cognitivo da IBM, Watson, conseguiu vencer o programa de TV Jeopardy em 2011.
 
 	No entanto, um dos empecilhos para o avanço da tecnologia é a linguagem. Qualquer idioma é cheio de insinuações, idiossincrasias, expressões idiomáticas e ambiguidades; portanto, são transmitidos muitos significados nestes contextos, como 4x4 não necessariamente é 16, podendo ser também uma característica de carro.
 
-	``IBM Watson é um sistema de PLN (Processamento de Linguagem Natural) profundo. Ele alcança a precisão tentando analisar a maior quantia de contextos possíveis. Ele obtém este contexto tanto da passagem da pergunta quanto da base de conhecimento (chamada de corpus) que está disponível para ele localizar respostas'' \cite{watson_manual}. 
+	``IBM Watson é um sistema de \gls{PLN} profundo. Ele alcança a precisão tentando analisar a maior quantia de contextos possíveis. Ele obtém este contexto tanto da passagem da pergunta quanto da base de conhecimento (chamada de corpus) que está disponível para ele localizar respostas'' \cite{watson_manual}. 
 
-	\subsection{Processamento de Linguagem Natural (PLN)}
+	\subsection{\gls{PLN}}
 	Em oposição às linguagens artificiais como Java, FORTRAN ou código Morse, uma linguagem natural é uma língua falada humanos, como Português, Inglês ou Turco. O Processamento de Linguagem Natural é uma parte importante do ramo de Inteligência Artificial, visto que a capacidade de compreender linguagens naturais está intimamente ligada ao pensamento humano. % TO DO: Aline, rever a parte da lingua falada por pessoas; Aline: "sim, é falada por pessoas. mudei pra humanos"%
 	
-		\subsubsection*{PLN e Computação}
+		\subsubsection*{\gls{PLN} e Computação}
 		A linguagem é uma das ferramentas centrais na vida social e profissional das pessoas. Dentre outras coisas, age como um meio de transmissão de ideias, informações, opiniões e sentimentos, assim como para persuadir, questionar e transmitir ordens \cite{book_natural_lang}.
 		
-	A Ciência da Computação começou a ganhar interesse por análise linguística assim que o próprio campo emergiu, principalmente no ramo da Inteligência Artificial (IA). O teste de Turing, por exemplo, um dos primeiros testes desenvolvidos para julgar se uma máquina é inteligente ou não, estipula que para ser considerada inteligente, uma máquina deve possuir habilidades de conversação comparáveis às de um ser humano \cite{turing}. Isso implica que uma máquina inteligente deve possuir habilidades de compreensão e produção, no sentido mais amplo desses termos \cite{book_natural_lang}. Ou seja, deve ser capaz de processar a linguagem de comunicação, aprender as informações contidas na mensagem, e ser capaz de transmitir o que foi aprendido. 	
+	A Ciência da Computação começou a ganhar interesse por análise linguística assim que o próprio campo emergiu, principalmente no ramo da \gls{IA}. O teste de Turing, por exemplo, um dos primeiros testes desenvolvidos para julgar se uma máquina é inteligente ou não, estipula que para ser considerada inteligente, uma máquina deve possuir habilidades de conversação comparáveis às de um ser humano \cite{turing}. Isso implica que uma máquina inteligente deve possuir habilidades de compreensão e produção, no sentido mais amplo desses termos \cite{book_natural_lang}. Ou seja, deve ser capaz de processar a linguagem de comunicação, aprender as informações contidas na mensagem, e ser capaz de transmitir o que foi aprendido. 	
 	
-	Em um contexto prático, o PLN é análogo ao ensino de uma língua para uma criança. Algumas das tarefas mais comuns, como a compreensão de palavras, frases e formação de sentenças gramaticais e estruturalmente corretas, são muito naturais para os seres humanos, mas não triviais para computadores. No âmbito PLN, algumas dessas tarefas se traduzem em tokenização, fragmentação, parte de speech tagging, análise, tradução automática, reconhecimento de fala, análise de sentimento, e a maioria deles ainda são os desafios mais difíceis na área de computação \cite{book_natlang_python}.
+	Em um contexto prático, o \gls{PLN} é análogo ao ensino de uma língua para uma criança. Algumas das tarefas mais comuns, como a compreensão de palavras, frases e formação de sentenças gramaticais e estruturalmente corretas, são muito naturais para os seres humanos, mas não triviais para computadores. No âmbito \gls{PLN}, algumas dessas tarefas se traduzem em tokenização, fragmentação, parte de speech tagging, análise, tradução automática, reconhecimento de fala, análise de sentimento, e a maioria deles ainda são os desafios mais difíceis na área de computação \cite{book_natlang_python}.
 		
 	\subsubsection*{Definições importantes}
-	O Processamento de Linguagem Natural, ou PLN, é uma disciplina que se encontra na interseção de vários ramos da ciência, como Ciência da Computação, Inteligência Artificial e Psicologia Cognitiva. 
+	O Processamento de Linguagem Natural, ou \gls{PLN}, é uma disciplina que se encontra na interseção de vários ramos da ciência, como Ciência da Computação, Inteligência Artificial e Psicologia Cognitiva. 
 	
 Existem várias definições para a área ainda não completamente consolidadas. Mas, como descrito por  \citeauthoronline{book_natural_lang} (\citeyear{book_natural_lang}), por exemplo, tem-se que os termos linguística formal ou linguística computacional relacionam-se com modelos ou formalidades linguísticas desenvolvidos para implementação de TI. E os termos Tecnologia de Linguagem Humana ou Processamento de Linguagem Natural, por outro lado, referem-se a uma ferramenta de software de publicação equipada com recursos relacionados ao processamento de linguagem. 
 
-Além disso, o processamento de fala designa uma gama de técnicas de processamento de sinais para o reconhecimento ou produção de unidades linguísticas, tais como fonemas, sílabas ou palavras. Exceto para a dimensão lidar com o processamento de sinal, não há grande diferença entre o processamento de fala e PLN. Muitas técnicas que foram inicialmente aplicadas ao processamento da fala encontraram seu caminho em aplicações em PLN; alguns exemplos são os Modelos de Markov Ocultos (HMM). Finalmente, vale a pena mencionar o termo \textit{corpus linguistics}  que se refere aos métodos de coleta, anotação e uso de corpus, tanto na pesquisa linguística quanto no PLN. Os corpus têm um papel muito importante no processo de construção de um sistema de PLN, especialmente aqueles que adotam uma abordagem de aprendizado de máquina.
+Além disso, o processamento de fala designa uma gama de técnicas de processamento de sinais para o reconhecimento ou produção de unidades linguísticas, tais como fonemas, sílabas ou palavras. Exceto para a dimensão lidar com o processamento de sinal, não há grande diferença entre o processamento de fala e \gls{PLN}. Muitas técnicas que foram inicialmente aplicadas ao processamento da fala encontraram seu caminho em aplicações em \gls{PLN}; alguns exemplos são os \gls{HMM}. Finalmente, vale a pena mencionar o termo \textit{corpus linguistics}  que se refere aos métodos de coleta, anotação e uso de corpus, tanto na pesquisa linguística quanto no \gls{PLN}. Os corpus têm um papel muito importante no processo de construção de um sistema de \gls{PLN}, especialmente aqueles que adotam uma abordagem de aprendizado de máquina.
 
-	\subsubsection*{NPL e IA}
-	Inteligência Artificial (IA) tem como uma de suas descrições o estudo, design e criação de agentes inteligentes. Um agente inteligente é um sistema natural ou artificial com habilidades perceptuais que lhe permite atuar em um determinado ambiente para satisfazer seus desejos ou alcançar com êxito os objetivos \cite{norvig3rd}. O trabalho em IA é geralmente classificado em várias subdisciplinas ou ramos, tais como representação do conhecimento, planejamento, percepção e aprendizagem. Todos esses ramos estão diretamente relacionados a PLN. Isso dá à relação entre IA e PLN uma dimensão muito importante. Muitos consideram o PLN como um ramo da IA, enquanto alguns preferem considerar o PLN uma disciplina independente. 
+	\subsubsection*{\gls{PLN} e \gls{IA}}
+	\gls{IA} tem como uma de suas descrições o estudo, design e criação de agentes inteligentes. Um agente inteligente é um sistema natural ou artificial com habilidades perceptuais que lhe permite atuar em um determinado ambiente para satisfazer seus desejos ou alcançar com êxito os objetivos \cite{norvig3rd}. O trabalho em \gls{IA} é geralmente classificado em várias subdisciplinas ou ramos, tais como representação do conhecimento, planejamento, percepção e aprendizagem. Todos esses ramos estão diretamente relacionados a \gls{PLN}. Isso dá à relação entre \gls{IA} e \gls{PLN} uma dimensão muito importante. Muitos consideram o \gls{PLN} como um ramo da \gls{IA}, enquanto alguns preferem considerar o \gls{PLN} uma disciplina independente. 
 
 	
-A representação do conhecimento é importante para um sistema PLN em dois níveis: Por um lado, pode fornecer um quadro para representar os conhecimentos linguísticos necessários ao bom funcionamento de todo o sistema PLN, mesmo que o tamanho e a quantidade das informações declarativas no sistema variem consideravelmente de acordo com a abordagem escolhida. Por outro lado, alguns sistemas PLN exigem informações extralinguísticas para tomar decisões, especialmente em casos ambíguos. Portanto, certos sistemas PLN são emparelhados com ontologias ou com bases de conhecimento sob a forma de uma rede semântica, um quadro ou gráficos conceituais \cite{book_natural_lang}.
+A representação do conhecimento é importante para um sistema \gls{PLN} em dois níveis: Por um lado, pode fornecer um quadro para representar os conhecimentos linguísticos necessários ao bom funcionamento de todo o sistema \gls{PLN}, mesmo que o tamanho e a quantidade das informações declarativas no sistema variem consideravelmente de acordo com a abordagem escolhida. Por outro lado, alguns sistemas \gls{PLN} exigem informações extralinguísticas para tomar decisões, especialmente em casos ambíguos. Portanto, certos sistemas \gls{PLN} são emparelhados com ontologias ou com bases de conhecimento sob a forma de uma rede semântica, um quadro ou gráficos conceituais \cite{book_natural_lang}.
 
 Em teoria, a percepção e a linguagem parecem distantes umas das outras, mas na realidade, não é esse o caso. Fazer a conexão entre percepção e reconhecimento semântico é crucial, não só para a compreensão, mas também para melhorar a qualidade e interpretação da mensagem contida no texto. 
 
-	\subsubsection*{PLN e Ciência Cognitiva}
-	Assim como na análise linguística, a relação entre a ciência cognitiva e PLN vai em duas direções \cite{book_natural_lang}. Por um lado, os modelos cognitivos podem agir para apoiar uma fonte de inspiração para um sistema de PLN. Por outro lado, a construção de um sistema PLN de acordo com um modelo cognitivo pode ser uma forma de testar este modelo. O benefício prático de uma abordagem que imita o processo cognitivo permanece uma questão aberta porque em muitos campos, construir um sistema que é inspirado por modelos biológicos não se revela produtivo. Deve-se notar também que certas tarefas realizadas por sistemas PLN não têm paralelo em seres humanos, como a busca de informações através de mecanismos de busca ou a busca por grandes volumes de dados de texto para extrair informações úteis. A PLN pode ser vista como uma extensão das capacidades cognitivas humanas como parte de um sistema de apoio à decisão, por exemplo. Outros sistemas de PLN são muito próximos de tarefas humanas, como compreensão e produção.
+	\subsubsection*{\gls{PLN} e Ciência Cognitiva}
+	Assim como na análise linguística, a relação entre a ciência cognitiva e \gls{PLN} vai em duas direções \cite{book_natural_lang}. Por um lado, os modelos cognitivos podem agir para apoiar uma fonte de inspiração para um sistema de \gls{PLN}. Por outro lado, a construção de um sistema \gls{PLN} de acordo com um modelo cognitivo pode ser uma forma de testar este modelo. O benefício prático de uma abordagem que imita o processo cognitivo permanece uma questão aberta porque em muitos campos, construir um sistema que é inspirado por modelos biológicos não se revela produtivo. Deve-se notar também que certas tarefas realizadas por sistemas \gls{PLN} não têm paralelo em seres humanos, como a busca de informações através de mecanismos de busca ou a busca por grandes volumes de dados de texto para extrair informações úteis. A \gls{PLN} pode ser vista como uma extensão das capacidades cognitivas humanas como parte de um sistema de apoio à decisão, por exemplo. Outros sistemas de \gls{PLN} são muito próximos de tarefas humanas, como compreensão e produção.
 	
-	\subsubsection*{PLN e Data Science}	
-	Com a disponibilidade de mais e mais dados digitais, surgiu recentemente uma nova disciplina: a Data Science (ciência dos dados). Trata-se de extrair, quantificar e visualizar o conhecimento, principalmente a partir de dados textuais e falados \cite{book_natural_lang}. 
+	\subsubsection*{\gls{PLN} e Data Science}	
+	Com a disponibilidade de mais e mais dados digitais, surgiu recentemente uma nova disciplina: a \emph{Data Science} - Ciência dos Dados. Trata-se de extrair, quantificar e visualizar o conhecimento, principalmente a partir de dados textuais e falados \cite{book_natural_lang}. 
 	
-	Grande parte da informação encontra-se não estruturada, pois foi especificamente criada para interpretação humana, sendo, dessa forma, de difícil processamento por máquinas. A PLN tem o papel de extrair e processar as informações para torná-las acessíveis e interpretáveis de forma automatizada. Atualmente, dados os inúmeros usos industriais para esse tipo de conhecimento, especialmente nos campos de marketing e tomada de decisões, esta área de estudo se tornou importante.
+	Grande parte da informação encontra-se não estruturada, pois foi especificamente criada para interpretação humana, sendo, dessa forma, de difícil processamento por máquinas. A \gls{PLN} tem o papel de extrair e processar as informações para torná-las acessíveis e interpretáveis de forma automatizada. Atualmente, dados os inúmeros usos industriais para esse tipo de conhecimento, especialmente nos campos de marketing e tomada de decisões, esta área de estudo se tornou importante.
 
-	\subsubsection*{Exemplo de Aplicações de PLN na atualidade}
-	Atualmente são gerados petabytes de Weblogs, tweets, feeds do Facebook, bate-papos, e-mails e comentários. As empresas estão coletando todos esses tipos diferentes de dados para uma melhor segmentação de clientes e insights significativos. Para processar todas essas fontes de dados não estruturadas é necessário entender e utilizar PLN.
-Seguem alguns exemplos de aplicações que utilizam NPL \cite{book_natlang_python}:
+	\subsubsection*{Exemplo de Aplicações de \gls{PLN} na atualidade}
+	Atualmente são gerados petabytes de \emph{Weblogs}, \emph{Tweets}, \emph{Feeds} do Facebook, bate-papos, e-mails e comentários. As empresas estão coletando todos esses tipos diferentes de dados para uma melhor segmentação de clientes e insights significativos. Para processar todas essas fontes de dados não estruturadas é necessário entender e utilizar \gls{PLN}.
+Seguem alguns exemplos de aplicações que utilizam \gls{PLN} \cite{book_natlang_python}:
 
 	\begin{itemize}
 	 	\item Corretores de texto (MS Word/ e qualquer outro editor de texto com a funcionalidade)
@@ -472,7 +484,7 @@ Seguem alguns exemplos de aplicações que utilizam NPL \cite{book_natlang_pytho
 	 	\item IBM Watson
 	\end{itemize}
 
-Para alcançar algumas das aplicações acima e outros pré-processamentos básicos de PLN, existem muitas ferramentas de código aberto disponíveis. Alguns deles são desenvolvidos por organizações para construir seus próprios aplicativos de PLN, enquanto alguns deles são open-sourced. Como exemplo, seguem algumas ferramentas de PLN disponíveis \cite{book_natlang_python}:
+Para alcançar algumas das aplicações acima e outros pré-processamentos básicos de \gls{PLN}, existem muitas ferramentas de código aberto disponíveis. Alguns deles são desenvolvidos por organizações para construir seus próprios aplicativos de \gls{PLN}, enquanto alguns deles são open-sourced. Como exemplo, seguem algumas ferramentas de \gls{PLN} disponíveis \cite{book_natlang_python}:
 
 	\begin{itemize}
 	 	\item GATE
@@ -489,7 +501,7 @@ Para alcançar algumas das aplicações acima e outros pré-processamentos bási
 
 	\subsubsection*{Definição}
 	
-	A análise de sentimentos ou geração de sentimentos é uma das tarefas da PLN. Ela é definida como o processo de determinar os sentimentos por trás de uma sequência de caracteres \cite{book_natlang_python}. Trata-se de uma tarefa subjetiva, pois fornece as informações sobre o texto que está sendo expresso. Pode ser definida como um problema de classificação que pode ser de dois tipos - categorização binária (positiva ou negativa) ou categorização multi-classe (positiva, negativa ou neutra). 
+	A análise de sentimentos ou geração de sentimentos é uma das tarefas da \gls{PLN}. Ela é definida como o processo de determinar os sentimentos por trás de uma sequência de caracteres \cite{book_natlang_python}. Trata-se de uma tarefa subjetiva, pois fornece as informações sobre o texto que está sendo expresso. Pode ser definida como um problema de classificação que pode ser de dois tipos - categorização binária (positiva ou negativa) ou categorização multi-classe (positiva, negativa ou neutra). 
 	
 Quando combina-se a análise de sentimentos com a mineração de tópicos, ela é referida como análise de sentimento de tópico. A análise de sentimento pode ser realizada usando um lexicon. O lexicon pode ser específico do domínio ou de natureza geral e pode conter uma lista de expressões positivas, expressões negativas, expressões neutras e palavras de parada. Quando uma sentença de teste aparece, então uma simples operação de consulta pode ser realizada através deste léxico \cite{book_natlang_python}. Um exemplo de Lexicon de análises de sentimentos é o SentiSense, que compreende 2.190 sínteses e 5.496 palavras baseadas em 14 categorias emocionais \cite{carrilho}.
 
@@ -525,7 +537,7 @@ Neste contexto, a análise de sentimentos tenta tornar evidente o que as pessoas
 
 Atualmente, o Google já não publica estimativas atuais de gripe e dengue com base em padrões de busca, mas continua a oferecer estimativas históricas produzidas pelo Google Flu Trends e Google Dengue Trends. Isto, principalmente devido à falta de acuracidade dos modelos de predição, evidenciados quando o algoritmo subestimou a necessidade de vacinas nos anos de 2011-2013 nos Estados Unidos  \cite{article_google_flu}.
 
-Outras empresas também estão usando feeds de mídia social, como Facebook, Twitter e seus equivalentes, para entender as tendências em tudo, desde previsões de tendências de consumo quanto em monitoramento de tragédias. A tecnologia IA está sendo usada de muitas maneiras por essas empresas para extrair e entender os dados. Por exemplo, algumas empresas usam técnicas de PLN para interpretar o conteúdo de mídia social, enquanto outras empresas estão explorando como a análise de sentimento das mídias sociais pode ser usada para entender o que as pessoas estão postando. Os resultados atuais indicam que o uso de PLN juntamente com análise de sentimento ajuda a diferenciar entre ``eu me sinto bem'' e ``eu me sinto mal'', que se torna um grande diferencial no rastreamento de tendências de saúde \cite{book_social_machines}.
+Outras empresas também estão usando feeds de mídia social, como Facebook, Twitter e seus equivalentes, para entender as tendências em tudo, desde previsões de tendências de consumo quanto em monitoramento de tragédias. A tecnologia \gls{IA} está sendo usada de muitas maneiras por essas empresas para extrair e entender os dados. Por exemplo, algumas empresas usam técnicas de \gls{PLN} para interpretar o conteúdo de mídia social, enquanto outras empresas estão explorando como a análise de sentimento das mídias sociais pode ser usada para entender o que as pessoas estão postando. Os resultados atuais indicam que o uso de \gls{PLN} juntamente com análise de sentimento ajuda a diferenciar entre ``eu me sinto bem'' e ``eu me sinto mal'', que se torna um grande diferencial no rastreamento de tendências de saúde \cite{book_social_machines}.
 	
 	\subsubsection*{Desafios}
 Infelizmente, analisar os feeds de mídia social é muito mais difícil do que parece. Suponha que alguém escreveu um tweet ``Meu médico me disse para tomar aspirina. Como eu me sinto melhor \#not''. Embora o hashtag \#not deixa claro que ``me sinto melhor'' é sarcástico, se removemos o hashtag, não sabe-se se o escritor está sendo sério ou sarcástico.
@@ -533,55 +545,55 @@ Infelizmente, analisar os feeds de mídia social é muito mais difícil do que p
 Os sistemas atuais resolvem este problema através do acoplamento de técnicas de Aprendizado de Máquina com técnicas de análise de linguagem. No entanto, a fim de serem eficientes, estas técnicas exigem um grande número de exemplos para ser ``marcado'' por pessoas, o que significa que as pessoas explicitamente precisam indicar recursos como sentimento e sarcasmo. Uma vez que o computador tem essas informações adicionais anotadas, resultados de pesquisas atuais indicam que o computador pode, então, mais precisamente correlacionar grandes conjuntos de dados para descobrir quais palavras prever, quais recursos  e usar os resultados para analisar novos conjuntos de dados \cite{book_social_machines}.
 %TO DO: Aline, quais recursos o que ? Aline: " recursos de análise de linguagem."%
 
-Embora a pesquisa em PLN tenha feito grandes progressos na produção de comportamentos artificialmente inteligentes, por exemplo, Google, IBM Watson e Apple Siri, nenhuma dessas estruturas PLN por si só realmente entendem o que eles estão fazendo - tornando-os não muito diferentes de um papagaio que aprende a repetir palavras sem nenhuma compreensão clara do que está dizendo. Hoje, mesmo as tecnologias de PLN mais populares visualizam a análise de texto como uma tarefa de correspondência de palavras ou padrões. Tentar verificar o significado de um pedaço de texto, processando-o no nível de palavra, no entanto, não é diferente de tentar entender uma imagem, analisando-a em nível de pixel \cite{book_Cambria2015}. 
+Embora a pesquisa em \gls{PLN} tenha feito grandes progressos na produção de comportamentos artificialmente inteligentes, por exemplo, Google, IBM Watson e Apple Siri, nenhuma dessas estruturas \gls{PLN} por si só realmente entendem o que eles estão fazendo - tornando-os não muito diferentes de um papagaio que aprende a repetir palavras sem nenhuma compreensão clara do que está dizendo. Hoje, mesmo as tecnologias de \gls{PLN} mais populares visualizam a análise de texto como uma tarefa de correspondência de palavras ou padrões. Tentar verificar o significado de um pedaço de texto, processando-o no nível de palavra, no entanto, não é diferente de tentar entender uma imagem, analisando-a em nível de pixel \cite{book_Cambria2015}. 
 
-Basear-se em palavras-chave arbitrárias, pontuação e frequências de co-ocorrência de palavras funciona bem para textos estruturados, mas uma grande quantidade de conteúdo gerado pelo usuário e o surgimento de fenômenos enganosos, como spam na web e de opinião, fazem com que os algoritmos de PLN padrão sejam cada vez menos eficientes. Para extrair e manipular adequadamente significados de texto, um sistema PLN deve ter acesso a uma quantidade significativa de conhecimento sobre o mundo e o domínio do discurso.
-Para este fim, os sistemas de PLN irão gradualmente parar de confiar muito em técnicas baseadas em palavras enquanto começam a explorar a semântica de forma mais consistente e, portanto, dão um salto da Curva de sintaxe para a curva de semântica (Figura \ref{NLPCurve}).
+Basear-se em palavras-chave arbitrárias, pontuação e frequências de co-ocorrência de palavras funciona bem para textos estruturados, mas uma grande quantidade de conteúdo gerado pelo usuário e o surgimento de fenômenos enganosos, como spam na web e de opinião, fazem com que os algoritmos de \gls{PLN} padrão sejam cada vez menos eficientes. Para extrair e manipular adequadamente significados de texto, um sistema \gls{PLN} deve ter acesso a uma quantidade significativa de conhecimento sobre o mundo e o domínio do discurso.
+Para este fim, os sistemas de \gls{PLN} irão gradualmente parar de confiar muito em técnicas baseadas em palavras enquanto começam a explorar a semântica de forma mais consistente e, portanto, dão um salto da Curva de sintaxe para a curva de semântica (Figura \ref{NLPCurve}).
 
 \begin{figure}[!h]
 \centering
 \includegraphics{NLPCurve}
-\caption{Evolução prevista da pesquisa da PLN através de três eras ou curvas diferentes \cite{book_Cambria2015}}
+\caption{Evolução prevista da pesquisa da \gls{PLN} através de três eras ou curvas diferentes \cite{book_Cambria2015}}
 \label{NLPCurve}
 \end{figure}
 
 \subsection{Sentic Computing}
 
-A Sentic Computing (SC), cujo termo deriva do ``sentire'' latino (raiz das palavras como sentimento e sensibilidade) e ``sensus'' (como em senso comum),  é uma abordagem multidisciplinar para a compreensão da linguagem natural que visa preencher a distância entre o processamento estatístico de linguagem natural (PLN) e muitas outras disciplinas que são necessárias para a compreensão da linguagem humana, como linguística, raciocínio de senso comum, computação afetiva, entre outros \cite{book_Cambria2015}.
+A \gls{SC}, cujo termo deriva do ``\emph{sentire}'' latino (raiz das palavras como sentimento e sensibilidade) e ``\emph{sensus}'' (como em senso comum), é uma abordagem multidisciplinar para a compreensão da linguagem natural que visa preencher a distância entre o \gls{PLN} e muitas outras disciplinas que são necessárias para a compreensão da linguagem humana, como linguística, raciocínio de senso comum, computação afetiva, entre outros \cite{book_Cambria2015}.
 
-Em particular, a SC utiliza de técnicas IA e SemanticWeb, para representação e inferência do conhecimento; Matemática, para realizar tarefas como mineração de gráficos e redução de multidimensionalidade; Linguística, para análise de discurso e pragmática; Psicologia, para modelagem cognitiva e afetiva; Sociologia, para a compreensão da dinâmica das redes sociais e da influência social; Finalmente ética, para compreender questões relacionadas com a natureza da mente e a criação de máquinas emocionais \cite{inBook_Bisio2017}.
+Em particular, a \gls{SC} utiliza de técnicas \gls{IA} e SemanticWeb, para representação e inferência do conhecimento; Matemática, para realizar tarefas como mineração de gráficos e redução de multidimensionalidade; Linguística, para análise de discurso e pragmática; Psicologia, para modelagem cognitiva e afetiva; Sociologia, para a compreensão da dinâmica das redes sociais e da influência social; Finalmente ética, para compreender questões relacionadas com a natureza da mente e a criação de máquinas emocionais \cite{inBook_Bisio2017}.
 
-Na SC a análise da linguagem natural baseia-se em ferramentas de raciocínio de senso comum, que permitem a análise de texto, não apenas em nível de documento, página ou parágrafo, mas também em sentença, cláusula e nível de conceito. A SC é diferente dos métodos comuns para a detecção de polaridade, pois requer uma abordagem multifacetada para o problema da análise do sentimento.
+Na \gls{SC} a análise da linguagem natural baseia-se em ferramentas de raciocínio de senso comum, que permitem a análise de texto, não apenas em nível de documento, página ou parágrafo, mas também em sentença, cláusula e nível de conceito. A \gls{SC} é diferente dos métodos comuns para a detecção de polaridade, pois requer uma abordagem multifacetada para o problema da análise do sentimento.
 
-Algumas das técnicas mais populares para Opinion Mining centram-se em frequências de co-ocorrência de palavras e polaridade estatística associadas a palavras. Essas abordagens podem inferir corretamente a polaridade de textos não ambíguos com estrutura de frases simples e em um domínio específico (ou seja, o qual o classificador estatístico foi treinado). Uma das principais características da linguagem natural, no entanto, é a ambiguidade. Uma palavra como ``grande'' não possui nenhuma polaridade de forma avulsa, pois pode ser negativa, por exemplo, no caso de um ``problema grande'', ou positiva, por exemplo, em ``grande jantar'', mas a maioria dos métodos estatísticos lhe atribuem uma polaridade positiva, pois o contexto em que aparece muitas vezes é positivo.
+Algumas das técnicas mais populares para \emph{Opinion Mining} centram-se em frequências de co-ocorrência de palavras e polaridade estatística associadas a palavras. Essas abordagens podem inferir corretamente a polaridade de textos não ambíguos com estrutura de frases simples e em um domínio específico (ou seja, o qual o classificador estatístico foi treinado). Uma das principais características da linguagem natural, no entanto, é a ambiguidade. Uma palavra como ``grande'' não possui nenhuma polaridade de forma avulsa, pois pode ser negativa, por exemplo, no caso de um ``problema grande'', ou positiva, por exemplo, em ``grande jantar'', mas a maioria dos métodos estatísticos lhe atribuem uma polaridade positiva, pois o contexto em que aparece muitas vezes é positivo.
 
-Trabalhando no nível do conceito, a SC supera isso e muitos outros problemas comuns de framework de opinion-mining que dependem fortemente das propriedades estatísticas das palavras. 
+Trabalhando no nível do conceito, a \gls{SC} supera isso e muitos outros problemas comuns de framework de \emph{Opinion Mining} que dependem fortemente das propriedades estatísticas das palavras. 
 
-A detecção de sentimentos é, no entanto, um problema muito desafiador porque as emoções são constructos (ou seja, quantidades conceituais que não podem ser diretamente medidas) com limites distorcidos e variações substanciais da diferença na expressão e experiência individuais \cite{inBook_Bisio2016} . Para superar esse obstáculo, a SC baseia-se em uma modelo de categorização afetiva inspirada e motivada biologica e  psicologicamente que descreve toda a gama de fatores emocionais e experiências em termos de quatro dimensões independentes, mas concomitantes, cujas diferentes níveis de ativação compõem o estado emocional total da mente \cite{book_Cambria2015}. Esse modelo é representado na forma de uma ampulheta, conforme demonstrado na figura \ref{SenticHourGlass}.
+A detecção de sentimentos é, no entanto, um problema muito desafiador porque as emoções são constructos (ou seja, quantidades conceituais que não podem ser diretamente medidas) com limites distorcidos e variações substanciais da diferença na expressão e experiência individuais \cite{inBook_Bisio2016} . Para superar esse obstáculo, a \gls{SC} baseia-se em uma modelo de categorização afetiva inspirada e motivada biologica e  psicologicamente que descreve toda a gama de fatores emocionais e experiências em termos de quatro dimensões independentes, mas concomitantes, cujas diferentes níveis de ativação compõem o estado emocional total da mente \cite{book_Cambria2015}. Esse modelo é representado na forma de uma ampulheta, conforme demonstrado na figura \ref{SenticHourGlass}.
 
 
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=1.4]{SenticHourGlass}
-\caption {O modelo 3D e a rede do ``Hourglass of Emotions''. Uma vez que os estados afetivos vão de fortemente positivo para nulo para fortemente negativo, o modelo assume uma forma de ampulheta \cite{book_Cambria2015}}.
+\caption {O modelo 3D e a rede do ``\emph{Hourglass of Emotions}''. Uma vez que os estados afetivos vão de fortemente positivo para nulo para fortemente negativo, o modelo assume uma forma de ampulheta \cite{book_Cambria2015}}.
 \label{SenticHourGlass}
 \end{figure}
 
 	\subsection{Twitter}
 	
-	Twitter é uma rede social onde milhões de curtas mensagens de 140 caracteres são postadas diariamente (microblogging). Esta rede tem um crescente volume de dados graças um grande número de usuários ativos \cite{conference_twitter_alg}.
+	Twitter é uma rede social onde milhões de curtas mensagens de 140 caracteres são postadas diariamente (\emph{microblogging}). Esta rede tem um crescente volume de dados graças um grande número de usuários ativos \cite{conference_twitter_alg}.
 
 	Por ser uma ferramenta de fácil e rápida utilização, usuários utilizam a rede para comentar situações cotidianas e/ou eventos em tempo real (shows, esportes, premiações), criando o efeito de segunda tela (Tela 1: Evento ou TV, Tela 2: Smartphone conectado em redes sociais focados no assunto em si), o que tornou a rede rica em informações abrangendo diversas áreas e diversos públicos \cite{conference_twitter_sports}.
 
-	A extração de dados dos diversos ``tweets'' se mostrou extremamente útil ultimamente, possibilitando saber qual é a popularidade de tópicos, e qual foi a reação dos usuários neste tópico,  ainda com a possibilidade de mapear qual é o público alvo (idade, sexo, localização, etc) pelo cadastro que é efetuado no ato de criação de um perfil na rede.
+	A extração de dados dos diversos ``\emph{tweets}'' se mostrou extremamente útil ultimamente, possibilitando saber qual é a popularidade de tópicos, e qual foi a reação dos usuários neste tópico,  ainda com a possibilidade de mapear qual é o público alvo (idade, sexo, localização, etc) pelo cadastro que é efetuado no ato de criação de um perfil na rede.
 
-	Segundo o Twitter, em junho de 2016, ele contava com 313 Milhões de usuários \cite{twitter_company} postando em média 500 milhões de tweets por dia \cite{TwitterU87:online}.
+	Segundo o Twitter, em junho de 2016, ele contava com 313 Milhões de usuários \cite{twitter_company} postando em média 500 milhões de \emph{tweets} por dia \cite{TwitterU87:online}.
 	
 	\subsection{ICONIX}	
 	
 	O ICONIX é um método de desenvolvimento de software minimalista, focado em atuar na área entre a elaboração dos casos de uso e o do código \cite{iconix}. A ênfase do método está em desenvolver uma boa análise e um bom design a partir de um processo incremental, no qual os diagramas de caso de uso são a base para cada iteração. As fases do desenvolvimento delimitadas pelo ICONIX são: Requisitos, Análise e Design Preliminares, Design Detalhado e Implementação.
 	
-	Na fase de Requisitos, os requisitos funcionais (que definem quais as capacidades do sistema) pré-elaborados são analisados com o intuito de realizar um modelo de domínio, um dicionário dos termos e objetos reais do seu projeto e de como eles se relacionam superficialmente. A partir do modelo de domínio, estabelecem-se os requisitos comportamentais, que detalham as ações do usuário e como o sistema deve responder a elas \cite{iconix}. Storyboads das interfaces gráficas com o usuário são uma ferramenta importante na idenficação destes requisitos, enquanto diagramas de caso de uso são utilizados para documentar cada cenário encontrado.
+	Na fase de Requisitos, os requisitos funcionais (que definem quais as capacidades do sistema) pré-elaborados são analisados com o intuito de realizar um modelo de domínio, um dicionário dos termos e objetos reais do seu projeto e de como eles se relacionam superficialmente. A partir do modelo de domínio, estabelecem-se os requisitos comportamentais, que detalham as ações do usuário e como o sistema deve responder a elas \cite{iconix}. \emph{Storyboads} das interfaces gráficas com o usuário são uma ferramenta importante na idenficação destes requisitos, enquanto diagramas de caso de uso são utilizados para documentar cada cenário encontrado.
 	
 	Baseadas nos casos de uso encontrados, as demais fases se repetem a cada iteração, trabalhando alguns poucos casos de uso por vez. Durante a Análise e Design Preliminares, os casos de uso são refinados através de diagramas de robustez, ajudando a complementar o modelo de domínio com a identificação de classes antes ignoradas e dos atributos de cada classe. No Design Detalhado, cada caso de uso gera um diagrama de sequência de mensagens que descreve todas as chamadas de método que ocorrem entre os objetos naquele cenário. Com base nestes diagramas, o modelo de domínio é atualizado com os métodos descritos e torna-se um diagrama de classes.
 	
@@ -598,34 +610,34 @@ A detecção de sentimentos é, no entanto, um problema muito desafiador porque 
 
 \section{Trabalhos relacionados}
 
-	Um dos métodos convencionais de predição, é a utilização da frequência de repetição de palavras chave, para identificar uma tendência. Conforme descrito no trabalho de \citeauthoronline{article_Tsugawa2013} (\citeyear{article_Tsugawa2013}), foi investigada a eficácia dos registros das atividades no Twitter, correlacionando a frequência do uso de certas palavras para detectar a tendência depressiva dos usuários. Para tal, foi realizado um levantamento utilizando 50 homens e mulheres japoneses com aproximadamente 20 anos de idade usando o teste de Zung - Zung’s Self-rating Depression Scale (SDS). Este teste é um método popular de análise de tendência depressiva, baseado em um questionário de 20 perguntas, respondidas pelo próprio usuário, em que cada questão é pontuada de 1 a 4, e o somatório constitui a pontuação de Zung. Quanto maior a pontuação, maior sua tendência à depressão. 
+	Um dos métodos convencionais de predição, é a utilização da frequência de repetição de palavras chave, para identificar uma tendência. Conforme descrito no trabalho de \citeauthoronline{article_Tsugawa2013} (\citeyear{article_Tsugawa2013}), foi investigada a eficácia dos registros das atividades no Twitter, correlacionando a frequência do uso de certas palavras para detectar a tendência depressiva dos usuários. Para tal, foi realizado um levantamento utilizando 50 homens e mulheres japoneses com aproximadamente 20 anos de idade usando o teste de Zung: \gls{SDS}. Este teste é um método popular de análise de tendência depressiva, baseado em um questionário de 20 perguntas, respondidas pelo próprio usuário, em que cada questão é pontuada de 1 a 4, e o somatório constitui a pontuação de Zung. Quanto maior a pontuação, maior sua tendência à depressão. 
 	
 	Neste estudo, foram realizadas análises de regressão múltipla para estimar as pontuações de Zung dos participantes a partir de freqüências de palavras usadas em suas mensagens de tweet. Os resultados experimentais mostraram que existe uma correlação positiva média (coeficiente de correlação r aproximadamente 0,45) entre pontuação de Zung calculada pelo questionário e a pontuação estimada obtida a partir do modelo de regressão. Um dos resultados interessantes deste trabalho, foi identificar que, o uso da análise de frequência de palavras como variáveis independentes não é adequado, pois quando analisadas em conjuntos de até 5 palavras chave, foi encontrado maior coeficiente de correlação.
 
-	No entanto, basear-se em palavras-chave arbitrárias, frequências de pontuação e ocorrência de palavras pode não ser tão eficiente levando em consideração a explosão de conteúdo da Web e o surto de fenômenos enganosos como o Web trolling e o spam, que diminuem a eficiência desses métodos. Para efetivamente extrair e manipular dinamicamente significados de textos não estruturados, um sistema de PLN verdadeiramente inteligente deve considerar dados ambíguos e ter acesso a uma quantidade significativa de conhecimento sobre os possíveis ruídos dos dados e o domínio do discurso variando no tempo.
+	No entanto, basear-se em palavras-chave arbitrárias, frequências de pontuação e ocorrência de palavras pode não ser tão eficiente levando em consideração a explosão de conteúdo da Web e o surto de fenômenos enganosos como o \emph{Web Trolling} e o \emph{spam}, que diminuem a eficiência desses métodos. Para efetivamente extrair e manipular dinamicamente significados de textos não estruturados, um sistema de \gls{PLN} verdadeiramente inteligente deve considerar dados ambíguos e ter acesso a uma quantidade significativa de conhecimento sobre os possíveis ruídos dos dados e o domínio do discurso variando no tempo.
 
-	No trabalho de \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) é descrito um novo paradigma que explora as relações entre os conceitos e padrões linguísticos em um texto para revelar o fluxo de sentimento de conceito a conceito. A principal novidade do artigo consiste em um algoritmo que atribui polaridade contextual a conceitos nos textos e flui essa polaridade através de arcos de dependência para atribuir um rótulo de polaridade final a cada sentença. Este algoritmo extrai o sentimento de cada palavra diretamente de recursos lexicais já existentes como SenticNet  \cite{Cambria2014}. Em seguida, aplica deslocadores de valor e combina o sentimento de palavras individuais da frase de forma semelhante aos circuitos eletrônicos, onde o sinal das fontes pode sofrer amplificação, inversão e enfraquecimento, combinando-os até obter o resultado final do balanço desses valores. Além disso, o método proposto envolve uma técnica de back-up machine-learning, que funciona nos casos em que não é encontrada informação suficiente nos recursos lexical existentes.
+	No trabalho de \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) é descrito um novo paradigma que explora as relações entre os conceitos e padrões linguísticos em um texto para revelar o fluxo de sentimento de conceito a conceito. A principal novidade do artigo consiste em um algoritmo que atribui polaridade contextual a conceitos nos textos e flui essa polaridade através de arcos de dependência para atribuir um rótulo de polaridade final a cada sentença. Este algoritmo extrai o sentimento de cada palavra diretamente de recursos lexicais já existentes como SenticNet  \cite{Cambria2014}. Em seguida, aplica deslocadores de valor e combina o sentimento de palavras individuais da frase de forma semelhante aos circuitos eletrônicos, onde o sinal das fontes pode sofrer amplificação, inversão e enfraquecimento, combinando-os até obter o resultado final do balanço desses valores. Além disso, o método proposto envolve uma técnica de \emph{back-up machine-learning}, que funciona nos casos em que não é encontrada informação suficiente nos recursos lexical existentes.
 
- 	O algoritmo descrito por \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) utiliza o conceito de sentic pattern ou padrão de sentimento, o qual foi definido no trabalho do mesmo grupo de pesquisa \cite{article_Poria2014} e pode ser ilustrado na figura abaixo.
+ 	O algoritmo descrito por \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) utiliza o conceito de \emph{Sentic Pattern} - Padrão de Sentimento, o qual foi definido no trabalho do mesmo grupo de pesquisa \cite{article_Poria2014} e pode ser ilustrado na figura abaixo. % TODO: Corrigir "figura abaixo"
 
 
 \begin{figure}[!htb]
 \centering
 \includegraphics{senticPatternsCircuit}
-\caption{A ideia principal por trás do sentic patterns: a estrutura de uma sentença é como um circuito eletrônico onde os operadores lógicos canalizam os fluxos de dados de sentimento para obter a polaridade total da sentença \cite{article_sentiment_analysis}}.
+\caption{A ideia principal por trás do \emph{sentic patterns}: a estrutura de uma sentença é como um circuito eletrônico onde os operadores lógicos canalizam os fluxos de dados de sentimento para obter a polaridade total da sentença \cite{article_sentiment_analysis}}.
 \label{senticPatternsCircuit}
 \end{figure}
 
 O procedimento pode ser compreendido como um algoritmo de coloração de árvores que opera nos nós e arcos da árvore de dependência sintática. O algoritmo determina diretamente a polaridade para as palavras ou relações - conceitos, ou expressões multi-palavras – pertencentes nos recursos lexicais existentes. Em seguida, ele gradualmente estende os rótulos para outros arcos e nós, com as transformações necessárias determinadas por regras de sentic patterns, até obter o rótulo final para o elemento raiz, que é a saída desejada. O grupo denominou a extensão da polaridade como o fluxo do sentimento.
 
-Para complementar a análise quando os dados não estavam mapeados nos Lexicons utilizados, \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) utilizaram uma nova técnica de inteligência computacional chamada máquina de aprendizagem extrema (Extreme Learning Machine - ELM), que é um tipo de redes feedforward de camada oculta desenvolvida recentemente, com uma camada oculta que não requer ajuste. O ELM superou os métodos de última geração, como o SVM (Support Vector Machines), tanto em termos de precisão como em tempo de treinamento. Nas experiências, Poria et al. (2015) obtiveram uma precisão global de 71,32\% no conjunto de dados final usando ELM e precisão de 68,35\% usando SVM. Esses dados foram obtidos a partir de análises em três tipos de conjuntos de dados diferentes.
+Para complementar a análise quando os dados não estavam mapeados nos \emph{Lexicons} utilizados, \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) utilizaram uma nova técnica de inteligência computacional chamada \gls{EML}, que é um tipo de redes \emph{feedforward} de camada oculta desenvolvida recentemente, com uma camada oculta que não requer ajuste. O \gls{EML} superou os métodos de última geração, como o \gls{SVM}, tanto em termos de precisão como em tempo de treinamento. Nas experiências, Poria et al. (2015) obtiveram uma precisão global de 71,32\% no conjunto de dados final usando \gls{EML} e precisão de 68,35\% usando \gls{SVM}. Esses dados foram obtidos a partir de análises em três tipos de conjuntos de dados diferentes.
 
 
 O artigo escrito por \citeauthoronline{article_tweet_crisis} (\citeyear{article_tweet_crisis}), descreve a criação de algoritmos para reconhecimento de emoções em tweets relacionados a situações de crise, com ênfase na passagem do furacão Sandy pela costa leste dos Estados Unidos. O desafio do trabalho consistia na classificação multinomial das emoções, ao invés da classificação binária clássica de polaridades positiva e negativa \cite{article_sentiment_twitter}. De forma similar a esta pesquisa, um outro desafio encontrado foi a linguagem utilizada nas postagens do Twitter: textos curtos e desestruturados, repletos de gírias e sarcasmo.
 
-Os tweets foram coletados através de uma biblioteca Python e avaliados manualmente para serem enquadrados em quatro classes de emoções: raiva, medo, felicidade e outros. O objetivo dos algoritmos era enquadrar novos tweets nestas mesmas classes de acordo com a principal emoção encontrada no texto. 90\% das mensagens foram utilizadas para treino dos algoritmos e 10\% para testes. Duas soluções foram criadas com base em algoritmos de  Aprendizado de Máquina diferentes: o Naive Bayes (NB) e a Máquina de Vetores de Suporte (SVM); e diversos parâmetros variaram durante a realização dos experimentos: tamanho do n-grama, redução ou não de palavras derivadas ao seu radical (pescaria => pesca), impacto das palavras de negação, etc. 
+Os tweets foram coletados através de uma biblioteca Python e avaliados manualmente para serem enquadrados em quatro classes de emoções: raiva, medo, felicidade e outros. O objetivo dos algoritmos era enquadrar novos tweets nestas mesmas classes de acordo com a principal emoção encontrada no texto. 90\% das mensagens foram utilizadas para treino dos algoritmos e 10\% para testes. Duas soluções foram criadas com base em algoritmos de  Aprendizado de Máquina diferentes: o \gls{NB} e a \gls{SVM}; e diversos parâmetros variaram durante a realização dos experimentos: tamanho do n-grama, redução ou não de palavras derivadas ao seu radical (pescaria => pesca), impacto das palavras de negação, etc. 
 
-Os resultados obtidos foram comparados com dois algoritmos de base: um que escolhia classes de forma randômica e outro baseado em regras de palavras-chave. Nestes cenários, ambas as soluções desenvolvidas, NB e SVM, obtiveram uma eficácia superior aos algoritmos de base, com 56.5\% e 59.7\% de acerto respectivamente. A precisão das respostas aumentou quando a classe de 'outros' foi removida do contexto, chegando à uma performance de 75.3\% de acerto do algoritmo de SVM. 
+Os resultados obtidos foram comparados com dois algoritmos de base: um que escolhia classes de forma randômica e outro baseado em regras de palavras-chave. Nestes cenários, ambas as soluções desenvolvidas, \gls{NB} e \gls{SVM}, obtiveram uma eficácia superior aos algoritmos de base, com 56.5\% e 59.7\% de acerto respectivamente. A precisão das respostas aumentou quando a classe de 'outros' foi removida do contexto, chegando à uma performance de 75.3\% de acerto do algoritmo de \gls{SVM}. 
 
 	A ideia deste trabalho é aplicar as diferentes técnicas descritas nos trabalhos relacionados para análise de frases do Twitter, com objetivo de extrair os sentimentos dos usuários sobre um determinado tema.  
 
