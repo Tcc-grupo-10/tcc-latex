@@ -402,7 +402,7 @@
 		\item Detectar atividade fraudulenta em transações com cartão de crédito
 	\end{itemize}
 	
-		Existem diversos algoritmos conhecidos que aplicam o conceito de aprendizagem supervisionada, neste trabalho serão tratados de forma mais aprofundada os classificadores de \emph{Naive Bayles}, o \emph{Support Vector Machine} e o \emph{Extreme Learning}.
+		Existem diversos algoritmos conhecidos que aplicam o conceito de aprendizagem supervisionada, neste trabalho serão tratados de forma mais aprofundada os classificadores de \emph{Naive Bayles}, o Máquinas de Vetor de Suporte e o \emph{Extreme Learning}.
 	
 	\subsubsubsection*{Classificadores Naive Bayles}
 	
@@ -425,6 +425,26 @@
 	
 	Em contrapartida, este tipo de classificador é fácil de implementar, rápido e, especificamente bom para pequenas quantidades de dados \cite{raschka}. Apesar do seu princípio de independência entre as características, ele também tende a se sair bem em situações o mundo real nos quais este princípio é violado, obtendo uma eficácia maior que outros métodos de classificação mais rebuscados, inclusive em problemas com características com dependências funcionais \cite{rish}. ``O \emph{Naive Bayles} já provou sua eficácia em várias aplicações práticas, incluindo classificação de textos, medicina diagnóstica e gerenciamento da performance de sistemas'' \cite{rish}. 
 
+	\subsubsubsection*{Máquinas de Vetor de Suporte}
+
+	As Máquinas de Vetor Suporte são um modelo de aprendizagem supervisionada para classificação de dados entre duas classes. Foram inicialmente descritas por \citeauthor{cortes} (\citeyear{cortes}) como uma solução capaz de mapear como pontos num espaço multidimensional de características, os vetores de entrada (treinamento). 
+	
+	É traçada uma ``superfície de decisão'' que divide o conjunto de dados em dois (um hiperplano para cada classe) e novos dados são mapeados neste espaço e classificados de acordo com qual lado da superfície de decisão estes ficam posionados. A distância entre a superfície de decisão e o primeiro dado de cada classe é chamado de margem. A otimização desta solução ocorre através da maximização da margem \cite{r_julian_heart}, ou seja, pela busca do maior espaço entre os grupos de dados de cada classe. \cite{r_julian_heart} A figura \ref{svm} ilustra a solução aplicada em um problema bidimensional.
+
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.5]{svm_distribution}
+\caption{Exemplo da separação em problema num plano bidimensional. Os vetores de suporte, marcados com quadrados cinzas, definem a margem da maior separação entre as duas classes \cite{cortes}}
+\label{svm}
+\end{figure}
+
+	Caso a distribuição dos vetores de entrada seja não-linear, é possível realizar um processo de \emph{smoothing} dos dados com o uso de \emph{kernel tricks} a fim de facilitar a busca do algoritmo pela superfície de decisão. A variável \emph{slack} $\xi$ também pode ser introduzida como um fator de relaxamento nas restrições lineares para optimizar casos nos quais a linha entre os conjutos de dados é tênue e algumas classificações errôneas acabam acontecendo \cite{r_julian_heart}.
+	
+	O método de Máquina de Vetor Suporte pode ser utilizado para realizar análise de sentimentos em textos \cite{patil}.
+	
+
+
 	\subsubsection*{Aprendizagem não Supervisionada}
 		Na Aprendizagem não Supervisionada, o sistema deve ser capaz de extrair um padrão dos dados por conta própria, sem nenhum tipo de mapeamento prévio. Apesar de ter aplicações bem sucedidas com esse método, ele é mais difícil de entender e avaliar. Exemplos de tarefas de Aprendizagem não Supervisionada \cite {guido_muller}: 
 	\begin{itemize}
@@ -436,7 +456,7 @@
 	\subsubsection*{Aprendizado por Reforço}
 		No Aprendizado por Reforço, o objetivo é desenvolver um sistema que melhora seu desempenho com base em interações com o ambiente (feedbacks). A diferença entre ele e a aprendizagem supervisionada, é o fato de que o feedback não é o valor correto, mas uma medida de quão bem a ação foi medida por uma função de recompensa. Através da interação com o ambiente, um agente pode usar o aprendizado de reforço para aprender uma série de ações que maximizam essa recompensa por meio de uma abordagem de tentativa e erro \cite{ r_julian_heart}.
 
-		Chess engine é um exemplo popular de reinforcement learning, pois o agente decide sobre uma série de movimentos dependendo do estado do ambiente, e a recompensa pode ser definida como ganhar ou perder no final do jogo \cite{r_julian_heart}.  %%TO DO: Aline, rever essa citaçao: Julian Heart ou EIA649B%%
+		Chess engine é um exemplo popular de reinforcement learning, pois o agente decide sobre uma série de movimentos dependendo do estado do ambiente, e a recompensa pode ser definida como ganhar ou perder no final do jogo \cite{r_julian_heart}.
 	 
 
 	\subsection{Processamento de Linguagem Natural (PLN)}
@@ -677,5 +697,4 @@ Os resultados obtidos foram comparados com dois algoritmos de base: um que escol
 % -- Preâmbulo da Revisão Bibliográfica
 % -- Passagem entre aprendizado de máquina e tipos de aprendizado 
 % -- Colocar \emph{} nos termos em inglês
-% -- Teorema de Bayles como apêndice/anexo 
 
