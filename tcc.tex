@@ -58,7 +58,7 @@
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{mathtools}
 \usepackage[automake,acronym]{glossaries}
-
+\usepackage{float}
 
 % ---
 
@@ -286,7 +286,7 @@
 	% Please add the following required packages to your document preamble:
 % \usepackage[normalem]{ulem}
 % \useunder{\uline}{\ul}{}
-\begin{table}[!h]
+\begin{table}[H]
 \centering
 \caption{Cronograma de Pesquisa}
 \label{cronograma}
@@ -319,8 +319,9 @@
 	
 	Existem diversas definições respondendo ``O que é Inteligência Artificial?'', porém, cada abordagem é focada em um tipo de comportamento ou método de raciocínio que a \gls{IA} pode ter. Segundo \citeauthoronline{norvig3rd} (\citeyear{norvig3rd}), estas definições podem ser divididas em 4 categorias: Pensando Humanamente, Pensando Racionalmente, Agindo Humanamente e Agindo Racionalmente. É possível ver alguns exemplos na tabela \ref{Quatro Categorias}
 	
-
-\begin{table}[!htb]
+	As definições da esquerda medem o sucesso da \gls{IA} baseando-se na fidelidade que o resultado obtido possui em relação à performance humana, sendo essa uma ciência empírica que envolve hipóteses sobre o comportamento e a cognição humana, como tomada de decisão, aprendizado e resolução de problemas. As definições da direta, por outro lado, tem como base de comparação para uma ``performance ideal'' o resultado obtido seguindo o caminho mais racional possível, e agindo sempre de ``maneira correta'' tomando suas decisões baseadas em dados e trabalhando conhecimentos das áreas de matemática e engenharia. Cada um desses modelos de comportamentos são estudados e desenvolvidos separadamente por diversos grupos que, com a divulgação de suas pesquisas e seus resultados, cooperam a entender e melhorar o conceito que se tem de \gls{IA}. \cite{norvig3rd}
+	 
+	 \begin{table}[H]
 
 \centering
 {\renewcommand\arraystretch{1.25}
@@ -373,8 +374,6 @@
 \caption{Tabela de Comportamentos}
 \label{Quatro Categorias}
 \end{table}
-	
-	As definições da esquerda medem o sucesso da \gls{IA} baseando-se na fidelidade que o resultado obtido possui em relação à performance humana, sendo essa uma ciência empírica que envolve hipóteses sobre o comportamento e a cognição humana, como tomada de decisão, aprendizado e resolução de problemas. As definições da direta, por outro lado, tem como base de comparação para uma ``performance ideal'' o resultado obtido seguindo o caminho mais racional possível, e agindo sempre de ``maneira correta'' tomando suas decisões baseadas em dados e trabalhando conhecimentos das áreas de matemática e engenharia. Cada um desses modelos de comportamentos são estudados e desenvolvidos separadamente por diversos grupos que, com a divulgação de suas pesquisas e seus resultados, cooperam a entender e melhorar o conceito que se tem de \gls{IA}. \cite{norvig3rd}
 	 
 	\subsubsection*{Agindo Humanamente}
 		Para que seja considerada que uma máquina age como humanos, ela deve passar pelo teste de Turing, sendo esse, um teste capaz de julgar se uma máquina pode ser considerada inteligente o suficiente para possuir habilidades de conversação comparáveis às de um ser humano \cite{turing}. A máquina deve ter os seguintes recursos:
@@ -457,15 +456,14 @@
 
 	As Máquinas de Vetor Suporte são um modelo de aprendizagem supervisionada para classificação de dados entre duas classes. Foram inicialmente descritas por \citeauthor{cortes} (\citeyear{cortes}) como uma solução capaz de mapear como pontos num espaço multidimensional de características, os vetores de entrada (treinamento). 
 	
-	É traçada uma ``superfície de decisão'' que divide o conjunto de dados em dois (um hiperplano para cada classe) e novos dados são mapeados neste espaço e classificados de acordo com qual lado da superfície de decisão estes ficam posionados. A distância entre a superfície de decisão e o primeiro dado de cada classe é chamado de margem. A otimização desta solução ocorre através da maximização da margem \cite{r_julian_heart}, ou seja, pela busca do maior espaço entre os grupos de dados de cada classe. \cite{r_julian_heart} A figura \ref{svm} ilustra a solução aplicada em um problema bidimensional.
-
-
-\begin{figure}[!htb]
+	\begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{svm_distribution}
 \caption{Exemplo da separação em problema num plano bidimensional. Os vetores de suporte, marcados com quadrados cinzas, definem a margem da maior separação entre as duas classes \cite{cortes}}
 \label{svm}
 \end{figure}
+	
+	É traçada uma ``superfície de decisão'' que divide o conjunto de dados em dois (um hiperplano para cada classe) e novos dados são mapeados neste espaço e classificados de acordo com qual lado da superfície de decisão estes ficam posionados. A distância entre a superfície de decisão e o primeiro dado de cada classe é chamado de margem. A otimização desta solução ocorre através da maximização da margem \cite{r_julian_heart}, ou seja, pela busca do maior espaço entre os grupos de dados de cada classe. \cite{r_julian_heart} A figura \ref{svm} ilustra a solução aplicada em um problema bidimensional.
 
 	Caso a distribuição dos vetores de entrada seja não-linear, é possível realizar um processo de \emph{smoothing} dos dados com o uso de \emph{kernel tricks} a fim de facilitar a busca do algoritmo pela superfície de decisão. A variável \emph{slack} $\xi$ também pode ser introduzida como um fator de relaxamento nas restrições lineares para optimizar casos nos quais a linha entre os conjutos de dados é tênue e algumas classificações errôneas acabam acontecendo \cite{r_julian_heart}.
 	
@@ -584,7 +582,7 @@ Neste contexto, a análise de sentimentos tenta tornar evidente o que as pessoas
 	\subsubsection*{Mídias Sociais e Análises de Tendências}
 	Muitas empresas, grandes e pequenas, estão explorando se podem usar os comportamentos e comunicações on-line das pessoas para prever situações do mundo real. Por exemplo, desde 2008, o Google vem explorando se as pesquisas que chegam de usuários de todo o mundo podem permitir o rastreamento ou mesmo a previsão da ocorrência de doenças. A empresa de pesquisa demonstrou o rastreamento de duas doenças: gripe e dengue. A Figura \ref{google_flu} mostra o site Flu Trends, que foi capaz de prever a incidência de gripe com base em um conjunto de palavras-chave usadas em pesquisas durante um surto local de gripe \cite{book_social_machines}.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 \centering
 \includegraphics{google_flu}
 \caption{Google Flu Trends}
@@ -602,17 +600,18 @@ Infelizmente, analisar os feeds de mídia social é muito mais difícil do que p
 Os sistemas atuais resolvem este problema através do acoplamento de técnicas de Aprendizado de Máquina com técnicas de análise de linguagem. No entanto, a fim de serem eficientes, estas técnicas exigem um grande número de exemplos para ser ``marcado'' por pessoas, o que significa que as pessoas explicitamente precisam indicar recursos como sentimento e sarcasmo. Uma vez que o computador tem essas informações adicionais anotadas, resultados de pesquisas atuais indicam que o computador pode, então, mais precisamente correlacionar grandes conjuntos de dados para descobrir quais palavras prever, quais recursos  e usar os resultados para analisar novos conjuntos de dados \cite{book_social_machines}.
 %TO DO: Aline, quais recursos o que ? Aline: " recursos de análise de linguagem."%
 
-Embora a pesquisa em \gls{PLN} tenha feito grandes progressos na produção de comportamentos artificialmente inteligentes, por exemplo, Google, IBM Watson e Apple Siri, nenhuma dessas estruturas \gls{PLN} por si só realmente entendem o que eles estão fazendo - tornando-os não muito diferentes de um papagaio que aprende a repetir palavras sem nenhuma compreensão clara do que está dizendo. Hoje, mesmo as tecnologias de \gls{PLN} mais populares visualizam a análise de texto como uma tarefa de correspondência de palavras ou padrões. Tentar verificar o significado de um pedaço de texto, processando-o no nível de palavra, no entanto, não é diferente de tentar entender uma imagem, analisando-a em nível de pixel \cite{book_Cambria2015}. 
-
-Basear-se em palavras-chave arbitrárias, pontuação e frequências de co-ocorrência de palavras funciona bem para textos estruturados, mas uma grande quantidade de conteúdo gerado pelo usuário e o surgimento de fenômenos enganosos, como spam na web e de opinião, fazem com que os algoritmos de \gls{PLN} padrão sejam cada vez menos eficientes. Para extrair e manipular adequadamente significados de texto, um sistema \gls{PLN} deve ter acesso a uma quantidade significativa de conhecimento sobre o mundo e o domínio do discurso.
-Para este fim, os sistemas de \gls{PLN} irão gradualmente parar de confiar muito em técnicas baseadas em palavras enquanto começam a explorar a semântica de forma mais consistente e, portanto, dão um salto da Curva de sintaxe para a curva de semântica (Figura \ref{NLPCurve}).
-
-\begin{figure}[!htb]
+\begin{figure}[H]
 \centering
 \includegraphics{NLPCurve}
 \caption{Evolução prevista da pesquisa da \gls{PLN} através de três eras ou curvas diferentes \cite{book_Cambria2015}}
 \label{NLPCurve}
 \end{figure}
+
+
+Embora a pesquisa em \gls{PLN} tenha feito grandes progressos na produção de comportamentos artificialmente inteligentes, por exemplo, Google, IBM Watson e Apple Siri, nenhuma dessas estruturas \gls{PLN} por si só realmente entendem o que eles estão fazendo - tornando-os não muito diferentes de um papagaio que aprende a repetir palavras sem nenhuma compreensão clara do que está dizendo. Hoje, mesmo as tecnologias de \gls{PLN} mais populares visualizam a análise de texto como uma tarefa de correspondência de palavras ou padrões. Tentar verificar o significado de um pedaço de texto, processando-o no nível de palavra, no entanto, não é diferente de tentar entender uma imagem, analisando-a em nível de pixel \cite{book_Cambria2015}. 
+
+Basear-se em palavras-chave arbitrárias, pontuação e frequências de co-ocorrência de palavras funciona bem para textos estruturados, mas uma grande quantidade de conteúdo gerado pelo usuário e o surgimento de fenômenos enganosos, como spam na web e de opinião, fazem com que os algoritmos de \gls{PLN} padrão sejam cada vez menos eficientes. Para extrair e manipular adequadamente significados de texto, um sistema \gls{PLN} deve ter acesso a uma quantidade significativa de conhecimento sobre o mundo e o domínio do discurso.
+Para este fim, os sistemas de \gls{PLN} irão gradualmente parar de confiar muito em técnicas baseadas em palavras enquanto começam a explorar a semântica de forma mais consistente e, portanto, dão um salto da Curva de sintaxe para a curva de semântica (Figura \ref{NLPCurve}).
 
 \subsection{Sentic Computing}
 
@@ -622,19 +621,18 @@ Em particular, a \gls{SC} utiliza de técnicas \gls{IA} e SemanticWeb, para repr
 
 Na \gls{SC} a análise da linguagem natural baseia-se em ferramentas de raciocínio de senso comum, que permitem a análise de texto, não apenas em nível de documento, página ou parágrafo, mas também em sentença, cláusula e nível de conceito. A \gls{SC} é diferente dos métodos comuns para a detecção de polaridade, pois requer uma abordagem multifacetada para o problema da análise do sentimento.
 
-Algumas das técnicas mais populares para \emph{Opinion Mining} centram-se em frequências de co-ocorrência de palavras e polaridade estatística associadas a palavras. Essas abordagens podem inferir corretamente a polaridade de textos não ambíguos com estrutura de frases simples e em um domínio específico (ou seja, o qual o classificador estatístico foi treinado). Uma das principais características da linguagem natural, no entanto, é a ambiguidade. Uma palavra como ``grande'' não possui nenhuma polaridade de forma avulsa, pois pode ser negativa, por exemplo, no caso de um ``problema grande'', ou positiva, por exemplo, em ``grande jantar'', mas a maioria dos métodos estatísticos lhe atribuem uma polaridade positiva, pois o contexto em que aparece muitas vezes é positivo.
-
-Trabalhando no nível do conceito, a \gls{SC} supera isso e muitos outros problemas comuns de framework de \emph{Opinion Mining} que dependem fortemente das propriedades estatísticas das palavras. 
-
-A detecção de sentimentos é, no entanto, um problema muito desafiador porque as emoções são constructos (ou seja, quantidades conceituais que não podem ser diretamente medidas) com limites distorcidos e variações substanciais da diferença na expressão e experiência individuais \cite{inBook_Bisio2016} . Para superar esse obstáculo, a \gls{SC} baseia-se em uma modelo de categorização afetiva inspirada e motivada biologica e  psicologicamente que descreve toda a gama de fatores emocionais e experiências em termos de quatro dimensões independentes, mas concomitantes, cujas diferentes níveis de ativação compõem o estado emocional total da mente \cite{book_Cambria2015}. Esse modelo é representado na forma de uma ampulheta, conforme demonstrado na figura \ref{SenticHourGlass}.
-
-
-\begin{figure}[!htb]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=1.4]{SenticHourGlass}
 \caption {O modelo 3D e a rede do ``\emph{Hourglass of Emotions}''. Uma vez que os estados afetivos vão de fortemente positivo para nulo para fortemente negativo, o modelo assume uma forma de ampulheta \cite{book_Cambria2015}}.
 \label{SenticHourGlass}
 \end{figure}
+
+Algumas das técnicas mais populares para \emph{Opinion Mining} centram-se em frequências de co-ocorrência de palavras e polaridade estatística associadas a palavras. Essas abordagens podem inferir corretamente a polaridade de textos não ambíguos com estrutura de frases simples e em um domínio específico (ou seja, o qual o classificador estatístico foi treinado). Uma das principais características da linguagem natural, no entanto, é a ambiguidade. Uma palavra como ``grande'' não possui nenhuma polaridade de forma avulsa, pois pode ser negativa, por exemplo, no caso de um ``problema grande'', ou positiva, por exemplo, em ``grande jantar'', mas a maioria dos métodos estatísticos lhe atribuem uma polaridade positiva, pois o contexto em que aparece muitas vezes é positivo.
+
+Trabalhando no nível do conceito, a \gls{SC} supera isso e muitos outros problemas comuns de framework de \emph{Opinion Mining} que dependem fortemente das propriedades estatísticas das palavras. 
+
+A detecção de sentimentos é, no entanto, um problema muito desafiador porque as emoções são constructos (ou seja, quantidades conceituais que não podem ser diretamente medidas) com limites distorcidos e variações substanciais da diferença na expressão e experiência individuais \cite{inBook_Bisio2016} . Para superar esse obstáculo, a \gls{SC} baseia-se em uma modelo de categorização afetiva inspirada e motivada biologica e  psicologicamente que descreve toda a gama de fatores emocionais e experiências em termos de quatro dimensões independentes, mas concomitantes, cujas diferentes níveis de ativação compõem o estado emocional total da mente \cite{book_Cambria2015}. Esse modelo é representado na forma de uma ampulheta, conforme demonstrado na figura \ref{SenticHourGlass}.
 
 	\subsection{Twitter}
 	
@@ -658,7 +656,7 @@ A detecção de sentimentos é, no entanto, um problema muito desafiador porque 
 	
 	Entre cada uma das fases, atinge-se uma milestone que consiste numa revisão crítica do que foi elaborado até o momento para assegurar que os requisitos estão sendo atendidos corretamente. A elaboração dos casos de uso, diagramas de robustez e de sequência de mensagem são a parte chamada de dinâmica no ICONIX e os diagramas de domínio e de classes são a parte estática. A figura \ref{iconix_diagram} apresenta uma visão geral do processo.
 	
-\begin{figure}[!htb]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{iconix}
 \caption{Visão Geral do Processo ICONIX \cite{iconix}}
@@ -671,19 +669,18 @@ A detecção de sentimentos é, no entanto, um problema muito desafiador porque 
 	
 	Neste estudo, foram realizadas análises de regressão múltipla para estimar as pontuações de Zung dos participantes a partir de freqüências de palavras usadas em suas mensagens de tweet. Os resultados experimentais mostraram que existe uma correlação positiva média (coeficiente de correlação r aproximadamente 0,45) entre pontuação de Zung calculada pelo questionário e a pontuação estimada obtida a partir do modelo de regressão. Um dos resultados interessantes deste trabalho, foi identificar que, o uso da análise de frequência de palavras como variáveis independentes não é adequado, pois quando analisadas em conjuntos de até 5 palavras chave, foi encontrado maior coeficiente de correlação.
 
-	No entanto, basear-se em palavras-chave arbitrárias, frequências de pontuação e ocorrência de palavras pode não ser tão eficiente levando em consideração a explosão de conteúdo da Web e o surto de fenômenos enganosos como o \emph{Web Trolling} e o \emph{spam}, que diminuem a eficiência desses métodos. Para efetivamente extrair e manipular dinamicamente significados de textos não estruturados, um sistema de \gls{PLN} verdadeiramente inteligente deve considerar dados ambíguos e ter acesso a uma quantidade significativa de conhecimento sobre os possíveis ruídos dos dados e o domínio do discurso variando no tempo.
-
-	No trabalho de \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) é descrito um novo paradigma que explora as relações entre os conceitos e padrões linguísticos em um texto para revelar o fluxo de sentimento de conceito a conceito. A principal novidade do artigo consiste em um algoritmo que atribui polaridade contextual a conceitos nos textos e flui essa polaridade através de arcos de dependência para atribuir um rótulo de polaridade final a cada sentença. Este algoritmo extrai o sentimento de cada palavra diretamente de recursos lexicais já existentes como SenticNet  \cite{Cambria2014}. Em seguida, aplica deslocadores de valor e combina o sentimento de palavras individuais da frase de forma semelhante aos circuitos eletrônicos, onde o sinal das fontes pode sofrer amplificação, inversão e enfraquecimento, combinando-os até obter o resultado final do balanço desses valores. Além disso, o método proposto envolve uma técnica de \emph{back-up machine-learning}, que funciona nos casos em que não é encontrada informação suficiente nos recursos lexical existentes.
-
- 	O algoritmo descrito por \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) utiliza o conceito de \emph{Sentic Pattern} - Padrão de Sentimento, o qual foi definido no trabalho do mesmo grupo de pesquisa \cite{article_Poria2014} e pode ser ilustrado na figura abaixo. % TODO: Corrigir "figura abaixo"
-
-
-\begin{figure}[!htb]
+    \begin{figure}[H]
 \centering
 \includegraphics{senticPatternsCircuit}
 \caption{A ideia principal por trás do \emph{sentic patterns}: a estrutura de uma sentença é como um circuito eletrônico onde os operadores lógicos canalizam os fluxos de dados de sentimento para obter a polaridade total da sentença \cite{article_sentiment_analysis}}.
 \label{senticPatternsCircuit}
 \end{figure}
+
+	No entanto, basear-se em palavras-chave arbitrárias, frequências de pontuação e ocorrência de palavras pode não ser tão eficiente levando em consideração a explosão de conteúdo da Web e o surto de fenômenos enganosos como o \emph{Web Trolling} e o \emph{spam}, que diminuem a eficiência desses métodos. Para efetivamente extrair e manipular dinamicamente significados de textos não estruturados, um sistema de \gls{PLN} verdadeiramente inteligente deve considerar dados ambíguos e ter acesso a uma quantidade significativa de conhecimento sobre os possíveis ruídos dos dados e o domínio do discurso variando no tempo.
+
+	No trabalho de \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) é descrito um novo paradigma que explora as relações entre os conceitos e padrões linguísticos em um texto para revelar o fluxo de sentimento de conceito a conceito. A principal novidade do artigo consiste em um algoritmo que atribui polaridade contextual a conceitos nos textos e flui essa polaridade através de arcos de dependência para atribuir um rótulo de polaridade final a cada sentença. Este algoritmo extrai o sentimento de cada palavra diretamente de recursos lexicais já existentes como SenticNet  \cite{Cambria2014}. Em seguida, aplica deslocadores de valor e combina o sentimento de palavras individuais da frase de forma semelhante aos circuitos eletrônicos, onde o sinal das fontes pode sofrer amplificação, inversão e enfraquecimento, combinando-os até obter o resultado final do balanço desses valores. Além disso, o método proposto envolve uma técnica de \emph{back-up machine-learning}, que funciona nos casos em que não é encontrada informação suficiente nos recursos lexical existentes.
+
+ 	O algoritmo descrito por \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}) utiliza o conceito de \emph{Sentic Pattern} - Padrão de Sentimento, o qual foi definido no trabalho do mesmo grupo de pesquisa \cite{article_Poria2014} e pode ser ilustrado na figura abaixo. % TODO: Corrigir "figura abaixo"
 
 O procedimento pode ser compreendido como um algoritmo de coloração de árvores que opera nos nós e arcos da árvore de dependência sintática. O algoritmo determina diretamente a polaridade para as palavras ou relações - conceitos, ou expressões multi-palavras – pertencentes nos recursos lexicais existentes. Em seguida, ele gradualmente estende os rótulos para outros arcos e nós, com as transformações necessárias determinadas por regras de sentic patterns, até obter o rótulo final para o elemento raiz, que é a saída desejada. O grupo denominou a extensão da polaridade como o fluxo do sentimento.
 
