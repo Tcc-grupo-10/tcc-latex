@@ -450,7 +450,7 @@ Sócrates é um homem; Todos os homens são mortais; Portanto, Sócrates é mort
 	\subsubsection*{Aprendizado por Reforço}
 		No Aprendizado por Reforço, o objetivo é desenvolver um sistema que melhora seu desempenho com base em interações com o ambiente (\emph{feedbacks}). A diferença entre ele e a aprendizagem supervisionada, é o fato de que o feedback não é o valor correto, mas uma medida de quão bem a ação foi medida por uma função de recompensa. Através da interação com o ambiente, um agente pode usar o aprendizado de reforço para aprender uma série de ações que maximizam essa recompensa por meio de uma abordagem de tentativa e erro \cite{ r_julian_heart}.
 
-		Chess engine é um exemplo popular de reinforcement learning, pois o agente decide sobre uma série de movimentos dependendo do estado do ambiente, e a recompensa pode ser definida como ganhar ou perder no final do jogo \cite{r_julian_heart}.  %%TO DO: Aline, rever essa citaçao: Julian Heart ou EIA649B%%
+		Chess engine é um exemplo popular de reinforcement learning, pois o agente decide sobre uma série de movimentos dependendo do estado do ambiente, e a recompensa pode ser definida como ganhar ou perder no final do jogo \cite{r_julian_heart}.  %%TO DO: Aline, rever essa citaçao: Julian Heart ou EIA649B Aline: "essa parte não é minha."%%
 	
 	
 	\subsection{Computação Cognitiva}
@@ -462,7 +462,7 @@ Sócrates é um homem; Todos os homens são mortais; Portanto, Sócrates é mort
 	``IBM Watson é um sistema de \gls{PLN} profundo. Ele alcança a precisão tentando analisar a maior quantia de contextos possíveis. Ele obtém este contexto tanto da passagem da pergunta quanto da base de conhecimento (chamada de corpus) que está disponível para ele localizar respostas'' \cite{watson_manual}. 
 
 	\subsection{\gls{PLN}}
-	Em oposição às linguagens artificiais como Java, FORTRAN ou código Morse, uma linguagem natural é uma língua falada por pessoas, como Português, Inglês ou Turco. O Processamento de Linguagem Natural é uma parte importante do ramo de Inteligência Artificial, visto que a capacidade de compreender linguagens naturais está intimamente ligada ao pensamento humano. % TO DO: Aline, rever a parte da lingua falada por pessoas%
+	Em oposição às linguagens artificiais como Java, FORTRAN ou código Morse, uma linguagem natural é uma língua falada humanos, como Português, Inglês ou Turco. O Processamento de Linguagem Natural é uma parte importante do ramo de Inteligência Artificial, visto que a capacidade de compreender linguagens naturais está intimamente ligada ao pensamento humano. % TO DO: Aline, rever a parte da lingua falada por pessoas; Aline: "sim, é falada por pessoas. mudei pra humanos"%
 	
 		\subsubsection*{\gls{PLN} e Computação}
 		A linguagem é uma das ferramentas centrais na vida social e profissional das pessoas. Dentre outras coisas, age como um meio de transmissão de ideias, informações, opiniões e sentimentos, assim como para persuadir, questionar e transmitir ordens \cite{book_natural_lang}.
@@ -536,7 +536,7 @@ Em que $e_{i}$ é o nome de uma entidade, $a_{ij}$ é um aspecto de $e_{i}$, $s_
 
 O sentimento $s_{ikjl}$ pode ser positivo, negativo ou neutro, ou expresso com diferentes níveis de intensidade, como o sistema de 1 a 5 estrelas usado pela maioria dos sites de revisão (por exemplo, em avaliações de itens da Amazon).
 
-%TO DO : Aline, aqui estava escrito "niveis de intensidade/intensidade", era pra estar assim ? % 
+%TO DO : Aline, aqui estava escrito "niveis de intensidade/intensidade", era pra estar assim ? Aline: "Non. tá certo agora."% 
 
 	\subsubsection*{Análises de Sentimentos em Mídias Sociais}
 	
@@ -566,7 +566,8 @@ Outras empresas também estão usando feeds de mídia social, como Facebook, Twi
 	\subsubsection*{Desafios}
 Infelizmente, analisar os feeds de mídia social é muito mais difícil do que parece. Suponha que alguém escreveu um tweet ``Meu médico me disse para tomar aspirina. Como eu me sinto melhor \#not''. Embora o hashtag \#not deixa claro que ``me sinto melhor'' é sarcástico, se removemos o hashtag, não sabe-se se o escritor está sendo sério ou sarcástico.
 
-Os sistemas atuais resolvem este problema através do acoplamento de técnicas de Aprendizado de Máquina com técnicas de análise de linguagem. No entanto, a fim de serem eficientes, estas técnicas exigem um grande número de exemplos para ser ``marcado'' por pessoas, o que significa que as pessoas explicitamente precisam indicar recursos como sentimento e sarcasmo. Uma vez que o computador tem essas informações adicionais anotadas, resultados de pesquisas atuais indicam que o computador pode, então, mais precisamente correlacionar grandes conjuntos de dados para descobrir quais palavras prever, quais recursos %TO DO: Aline, quais recursos o que ?% e usar os resultados para analisar novos conjuntos de dados \cite{book_social_machines}.
+Os sistemas atuais resolvem este problema através do acoplamento de técnicas de Aprendizado de Máquina com técnicas de análise de linguagem. No entanto, a fim de serem eficientes, estas técnicas exigem um grande número de exemplos para ser ``marcado'' por pessoas, o que significa que as pessoas explicitamente precisam indicar recursos como sentimento e sarcasmo. Uma vez que o computador tem essas informações adicionais anotadas, resultados de pesquisas atuais indicam que o computador pode, então, mais precisamente correlacionar grandes conjuntos de dados para descobrir quais palavras prever, quais recursos  e usar os resultados para analisar novos conjuntos de dados \cite{book_social_machines}.
+%TO DO: Aline, quais recursos o que ? Aline: " recursos de análise de linguagem."%
 
 Embora a pesquisa em \gls{PLN} tenha feito grandes progressos na produção de comportamentos artificialmente inteligentes, por exemplo, Google, IBM Watson e Apple Siri, nenhuma dessas estruturas \gls{PLN} por si só realmente entendem o que eles estão fazendo - tornando-os não muito diferentes de um papagaio que aprende a repetir palavras sem nenhuma compreensão clara do que está dizendo. Hoje, mesmo as tecnologias de \gls{PLN} mais populares visualizam a análise de texto como uma tarefa de correspondência de palavras ou padrões. Tentar verificar o significado de um pedaço de texto, processando-o no nível de palavra, no entanto, não é diferente de tentar entender uma imagem, analisando-a em nível de pixel \cite{book_Cambria2015}. 
 
@@ -661,6 +662,15 @@ O artigo escrito por \citeauthoronline{article_tweet_crisis} (\citeyear{article_
 Os tweets foram coletados através de uma biblioteca Python e avaliados manualmente para serem enquadrados em quatro classes de emoções: raiva, medo, felicidade e outros. O objetivo dos algoritmos era enquadrar novos tweets nestas mesmas classes de acordo com a principal emoção encontrada no texto. 90\% das mensagens foram utilizadas para treino dos algoritmos e 10\% para testes. Duas soluções foram criadas com base em algoritmos de  Aprendizado de Máquina diferentes: o \gls{NB} e a \gls{SVM}; e diversos parâmetros variaram durante a realização dos experimentos: tamanho do n-grama, redução ou não de palavras derivadas ao seu radical (pescaria => pesca), impacto das palavras de negação, etc. 
 
 Os resultados obtidos foram comparados com dois algoritmos de base: um que escolhia classes de forma randômica e outro baseado em regras de palavras-chave. Nestes cenários, ambas as soluções desenvolvidas, \gls{NB} e \gls{SVM}, obtiveram uma eficácia superior aos algoritmos de base, com 56.5\% e 59.7\% de acerto respectivamente. A precisão das respostas aumentou quando a classe de 'outros' foi removida do contexto, chegando à uma performance de 75.3\% de acerto do algoritmo de \gls{SVM}. 
+
+	A ideia deste trabalho é aplicar as diferentes técnicas descritas nos trabalhos relacionados para análise de frases do Twitter, com objetivo de extrair os sentimentos dos usuários sobre um determinado tema.  
+
+	Dessa forma, como descrito em \citeauthoronline{article_tweet_crisis} (\citeyear{article_tweet_crisis}), a base de tweets inicial será obtida através do uso do Tweetstream, um pacote Python que permite a extração de tweets utilizando termos específicos de busca. Os pesquisadores aplicaram os algoritmos de NB e SVM para análise de sentimentos. No entando, para a mesma base de dados iniciais, este trabalho aplicará também os algoritmos de Fluxo de Sentimentos e ELM, de maneira similar ao grupo de \citeauthoronline{article_sentiment_analysis} (\citeyear{article_sentiment_analysis}). Para analisar a eficiência dos algoritmos, será utilizado o método de análise de frequência de palavras, descrito por \citeauthoronline{article_Tsugawa2013} (\citeyear{article_Tsugawa2013}), e uma atribuição de sentimentos randômica, como descrito por \citeauthoronline{article_tweet_crisis} (\citeyear{article_tweet_crisis}), que será o controle. 
+
+Utilizaremos o Lexicon SenticNet \cite{article_Poria2014}, para associar os sentimentos vinculados a cada palavra.
+
+A contribuição deste trabalho, se dará na aplicação e comparação de performance de cinco técnicas diferentes para análise de sentimentos (NB, SVM, Fluxo de Sentimentos e ELM, e frêquencia de palavras), e, potencialmente, desenvolvimento de um algoritmo próprio específico para o cenário de extração sentimento em frases curtas e não estruturadas (como é o caso dos tweets).
+
 
 	%% Quero falar sobre TDD %%
 	

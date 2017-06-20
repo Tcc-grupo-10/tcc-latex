@@ -1,0 +1,345 @@
+% Encoding: UTF-8
+
+
+@Conference{conference_fb,
+  Title                    = {Social Networks' Facebook' Statutes Updates Mining for Sentiment Classification},
+  Author                   = {Jalel Akaichi},
+  Booktitle                = {Social Computing (SocialCom), 2013 International Conference on},
+  Year                     = {2014},
+
+  Address                  = {Alexandria, VA, USA},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Book{book_ia_concepts,
+  Title                    = {Artificial Intelligence: Concepts, Methodologies, Tools, and Applications.},
+  Author                   = {Information Resources Management Association},
+  Publisher                = {IGI Global},
+  Year                     = {2016},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Book{book_python_orly,
+  Title                    = {Natural Language Processing with Python},
+  Author                   = {Bird, S. and Klein, E. and Loper, E.},
+  Publisher                = {O'Reilly Media, Inc.},
+  Year                     = {2009},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Misc{tweetstream,
+  Title                    = {Tweetstream},
+
+  Author                   = {M. Bleigh and S. Agalloco and E. Michaels-Ober},
+  HowPublished             = {\url{https://github.com/tweetstream/tweetstream}},
+  Note                     = {(Acessado em; 05/04/2017)},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Article{article_tweet_crisis,
+  Title                    = {Learning to Classify Emotional Content in Crisis-Related Tweets},
+  Author                   = {J. Brynielsson and F. Johansson and A. Westling},
+  Journal                  = {Institute for Scientific Information},
+  Year                     = {2013},
+  Pages                    = {33-38},
+  Volume                   = {13},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Article{article_google_flu,
+  Title                    = {When Google got flu wrong.},
+  Author                   = {BUTLER, D.},
+  Journal                  = {NATURE},
+  Year                     = {2013},
+  Pages                    = {155-156},
+  Volume                   = {494},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Book{,
+  Author                   = {Carrillo de Albornoz, J. and Plaza, L. and Gervás, P.},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Conference{carrilho,
+  Title                    = {SentiSense: An easily scalable concept-based affective lexicon for Sentiment Analysis},
+  Author                   = {Carrillo de Albornoz, J. and Plaza, L. and Gervás, P.},
+  Booktitle                = {The 8th International Conference on Language Resources and Evaluation (LREC 2012)},
+  Year                     = {2012},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Conference{conference_twitter_alg,
+  Title                    = {Twitter sentiment analysis using various classification algorithms},
+  Author                   = {Ajay Deshwal and Sudhir Kumar Sharma},
+  Booktitle                = {Reliability, Infocom Technologies and Optimization (Trends and Future Directions) (ICRITO), 2016 5th International Conference on},
+  Year                     = {2016},
+
+  Address                  = {Noida, India},
+  Month                    = {Setembro},
+  Publisher                = {IEEE},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Article{article_weka,
+  Title                    = {The WEKA Data Mining Software: An Update},
+  Author                   = {M. Hall and E. Frank and G. Holmes and B. Pfahringer and P. Reutemann and I. H. Witten},
+  Journal                  = {SIGKDD Explorations},
+  Year                     = {2009},
+  Number                   = {1},
+  Volume                   = {11},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Book{book_social_machines,
+  Title                    = {Social Machines: The Coming Collision of Artificial Intelligence, Social Networking, and Humanity.},
+  Author                   = {Hendler, J. and Mulvehill, A. M.},
+  Publisher                = {Apress},
+  Year                     = {2016},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Manual{watson_manual,
+  Title                    = {The Era of Cognitive Systems: An Inside Look at IBM Watson and How it Works},
+  Author                   = {High, Rob},
+  Month                    = {Dezembro},
+  Organization             = {IBM Corp.},
+  Year                     = {2012},
+
+  Optaddress               = {•},
+  Optannote                = {•},
+  Optedition               = {•},
+  Optkey                   = {•},
+  Optmonth                 = {December},
+  Optnote                  = {•},
+  Optyear                  = {2012},
+  Url                      = {http://www.redbooks.ibm.com/redpapers/pdfs/redp4955.pdf}
+}
+
+@Book{book_discover_practices,
+  Title                    = {Knowledge Discovery Practices and Emerging Applications of Data Mining: Trends and New Domains.},
+  Author                   = {Kumar, A. S.},
+  Publisher                = {IGI Global},
+  Year                     = {2010},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Book{book_natural_lang,
+  Title                    = {Natural Language Processing and Computational Linguistics},
+  Author                   = {Kurdi, M. Z.},
+  Publisher                = {John Wiley \& Sons},
+  Year                     = {2016},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Book{bliu_2012,
+  Title                    = {Sentiment Analysis and Opinion Mining},
+  Author                   = {Liu, B.},
+  Publisher                = {Morgan \& Claypool},
+  Year                     = {2012},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Book{book_sentiment_social,
+  Title                    = {Sentiment Analysis in Social Networks},
+  Author                   = {Liu, B. and Messina, E. and Fersini, E. and Pozzi, F. A.},
+  Publisher                = {Morgan Kaufmann},
+  Year                     = {2016},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Book{book_natlang_python,
+  Title                    = {Natural Language Processing: Python and NLTK.},
+  Author                   = {Mathur, I. and et al},
+  Year                     = {2016},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Article{article_sentiment_twitter,
+  Title                    = {Sentiment Analysis in Twitter Messages Using Constrained and Unconstrained Data Categories},
+  Author                   = {S. R. Muthutantrige and A. Weerasinghe},
+  Journal                  = {IEEE},
+  Year                     = {2016},
+  Pages                    = {304-310},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Article{article_sentiment_analysis,
+  Title                    = {Sentiment data flow analysis by means of dynamic linguistic patterns},
+  Author                   = {Poria, S. and Cambria, E. and Gelbukh, A. and Bisio, F. and Hussain, A.},
+  Journal                  = {IEEE Computational intelligence magazine},
+  Year                     = {2015},
+  Pages                    = {1556-603},
+  Volume                   = {15},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Book{iconix,
+  Title                    = {Use Case Driven Object Modeling with UML},
+  Author                   = {Rosenberg, Doug and Stephens, Matt},
+  Editor                   = {Gannik, Jonathan},
+  Publisher                = {Apress},
+  Year                     = {2007},
+
+  Address                  = {Nova Iorque},
+
+  Optaddress               = {•},
+  Optannote                = {•},
+  Optedition               = {•},
+  Optkey                   = {•},
+  Optmonth                 = {•},
+  Optnote                  = {•},
+  Optnumber                = {•},
+  Optseries                = {•},
+  Optvolume                = {•},
+  Subtitle                 = {Theory and Practice}
+}
+
+@Book{norvig,
+  Title                    = {Inteligência Artifical},
+  Author                   = {Russel, Stuart and Norvig, Peter.},
+  Editor                   = {Mickey},
+  Publisher                = {Elsevier},
+  Year                     = {2013},
+  Edition                  = {2},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Book{book_political_opinion,
+  Title                    = {Political Opinion Mining from Twitter. International Journal of Information Systems in the Service Sector (IJISSS)},
+  Author                   = {Sharma, Y. and Mittal, E. and  Garg, M.},
+  Year                     = {2016},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Article{turing,
+  Title                    = {Computing machinery and intelligence.},
+  Author                   = {Turing, Alan},
+  Journal                  = {Mind},
+  Year                     = {1950},
+  Pages                    = {433-460},
+  Volume                   = {59},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Conference{conference_twitter_sports,
+  Title                    = {Is Twitter a good enough social sensor for sports TV?},
+  Author                   = {Venu Vasudevan  and Jehan Wickramasuriya  and  Siqi Zhao and  Lin Zhong},
+  Booktitle                = {Pervasive Computing and Communications Workshops (PERCOM Workshops), 2013 IEEE International Conference on},
+  Year                     = {2013},
+
+  Address                  = {San Diego, CA, USA},
+  Month                    = {Julho},
+  Publisher                = {IEEE},
+
+  Owner                    = {flaviapezoti},
+  Timestamp                = {2017.05.10}
+}
+
+@Misc{twitter_company,
+  Title                    = {Sobre o Twitter},
+  HowPublished             = {\url{https://about.twitter.com/pt/company}},
+  Note                     = {(Accessed on 04/10/2017)}
+}
+
+@Misc{TwitterU87:online,
+  Title                    = {Twitter Usage Statistics - Internet Live Stats},
+  HowPublished             = {\url{http://www.internetlivestats.com/twitter-statistics/}},
+  Note                     = {(Accessed on 04/10/2017)}
+}
+
+@Book{book_Cambria2015,
+  title     = {Sentic Computing - A Common-Sense-Based Framework for Concept-Level Sentiment Analysis},
+  publisher = {Springer International Publishing},
+  year      = {2015},
+  author    = {Erik Cambria and Amir Hussain},
+}
+
+@Book{,
+  title = {Sentic Computing for Social Network Analysis},
+}
+
+@InBook{inBook_Bisio2016,
+  chapter   = {Sentic Computing for Social Network Analysis},
+  title     = {Sentiment Analysis in Social Networks},
+  publisher = {Elsevier Inc},
+  year      = {2016},
+  author    = {F. Bisio and L. Onetoa and E. Cambria},
+}
+
+@InBook{inBook_Bisio2017,
+  chapter = {Concept-Level Sentiment Analysis with SenticNet},
+  pages   = {173-189},
+  title   = {A Practical Guide to Sentiment Analysis},
+  year    = {2017},
+  author  = {Federica Bisio and Claudia Meda and Paolo Gastaldo and Rodolfo Zunino and Erik Cambria},
+}
+
+@Article{article_Tsugawa2013,
+  author  = {Sho Tsugawa and Yukiko Mogi and Yusuke Kikuchi and Fumio Kishino and Kazuyuki Fujita and Yuichi Itoh and Hiroyuki Ohsaki},
+  title   = {On Estimating Depressive Tendencies of Twitter Users Utilizing their Tweet Data},
+  journal = {IEEE Virtual Reality},
+  year    = {2013},
+}
+
+@Conference{Cambria2014,
+  author = {E. Cambria and D. Olsher and D. Rajagopal},
+  title  = {SenticNet 3: A common and common-sense sense knowledge base for cognition-driven sentiment analysis},
+  year   = {2014},
+}
+
+@Misc{site_SenticNet,
+  title        = {SenticNet},
+  howpublished = {http://sentic.net},
+}
+
+@Article{,
+  author  = {S. Poria and E. Cambria and G. Winterstein and G.-B Huang},
+  title   = {Sentic patterns: Dependency - based rules for concept-level sentiment analysis},
+  journal = {Knowl.-Based Syst.},
+  year    = {2014},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
