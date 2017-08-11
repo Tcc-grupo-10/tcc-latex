@@ -1,7 +1,8 @@
-#TCC Latex
-####Algoritmo de Processamento de Linguagem Natural para Análise de Sentimento em Mídias Sociais
+# TCC Latex
 
-####Como Compilar: Linux
+#### Algoritmo de Processamento de Linguagem Natural para Análise de Sentimento em Mídias Sociais
+
+#### Como Compilar: Linux
 
 * Instalar todas as dependências do latex, abntex
 	* TODO: Descrever melhor
@@ -9,6 +10,16 @@
 * Usando o Texmaker para compilar:
 	* Opções -> Configurar -> Compilar -> Usuário -> Colar código abaixo:
 	* ```pdflatex -synctex=1 -interaction=nonstopmode %.tex|bibtex %.aux|pdflatex -synctex=1 -interaction=nonstopmode %.tex|makeglossaries %|pdflatex -synctex=1 -interaction=nonstopmode %.tex|evince %.pdf```
+	* Este irá ```makeGlossaries``` + ```pdfLaTeX``` + ```Bibtex``` + ```pdfLaTeX(2x)``` + ```viewPDF``` 
+	
+#### Como Compilar: Mac
+
+* Instalar todas as dependências do latex, abntex
+	* ```brew cask install mactex```
+	
+* Usando o Texmaker para compilar:
+	* texmaker -> Preferências -> Compilar -> Usuário -> Colar código abaixo:
+	* ```"pdflatex" -synctex=1 -interaction=nonstopmode %.tex|"bibtex" %.aux|"pdflatex" -synctex=1 -interaction=nonstopmode %.tex|"makeglossaries" %|"pdflatex" -synctex=1 -interaction=nonstopmode %.tex|open %.pdf```
 	* Este irá ```makeGlossaries``` + ```pdfLaTeX``` + ```Bibtex``` + ```pdfLaTeX(2x)``` + ```viewPDF``` 
 
 ### Latex Hacks
